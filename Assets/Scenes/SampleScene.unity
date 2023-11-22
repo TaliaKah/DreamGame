@@ -1384,6 +1384,7 @@ GameObject:
   - component: {fileID: 2090366169}
   - component: {fileID: 2090366171}
   - component: {fileID: 2090366170}
+  - component: {fileID: 2090366172}
   m_Layer: 0
   m_Name: Chevalier
   m_TagString: Untagged
@@ -1535,6 +1536,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myConversation: {fileID: 256131682}
+--- !u!114 &2090366172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090366164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc70b6e7b887b65419a7a7aa66ad2b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolRadius: 10
+  patrolInterval: 5
 --- !u!1 &2119017940
 GameObject:
   m_ObjectHideFlags: 0
