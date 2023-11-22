@@ -10,6 +10,18 @@ public class RandomPatrol : MonoBehaviour
     private Vector3 patrolDestination;
     private float timer = 0f;
 
+    private bool isMoving = true;
+
+    public void MovingPNJ()
+    {
+        isMoving = true;
+    }
+
+    public void StopMovingPNJ()
+    {
+        isMoving = false;
+    }
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -18,14 +30,20 @@ public class RandomPatrol : MonoBehaviour
 
     void Update()
     {
-        // Si le NavMesh Agent a atteint sa destination ou si le temps d'attente est écoulé
-        if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.1f && timer >= patrolInterval)
-        {
-            SetRandomDestination();
-            timer = 0f;
-        }
+        if(isMoving)
+        {        // Si le NavMesh Agent a atteint sa destination ou si le temps d'attente est écoulé
+            if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.1f && timer >= patrolInterval)
+            {
+                SetRandomDestination();
+                timer = 0f;
+            }
 
-        timer += Time.deltaTime;
+            timer += Time.deltaTime;
+        }
+        else
+        {
+            navMeshAgent.SetDestination(transform.position);
+        }
     }
 
     void SetRandomDestination()
