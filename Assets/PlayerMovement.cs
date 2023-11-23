@@ -20,27 +20,10 @@ public class PlayerMovement : MonoBehaviour
 
         // Déplacer le personnage
         MoveCharacter(movementInput);
-
-        // Déclencher la destination lors d'un clic de souris
-        if (Input.GetMouseButtonDown(0))
-        {
-            SetDestinationToMousePosition();
-        }
     }
 
     void MoveCharacter(Vector3 direction)
     {
         navMeshAgent.Move(direction * Time.deltaTime * navMeshAgent.speed);
-    }
-
-    void SetDestinationToMousePosition()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            navMeshAgent.SetDestination(hit.point);
-        }
     }
 }
