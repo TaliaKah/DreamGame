@@ -2487,6 +2487,7 @@ GameObject:
   - component: {fileID: 941876374}
   - component: {fileID: 941876372}
   - component: {fileID: 941876377}
+  - component: {fileID: 941876378}
   m_Layer: 0
   m_Name: "F\xE9e"
   m_TagString: Untagged
@@ -2594,6 +2595,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myConversation: {fileID: 287450287}
+--- !u!114 &941876378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941876371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f479794211cecc4983d17ce946317d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: "F\xE9e"
+  description: "Fid\xE8le servante de la Reine des f\xE9es, elle est un agant double
+    au service de la r\xE9bellion. "
 --- !u!1 &947265517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,6 +2973,7 @@ GameObject:
   - component: {fileID: 1140964974}
   - component: {fileID: 1140964973}
   - component: {fileID: 1140964972}
+  - component: {fileID: 1140964979}
   m_Layer: 0
   m_Name: Chevalier 2
   m_TagString: Untagged
@@ -3099,6 +3116,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140964970}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1140964979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140964970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f479794211cecc4983d17ce946317d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Chevalier 2
+  description: "Toujours avec Chevalier 1, il est r\xE9cemment devenu chevalier et
+    n'a jamais pu rencontrer le Roi Patate en personne."
 --- !u!1 &1263233044
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,6 +3470,7 @@ GameObject:
   - component: {fileID: 1624620372}
   - component: {fileID: 1624620370}
   - component: {fileID: 1624620369}
+  - component: {fileID: 1624620374}
   m_Layer: 0
   m_Name: "Reine f\xE9e"
   m_TagString: Untagged
@@ -3545,6 +3578,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624620367}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1624620374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624620367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f479794211cecc4983d17ce946317d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: "Reine F\xE9e"
+  description: "Reine de la for\xEAt des f\xE9es, elle m\xE8ne une r\xE9bellion face
+    au Roi Patate."
 --- !u!1 &1682031527
 GameObject:
   m_ObjectHideFlags: 0
@@ -4328,6 +4376,7 @@ GameObject:
   - component: {fileID: 2090366171}
   - component: {fileID: 2090366170}
   - component: {fileID: 2090366172}
+  - component: {fileID: 2090366173}
   m_Layer: 0
   m_Name: Chevalier 1
   m_TagString: Untagged
@@ -4470,6 +4519,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolRadius: 10
   patrolInterval: 5
+--- !u!114 &2090366173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090366164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f479794211cecc4983d17ce946317d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PNJName: Chevalier 1
+  description: "Chevalier fid\xE8le du Roi Patate. Toujours avec son acolyte Chevalier
+    2 avec lequel il se dispute souvent. Il est de nature joviale."
 --- !u!1 &2119017940
 GameObject:
   m_ObjectHideFlags: 0
