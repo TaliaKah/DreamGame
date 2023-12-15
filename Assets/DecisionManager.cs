@@ -4,20 +4,6 @@ using System.Collections.Generic;
 
 public class DecisionManager : MonoBehaviour
 {
-    private static DecisionManager _instance;
-    public static DecisionManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = new GameObject("DecisionManager").AddComponent<DecisionManager>();
-                DontDestroyOnLoad(_instance.gameObject);
-            }
-            return _instance;
-        }
-    }
-
     public enum Decision
     {
         AccepterDeDevenirChevalier,

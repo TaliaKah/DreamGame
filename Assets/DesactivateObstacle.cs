@@ -6,8 +6,11 @@ public class DesactivateObstacle : MonoBehaviour
 {
     void Update()
     {
-        if (DecisionManager.Instance.GetDecision(DecisionManager.Decision.AccepterDeDevenirChevalier)
-        || DecisionManager.Instance.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion))
+    DecisionManager decisionManager = FindObjectOfType<DecisionManager>(); // Utilisez cette ligne si DecisionManager est attaché à un objet dans la scène.
+
+    if (decisionManager != null &&
+        (decisionManager.GetDecision(DecisionManager.Decision.AccepterDeDevenirChevalier) ||
+         decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion)))
         {
             gameObject.SetActive(false);
         }
