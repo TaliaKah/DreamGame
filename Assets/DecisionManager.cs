@@ -58,4 +58,16 @@ public class DecisionManager : MonoBehaviour
         _decisions[Decision.AccepterDeDevenirChevalier] = true;
         Debug.LogWarning($"{Decision.AccepterDeDevenirChevalier} est {_decisions[Decision.AccepterDeDevenirChevalier]}");
     }
+    
+    public void AccepterDeRejoindreLaRebellion()
+    {
+        _decisions[Decision.AccepterDeRejoindreLaRebellion] = true;
+        Debug.LogWarning($"{Decision.AccepterDeRejoindreLaRebellion} est {_decisions[Decision.AccepterDeDevenirChevalier]}");
+    }
+    
+    public void RefuserDeRejoindreLaRebellion()
+    {
+        _decisions[Decision.RefuserDeRejoindreLaRebellion] = true;
+        Debug.LogWarning($"{Decision.RefuserDeRejoindreLaRebellion} est {_decisions[Decision.AccepterDeDevenirChevalier]}");
+    }
 }
