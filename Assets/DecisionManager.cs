@@ -45,6 +45,7 @@ public class DecisionManager : MonoBehaviour
         if (_decisions.ContainsKey(decision))
         {
             _decisions[decision] = value;
+            Debug.Log($"La décision {decision} est mainetnant {value}");
         }
         else
         {

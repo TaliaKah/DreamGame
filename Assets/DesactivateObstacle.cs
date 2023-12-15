@@ -13,6 +13,7 @@ public class DesactivateObstacle : MonoBehaviour
          decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion)))
         {
             gameObject.SetActive(false);
+            Debug.Log("Objet désactivé !");
         }
     }
 }
