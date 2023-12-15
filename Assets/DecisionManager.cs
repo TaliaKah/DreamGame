@@ -52,4 +52,10 @@ public class DecisionManager : MonoBehaviour
             UnityEngine.Debug.LogWarning($"La décision {decision} n'existe pas dans le dictionnaire.");
         }
     }
+
+    public void AccepterDeDevenirChevalier()
+    {
+        _decisions[Decision.AccepterDeDevenirChevalier] = true;
+        Debug.LogWarning($"{Decision.AccepterDeDevenirChevalier} est {_decisions[Decision.AccepterDeDevenirChevalier]}");
+    }
 }
