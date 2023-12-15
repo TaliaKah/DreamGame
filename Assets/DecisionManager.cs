@@ -11,7 +11,8 @@ public class DecisionManager : MonoBehaviour
         {
             if (_instance == null)
             {
-                _instance = new DecisionManager();
+                _instance = new GameObject("DecisionManager").AddComponent<DecisionManager>();
+                DontDestroyOnLoad(_instance.gameObject);
             }
             return _instance;
         }
