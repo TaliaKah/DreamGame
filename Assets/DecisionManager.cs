@@ -25,7 +25,9 @@ public class DecisionManager : MonoBehaviour
         foreach (Decision decision in Enum.GetValues(typeof(Decision)))
         {
             _decisions.Add(decision, false);
+            UnityEngine.Debug.Log($"{decision} est ajouté dans le dictionnaire avec la valeur {_decisions[decision]}");
         }
+        UnityEngine.Debug.Log($"Les décisions ont été initialisées.");
     }
 
     public bool GetDecision(Decision decision)
