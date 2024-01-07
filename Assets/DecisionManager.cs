@@ -6,6 +6,7 @@ public class DecisionManager : MonoBehaviour
 {
     public enum Decision
     {
+        RencontrerLesChevaliersDansLaPlaine,
         AccepterDeDevenirChevalier,
         AccepterDeRejoindreLaRebellion,
         RefuserDeRejoindreLaRebellion,
@@ -56,6 +57,12 @@ public class DecisionManager : MonoBehaviour
         }
     }
 
+    public void RencontrerLesChevaliersDansLaPlaine()
+    {
+        _decisions[Decision.RencontrerLesChevaliersDansLaPlaine] = true;
+        Debug.LogWarning($"{Decision.RencontrerLesChevaliersDansLaPlaine} est {_decisions[Decision.RencontrerLesChevaliersDansLaPlaine]}");
+    }
+
     public void AccepterDeDevenirChevalier()
     {
         _decisions[Decision.AccepterDeDevenirChevalier] = true;
@@ -79,4 +86,5 @@ public class DecisionManager : MonoBehaviour
         _decisions[Decision.PrendreUneBoissonALaTaverne] = true;
         Debug.LogWarning($"{Decision.PrendreUneBoissonALaTaverne} est {_decisions[Decision.PrendreUneBoissonALaTaverne]}");
     }
+    
 }
