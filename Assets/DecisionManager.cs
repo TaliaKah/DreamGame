@@ -8,7 +8,8 @@ public class DecisionManager : MonoBehaviour
     {
         AccepterDeDevenirChevalier,
         AccepterDeRejoindreLaRebellion,
-        RefuserDeRejoindreLaRebellion
+        RefuserDeRejoindreLaRebellion,
+        PrendreUneBoissonALaTaverne
     }
 
     private Dictionary<Decision, bool> _decisions;
@@ -70,5 +71,10 @@ public class DecisionManager : MonoBehaviour
         _decisions[Decision.RefuserDeRejoindreLaRebellion] = true;
         Debug.LogWarning($"{Decision.RefuserDeRejoindreLaRebellion} est {_decisions[Decision.RefuserDeRejoindreLaRebellion]}");
     }
+    
+    public void PrendreUneBoissonALaTaverne()
+    {
+        _decisions[Decision.PrendreUneBoissonALaTaverne] = true;
+        Debug.LogWarning($"{Decision.PrendreUneBoissonALaTaverne} est {_decisions[Decision.PrendreUneBoissonALaTaverne]}");
     }
 }
