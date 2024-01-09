@@ -4,6 +4,12 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
     private NavMeshAgent navMeshAgent;
+    public GameObject corridor;
+
+    public void ResetPosition()
+    {
+        transform.position = corridor.transform.position;
+    }
 
     void Start()
     {
