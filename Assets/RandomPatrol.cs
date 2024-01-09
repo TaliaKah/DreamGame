@@ -6,32 +6,61 @@ public class RandomPatrol : MonoBehaviour
     public float patrolRadius = 10f;  // Rayon de patrouille
     public float patrolInterval = 5f; // Intervalle entre les destinations de patrouille
 
+    public GameObject taverneEntrance;
+
     private NavMeshAgent navMeshAgent;
     private Vector3 patrolDestination;
     private float timer = 0f;
 
-    private bool isMoving = true;
+    private DecisionManager decisionManager;
 
-    public void MovingPNJ()
+    enum MovingStatus
     {
-        isMoving = true;
+        Stop,
+        RandomlyMoving,
+        GoingToTavern
     }
 
-    public void StopMovingPNJ()
+    private MovingStatus movingStatus;
+
+    public void RandomlyMoving()
     {
-        isMoving = false;
+        movingStatus = MovingStatus.RandomlyMoving;
+        Debug.Log($"{transform.name} is randomly moving");
+    }
+
+    public void GoingToTavern()
+    {
+        movingStatus = MovingStatus.GoingToTavern;
+        Debug.Log($"{transform.name} is going to tavern.");
+    }
+
+    public void StopMoving()
+    {
+        movingStatus = MovingStatus.Stop;
+        Debug.Log($"{transform.name} have stopped moving");
     }
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        decisionManager = FindObjectOfType<DecisionManager>();
+        movingStatus = MovingStatus.RandomlyMoving;
         SetRandomDestination();
     }
 
     void Update()
     {
-        if(isMoving)
-        {        // Si le NavMesh Agent a atteint sa destination ou si le temps d'attente est écoulé
+        if (movingStatus == MovingStatus.GoingToTavern)
+        {
+            navMeshAgent.SetDestination(taverneEntrance.transform.position);
+            if ((Mathf.Abs(transform.position.x - taverneEntrance.transform.position.x) < 2f && Mathf.Abs(transform.position.z - taverneEntrance.transform.position.z) < 2f))
+            {
+                movingStatus = MovingStatus.Stop;
+            }
+        }
+        if (movingStatus == MovingStatus.RandomlyMoving)
+        {
             if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.1f && timer >= patrolInterval)
             {
                 SetRandomDestination();
@@ -39,7 +68,7 @@ public class RandomPatrol : MonoBehaviour
             }
 
             timer += Time.deltaTime;
-        }
+            }
         else
         {
             navMeshAgent.SetDestination(transform.position);
