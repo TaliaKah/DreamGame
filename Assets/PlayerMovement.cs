@@ -5,10 +5,16 @@ public class PlayerMovement : MonoBehaviour
 {
     private NavMeshAgent navMeshAgent;
     public GameObject corridor;
+    public GameObject prison;
 
     public void ResetPosition()
     {
         transform.position = corridor.transform.position;
+    }
+
+    public void GoToJail()
+    {
+        transform.position = prison.transform.position;
     }
 
     void Start()
