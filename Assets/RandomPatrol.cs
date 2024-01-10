@@ -26,18 +26,21 @@ public class RandomPatrol : MonoBehaviour
     public void RandomlyMoving()
     {
         movingStatus = MovingStatus.RandomlyMoving;
+        SetRandomDestination();
         Debug.Log($"{transform.name} is randomly moving");
     }
 
     public void GoingToTavern()
     {
         movingStatus = MovingStatus.GoingToTavern;
+        navMeshAgent.SetDestination(taverneEntrance.transform.position);
         Debug.Log($"{transform.name} is going to tavern.");
     }
 
     public void StopMoving()
     {
         movingStatus = MovingStatus.Stop;
+        navMeshAgent.SetDestination(transform.position);
         Debug.Log($"{transform.name} have stopped moving");
     }
 
@@ -53,25 +56,20 @@ public class RandomPatrol : MonoBehaviour
     {
         if (movingStatus == MovingStatus.GoingToTavern)
         {
-            navMeshAgent.SetDestination(taverneEntrance.transform.position);
             if ((Mathf.Abs(transform.position.x - taverneEntrance.transform.position.x) < 2f && Mathf.Abs(transform.position.z - taverneEntrance.transform.position.z) < 2f))
             {
-                movingStatus = MovingStatus.Stop;
+                StopMoving();
             }
         }
         if (movingStatus == MovingStatus.RandomlyMoving)
         {
             if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.1f && timer >= patrolInterval)
             {
-                SetRandomDestination();
+                RandomlyMoving();
                 timer = 0f;
             }
 
             timer += Time.deltaTime;
-            }
-        else
-        {
-            navMeshAgent.SetDestination(transform.position);
         }
     }
 

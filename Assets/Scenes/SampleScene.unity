@@ -374,7 +374,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 159046333}
-  - component: {fileID: 159046334}
   m_Layer: 0
   m_Name: Dialogues
   m_TagString: Untagged
@@ -399,18 +398,6 @@ Transform:
   - {fileID: 619467725}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &159046334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159046332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 565cbe3beec9ce84e8490869c9a44dd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &168002401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,7 +2292,7 @@ Transform:
   m_GameObject: {fileID: 451133429}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.181, y: -0.235, z: -0.5591}
+  m_LocalPosition: {x: 0.181, y: -0.2309, z: -0.5591}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3953,7 +3940,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 947265518}
-  - component: {fileID: 947265519}
   m_Layer: 0
   m_Name: PNJs
   m_TagString: Untagged
@@ -3982,18 +3968,6 @@ Transform:
   - {fileID: 2100365140}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &947265519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947265517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e8007f04bc0aa44a8c595a7099d4a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &958842732
 GameObject:
   m_ObjectHideFlags: 0
