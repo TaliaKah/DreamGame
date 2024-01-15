@@ -8,6 +8,10 @@ public class NPCKnightDialog : MonoBehaviour
 {
     public NPCConversation firstConversation;
     public NPCConversation secondConversation;
+    public NPCConversation QuestConversation1;
+    public NPCConversation QuestConversation2;
+    public NPCConversation QuestConversation3;
+
     private DecisionManager decisionManager;
     // ajouter conversattion qui invite à prendre un verre dans la taverne et à parler au tavernier
 
