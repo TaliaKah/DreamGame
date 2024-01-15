@@ -16,10 +16,12 @@ public class Controller : MonoSingleton<Controller>
     float m_VerticalSpeed = 0.0f;
     float m_VerticalAngle, m_HorizontalAngle;
     bool m_IsPaused;
+    bool m_IsInConversation;
 
     void Start()
     {
         m_IsPaused = false;
+        m_IsPaused = true;
         m_VerticalAngle = 0.0f;
         m_HorizontalAngle = transform.localEulerAngles.y;
 
@@ -31,7 +33,23 @@ public class Controller : MonoSingleton<Controller>
     }
 
     bool IsUpdatable() {
-        return !m_IsPaused;
+        return !m_IsPaused && !m_IsInConversation;
+    }
+
+    public void PauseFlags(bool display)
+    {
+        m_IsPaused = display;
+        Cursor.lockState = display ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = display;
+        m_IsInConversation = display;
+    }
+
+    public void PauseTheGame() {
+        PauseFlags(true);
+    }
+
+    public void TogglePause() {
+        PauseFlags(!m_IsPaused);
     }
 
     void Update()
@@ -81,6 +99,8 @@ public class Controller : MonoSingleton<Controller>
             currentAngles = CameraPosition.transform.localEulerAngles;
             currentAngles.x = m_VerticalAngle;
             CameraPosition.transform.localEulerAngles = currentAngles;
+        } else {
+
         }
     }
 }
