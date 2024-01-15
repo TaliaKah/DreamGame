@@ -21,7 +21,7 @@ public class Controller : MonoSingleton<Controller>
     void Start()
     {
         m_IsPaused = false;
-        m_IsPaused = true;
+        m_IsInConversation = false;
         m_VerticalAngle = 0.0f;
         m_HorizontalAngle = transform.localEulerAngles.y;
 
