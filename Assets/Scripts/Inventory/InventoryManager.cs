@@ -81,6 +81,8 @@ public class InventoryManager : MonoBehaviour
             string json = File.ReadAllText(saveFilePath);
             Serialization<ItemClass> data = JsonUtility.FromJson<Serialization<ItemClass>>(json);
             Inventory = data.ToList();
+        } else {
+            Debug.LogWarning("Inventory file not found");
         }
     }
 
