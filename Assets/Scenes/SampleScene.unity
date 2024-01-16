@@ -11004,8 +11004,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f479794211cecc4983d17ce946317d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PNJName: Roi Patate
-  description: "Roi du royaume. Il semble \xEAtre d\xE9prim\xE9."
+  PNJName: "Sorci\xE8re"
+  description: "Myst\xE9rieuse, elle semble savoir tous les secrets de ce monde mais
+    ne veut pas les partager."
 --- !u!65 &1907089408
 BoxCollider:
   m_ObjectHideFlags: 0
