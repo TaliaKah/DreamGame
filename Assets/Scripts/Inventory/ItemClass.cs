@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 //Abstract Class
+[System.Serializable]
 public abstract class ItemClass : ScriptableObject
 {
     [Header("Item")]
