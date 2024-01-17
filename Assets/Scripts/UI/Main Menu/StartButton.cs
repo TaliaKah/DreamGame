@@ -8,8 +8,8 @@ public class StartButton : MonoBehaviour
     private SceneLoaderAsync Loader;
 
     public void Start() {
-        Loader = gameObject.AddComponent(typeof(SceneLoaderAsync)) as SceneLoaderAsync;
-        Debug.Log($"Loader {((Loader) ? "loaded" : "not loaded")}");
+        Loader = SceneLoaderAsync.Instance;
+        Debug.Log($"Loader {((Loader != null) ? "loaded" : "not loaded")}");
     }
 
     public void StartGame()

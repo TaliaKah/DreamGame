@@ -2,17 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GMButtons : MonoBehaviour
 {
+    private Controller controller;
+    private SceneLoaderAsync loader;
+
+    public void Start() {
+        controller = Controller.Instance;
+        loader = SceneLoaderAsync.Instance;
+    }
+
+    public void Update() {
+        if (Input.GetButtonDown("Cancel")) {
+            Debug.Log("Pressed cancel");
+            Resume();
+        }
+    }
+
     public void Resume()
     {
         // TODO
+        SceneManager.UnloadSceneAsync("Game Menu");
+        controller.ResumeTheGame();
     }
 
     public void ShowOptions()
     {
         // TODO
+        SceneManager.LoadScene("Options", LoadSceneMode.Additive);
     }
 
     public void Save()
@@ -28,5 +47,6 @@ public class GMButtons : MonoBehaviour
     public void MainMenu()
     {
         // TODO
+        loader.LoadScene("Main Menu");
     }
 }

@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class Controller : MonoSingleton<Controller>
+public class Controller : MonoBehaviour
 {
+    private static Controller instance;
+    public static Controller Instance
+    {
+        get; private set;
+    }
+
     public Camera MainCamera;
     public Transform CameraPosition;
     CharacterController m_CharacterController;
@@ -18,10 +26,14 @@ public class Controller : MonoSingleton<Controller>
     bool m_IsPaused;
     bool m_IsInConversation;
 
+    void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
-        m_IsPaused = false;
-        m_IsInConversation = false;
+        PauseFlags(false);
         m_VerticalAngle = 0.0f;
         m_HorizontalAngle = transform.localEulerAngles.y;
 
@@ -32,7 +44,10 @@ public class Controller : MonoSingleton<Controller>
         m_CharacterController = GetComponent<CharacterController>();
     }
 
-    bool IsUpdatable() {
+
+
+    bool IsUpdatable()
+    {
         return !m_IsPaused && !m_IsInConversation;
     }
 
@@ -44,12 +59,19 @@ public class Controller : MonoSingleton<Controller>
         m_IsInConversation = display;
     }
 
-    public void PauseTheGame() {
+    public void PauseTheGame()
+    {
         PauseFlags(true);
     }
 
-    public void TogglePause() {
+    public void TogglePause()
+    {
         PauseFlags(!m_IsPaused);
+    }
+
+    public void ResumeTheGame()
+    {
+        PauseFlags(false);
     }
 
     void Update()
@@ -68,7 +90,7 @@ public class Controller : MonoSingleton<Controller>
             if (running) Debug.Log("Character is running");
             float actualSpeed = running ? RunningSpeed : PlayerSpeed;
             move = move * actualSpeed * Time.deltaTime;
-            
+
             move = transform.TransformDirection(move);
             m_CharacterController.Move(move);
 
@@ -99,8 +121,12 @@ public class Controller : MonoSingleton<Controller>
             currentAngles = CameraPosition.transform.localEulerAngles;
             currentAngles.x = m_VerticalAngle;
             CameraPosition.transform.localEulerAngles = currentAngles;
-        } else {
 
+            if (Input.GetButtonDown("Cancel"))
+            {
+                PauseTheGame();
+                SceneLoaderAsync.Instance.LoadScene("Game Menu", LoadSceneMode.Additive);
+            }
         }
     }
 }

@@ -12,31 +12,31 @@ public class SceneLoaderAsync : MonoSingleton<SceneLoaderAsync> {
     public float LoadingProgress { get { return _loadingProgress; } }
     public Text Text;
 
-    public void LoadScene(string sceneName)
+    public void LoadScene(string sceneName, LoadSceneMode mode = LoadSceneMode.Single)
     {
         // kick-off the one co-routine to rule them all
         Debug.Log($"Load kicked-off: {sceneName}");
-        StartCoroutine(LoadScenesInOrder(sceneName));
+        StartCoroutine(LoadScenesInOrder(sceneName, mode));
     }
 
-    private IEnumerator LoadScenesInOrder(string sceneName)
+    private IEnumerator LoadScenesInOrder(string sceneName, LoadSceneMode mode)
     {
         // LoadSceneAsync() returns an AsyncOperation, 
         // so will only continue past this point when the Operation has finished
         // yield return SceneManager.LoadSceneAsync("Loading");
         
         // This works
-        SceneManager.LoadScene("Loading");
+        // SceneManager.LoadScene("Loading");
         //Debug.Log($"Loading screen loaded.");
         //yield return new WaitForSeconds(2f);
 
         // as soon as we've finished loading the loading screen, start loading the game scene
-        yield return StartCoroutine(LoadSceneWithProgress(sceneName));
+        yield return StartCoroutine(LoadSceneWithProgress(sceneName, mode));
     }
 
-    private IEnumerator LoadSceneWithProgress(string sceneName)
+    private IEnumerator LoadSceneWithProgress(string sceneName, LoadSceneMode mode)
     {
-        var asyncScene = SceneManager.LoadSceneAsync(sceneName);
+        var asyncScene = SceneManager.LoadSceneAsync(sceneName, mode);
 
         Debug.Log($"Loading scene: {sceneName}...");
 
