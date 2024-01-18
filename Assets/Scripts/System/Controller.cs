@@ -97,18 +97,6 @@ public class Controller : MonoBehaviour
 
             navMeshAgent.Move(move * Time.deltaTime * navMeshAgent.speed);
 
-            // 
-            // m_CharacterController.Move(move);
-
-            // Fall down / gravity
-            // m_VerticalSpeed = m_VerticalSpeed - 10.0f * Time.deltaTime;
-            // if (m_VerticalSpeed < -10.0f)
-            //     m_VerticalSpeed = -10.0f; // max fall speed
-            // var verticalMove = new Vector3(0, m_VerticalSpeed * Time.deltaTime, 0);
-            // var flag = m_CharacterController.Move(verticalMove);
-            // if ((flag & CollisionFlags.Below) != 0)
-            //     m_VerticalSpeed = 0;
-
             // Turn player
             float turnPlayer = Input.GetAxis("Mouse X") * MouseSensitivity;
             m_HorizontalAngle = m_HorizontalAngle + turnPlayer;
