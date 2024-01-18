@@ -20,14 +20,13 @@ public class NPCTavernDialog : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (!decisionManager.GetDecision(DecisionManager.Decision.PrendreUneBoissonALaTaverne))
+                if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier))
                 {
                     ConversationManager.Instance.StartConversation(casualConversation);
                 }
                 else
                 {
                     ConversationManager.Instance.StartConversation(firstConversation);
-                    ConversationManager.Instance.SetBool("EtreChevalier", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeDevenirChevalier));
                 }
             }
         }
