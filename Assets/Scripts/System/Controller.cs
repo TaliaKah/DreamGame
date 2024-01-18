@@ -15,9 +15,12 @@ public class Controller : MonoBehaviour
     public Camera MainCamera;
     public Transform CameraPosition;
     CharacterController m_CharacterController;
+    private UnityEngine.AI.NavMeshAgent navMeshAgent;
 
     [Header("Control Settings")]
-    public float MouseSensitivity = 100.0f;
+    public float MouseSensitivity = 50.0f;
+    public readonly float MinSensitivity = 20.0f;
+    public readonly float MaxSensitivity = 100.0f;
     public float PlayerSpeed = 5.0f;
     public float RunningSpeed = 7.5f;
 
@@ -42,6 +45,7 @@ public class Controller : MonoBehaviour
         MainCamera.transform.localRotation = Quaternion.identity;
 
         m_CharacterController = GetComponent<CharacterController>();
+        navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
 
@@ -88,20 +92,22 @@ public class Controller : MonoBehaviour
             // float usedSpeed = m_Grounded ? actualSpeed : m_SpeedAtJump;
             bool running = Input.GetButton("Run");
             if (running) Debug.Log("Character is running");
-            float actualSpeed = running ? RunningSpeed : PlayerSpeed;
-            move = move * actualSpeed * Time.deltaTime;
-
+            navMeshAgent.speed = running ? RunningSpeed : PlayerSpeed;
             move = transform.TransformDirection(move);
-            m_CharacterController.Move(move);
+
+            navMeshAgent.Move(move * Time.deltaTime * navMeshAgent.speed);
+
+            // 
+            // m_CharacterController.Move(move);
 
             // Fall down / gravity
-            m_VerticalSpeed = m_VerticalSpeed - 10.0f * Time.deltaTime;
-            if (m_VerticalSpeed < -10.0f)
-                m_VerticalSpeed = -10.0f; // max fall speed
-            var verticalMove = new Vector3(0, m_VerticalSpeed * Time.deltaTime, 0);
-            var flag = m_CharacterController.Move(verticalMove);
-            if ((flag & CollisionFlags.Below) != 0)
-                m_VerticalSpeed = 0;
+            // m_VerticalSpeed = m_VerticalSpeed - 10.0f * Time.deltaTime;
+            // if (m_VerticalSpeed < -10.0f)
+            //     m_VerticalSpeed = -10.0f; // max fall speed
+            // var verticalMove = new Vector3(0, m_VerticalSpeed * Time.deltaTime, 0);
+            // var flag = m_CharacterController.Move(verticalMove);
+            // if ((flag & CollisionFlags.Below) != 0)
+            //     m_VerticalSpeed = 0;
 
             // Turn player
             float turnPlayer = Input.GetAxis("Mouse X") * MouseSensitivity;
@@ -127,6 +133,10 @@ public class Controller : MonoBehaviour
                 PauseTheGame();
                 SceneLoaderAsync.Instance.LoadScene("Game Menu", LoadSceneMode.Additive);
             }
+        }
+
+        if (Input.GetButtonDown("Run")) {
+            Debug.Log("");
         }
     }
 }
