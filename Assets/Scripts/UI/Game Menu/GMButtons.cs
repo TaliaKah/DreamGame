@@ -14,9 +14,7 @@ public class GMButtons : MonoBehaviour
         controller = Controller.Instance;
         loader = SceneLoaderAsync.Instance;
     }
-
-    public void Update() {
-        if (Input.GetButtonDown("Cancel")) {
+    
     void Update()
     {
         if (Input.GetButtonDown("Cancel"))
