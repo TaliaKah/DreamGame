@@ -16,15 +16,19 @@ public class DecisionManager : MonoBehaviour
         RechercherQuete1,
         DebuterQuete1,
         ReussirQuete1,
+        AcheverQuete1,
         DebuterQuete2,
         ReussirQuete2,
+        AcheverQuete2,
         DebuterQuete3,
         ReussirQuete3,
+        AcheverQuete3,
         AllerALaMontagneDuDesespoir,
         RechercherLaPotionDEveil,
         RencontrerSphynx,
         TrouverLeCube,
         TrouverLaPotionDEveil,
+        BoireLaPotionDEveil,
         AllerAuChateau,
         TrouverLaFleurDeVerite,
     }
@@ -132,6 +136,12 @@ public class DecisionManager : MonoBehaviour
         _decisions[Decision.ReussirQuete1] = true;
         Debug.LogWarning($"{Decision.ReussirQuete1} est {_decisions[Decision.ReussirQuete1]}");
     }
+    
+    public void AcheverQuete1()
+    {
+        _decisions[Decision.AcheverQuete1] = true;
+        Debug.LogWarning($"{Decision.AcheverQuete1} est {_decisions[Decision.AcheverQuete1]}");
+    }
 
     public void DebuterQuete2()
     {
@@ -145,6 +155,12 @@ public class DecisionManager : MonoBehaviour
         Debug.LogWarning($"{Decision.ReussirQuete2} est {_decisions[Decision.ReussirQuete2]}");
     }
 
+    public void AcheverQuete2()
+    {
+        _decisions[Decision.AcheverQuete2] = true;
+        Debug.LogWarning($"{Decision.AcheverQuete2} est {_decisions[Decision.AcheverQuete2]}");
+    }
+
     public void DebuterQuete3()
     {
         _decisions[Decision.DebuterQuete3] = true;
@@ -155,6 +171,12 @@ public class DecisionManager : MonoBehaviour
     {
         _decisions[Decision.ReussirQuete3] = true;
         Debug.LogWarning($"{Decision.ReussirQuete3} est {_decisions[Decision.ReussirQuete3]}");
+    }
+    
+    public void AcheverQuete3()
+    {
+        _decisions[Decision.AcheverQuete3] = true;
+        Debug.LogWarning($"{Decision.AcheverQuete3} est {_decisions[Decision.AcheverQuete3]}");
     }
     
     public void RechercherLaPotionDEveil()
