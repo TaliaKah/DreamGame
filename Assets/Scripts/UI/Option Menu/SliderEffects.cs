@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SliderEffects : MonoBehaviour
 {
-    private Controller controller;
+    private Controller controller = null;
     public Slider mouseSensitivitySlider;
     public Text minValueText;
     public Text maxValueText;

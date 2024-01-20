@@ -24,14 +24,17 @@ public class Controller : MonoBehaviour
     public float PlayerSpeed = 5.0f;
     public float RunningSpeed = 7.5f;
 
-    float m_VerticalSpeed = 0.0f;
     float m_VerticalAngle, m_HorizontalAngle;
     bool m_IsPaused;
     bool m_IsInConversation;
 
     void Awake()
     {
-        Instance = this;
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Debug.LogError("Creation failed: Controller already exists");
+        }
     }
 
     void Start()

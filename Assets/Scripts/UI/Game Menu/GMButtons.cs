@@ -6,16 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class GMButtons : MonoBehaviour
 {
-    private Controller controller;
+    private Controller controller = null;
     private SceneLoaderAsync loader;
 
-    public void Start() {
+    void Start()
+    {
         controller = Controller.Instance;
         loader = SceneLoaderAsync.Instance;
     }
 
     public void Update() {
         if (Input.GetButtonDown("Cancel")) {
+    void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
             Debug.Log("Pressed cancel");
             Resume();
         }
