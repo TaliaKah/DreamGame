@@ -1451,7 +1451,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2090366172}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RandomPatrol, Assembly-CSharp
         m_MethodName: GoingToTavern
         m_Mode: 1
@@ -1494,7 +1494,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2090366172}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RandomPatrol, Assembly-CSharp
         m_MethodName: GoingToTavern
         m_Mode: 1
@@ -1594,7 +1594,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2090366172}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RandomPatrol, Assembly-CSharp
         m_MethodName: MovingPNJ
         m_Mode: 1
@@ -1637,7 +1637,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2090366172}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RandomPatrol, Assembly-CSharp
         m_MethodName: StopMoving
         m_Mode: 1
@@ -3098,14 +3098,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 329349046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8acf25f4ba896c74caa5e2135cf7bd85, type: 3}
+  m_Script: {fileID: 11500000, guid: ff1e68d853f5ef649898ab965210b9a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inJailConversation: {fileID: 1631524308}
   outOfJailConversation: {fileID: 2016502600}
   finalConversation: {fileID: 901916342}
   afterFightConversation: {fileID: 1391439727}
-  decisionManager: {fileID: 0}
 --- !u!1 &332081678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,12 +4307,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 381524237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39772db10620a8943813cd2dc78988b3, type: 3}
+  m_Script: {fileID: 11500000, guid: c44812d5849ee2741a91ecef018cd22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 468673413}
   casualConversation: {fileID: 251182094}
-  decisionManager: {fileID: 0}
 --- !u!1 &441502694
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,8 +5166,8 @@ Transform:
   - {fileID: 251182093}
   - {fileID: 1075110448}
   - {fileID: 1496766472}
-  - {fileID: 974152363}
   - {fileID: 838650509}
+  - {fileID: 974152363}
   - {fileID: 1072141268}
   - {fileID: 751574475}
   - {fileID: 1061407286}
@@ -6809,11 +6807,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 857506274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3de46d17a79f2794db810c38686b1ad2, type: 3}
+  m_Script: {fileID: 11500000, guid: fe86faeea5715a648b98f89d663f7e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   casualConversation: {fileID: 1496766473}
-  decisionManager: {fileID: 0}
 --- !u!1 &862570362
 GameObject:
   m_ObjectHideFlags: 0
@@ -7369,12 +7366,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 941876371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab18adf74ed295f48b7a763fb826291d, type: 3}
+  m_Script: {fileID: 11500000, guid: 04dee33bccf6e78439910ceaa2b899d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 287450287}
   casualConversation: {fileID: 305468967}
-  decisionManager: {fileID: 0}
 --- !u!1 &947265517
 GameObject:
   m_ObjectHideFlags: 0
@@ -7972,11 +7968,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1003251658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b261161026870ae4290c3b51838fd422, type: 3}
+  m_Script: {fileID: 11500000, guid: 58ed339b260cbfa47941188914a3b703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 244713723}
-  decisionManager: {fileID: 0}
 --- !u!1 &1003380014
 GameObject:
   m_ObjectHideFlags: 0
@@ -9940,27 +9935,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1140964970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc70b6e7b887b65419a7a7aa66ad2b50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patrolRadius: 10
-  patrolInterval: 5
-  taverneEntrance: {fileID: 451133429}
-  navMeshAgent: {fileID: 0}
-  patrolDestination: {x: 0, y: 0, z: 0}
-  timer: 0
-  decisionManager: {fileID: 0}
-  movingStatus: 0
---- !u!114 &1140964981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140964970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a762c101a9b41499e09fc9fe6133d3, type: 3}
+  m_Script: {fileID: 11500000, guid: c7539666c739136419f8d44ac899ab3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 256131682}
@@ -9974,7 +9949,19 @@ MonoBehaviour:
   endQuestConversation: {fileID: 127520476}
   inFrontOfSphynx: {fileID: 1764227016}
   awakeningPotion: {fileID: 1533862512}
-  decisionManager: {fileID: 0}
+--- !u!114 &1140964981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140964970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf40e44c40deb03498b70564c48d4c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fightConversation: {fileID: 1064727176}
 --- !u!114 &1140964982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9984,11 +9971,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1140964970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13edce161fce383488af9a882de4baac, type: 3}
+  m_Script: {fileID: 11500000, guid: 88c428f48927e3f4989f3304485da16a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fightConversation: {fileID: 1064727176}
-  decisionManager: {fileID: 0}
+  patrolRadius: 10
+  patrolInterval: 5
+  taverneEntrance: {fileID: 451133429}
 --- !u!1 &1161617991
 GameObject:
   m_ObjectHideFlags: 0
@@ -10308,11 +10296,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1182108679}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3de46d17a79f2794db810c38686b1ad2, type: 3}
+  m_Script: {fileID: 11500000, guid: fe86faeea5715a648b98f89d663f7e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   casualConversation: {fileID: 1496766473}
-  decisionManager: {fileID: 0}
 --- !u!1 &1185646451
 GameObject:
   m_ObjectHideFlags: 0
@@ -13684,12 +13671,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1624620367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab18adf74ed295f48b7a763fb826291d, type: 3}
+  m_Script: {fileID: 11500000, guid: 04dee33bccf6e78439910ceaa2b899d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 287450287}
   casualConversation: {fileID: 305468967}
-  decisionManager: {fileID: 0}
 --- !u!1 &1631524306
 GameObject:
   m_ObjectHideFlags: 0
@@ -14967,13 +14953,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1907089405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2265f6938d7ea4298034cd0d231d03, type: 3}
+  m_Script: {fileID: 11500000, guid: f5fe0684815c3524a8d9108ff0ee89ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 838650510}
   casualConversation: {fileID: 974152364}
   quest2Conversation: {fileID: 1185646453}
-  decisionManager: {fileID: 0}
 --- !u!1 &1930036323
 GameObject:
   m_ObjectHideFlags: 0
@@ -15141,7 +15126,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2090366172}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RandomPatrol, Assembly-CSharp
         m_MethodName: GoingToTavern
         m_Mode: 1
@@ -15249,7 +15234,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2090366172}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RandomPatrol, Assembly-CSharp
         m_MethodName: StopMoving
         m_Mode: 1
@@ -15323,7 +15308,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2090366172}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RandomPatrol, Assembly-CSharp
         m_MethodName: RandomlyMoving
         m_Mode: 1
@@ -15499,7 +15484,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2090366172}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RandomPatrol, Assembly-CSharp
         m_MethodName: GoingToTavern
         m_Mode: 1
@@ -16121,9 +16106,9 @@ GameObject:
   - component: {fileID: 2090366165}
   - component: {fileID: 2090366169}
   - component: {fileID: 2090366170}
-  - component: {fileID: 2090366172}
   - component: {fileID: 2090366173}
   - component: {fileID: 2090366174}
+  - component: {fileID: 2090366175}
   m_Layer: 0
   m_Name: Chevalier 1
   m_TagString: Untagged
@@ -16262,26 +16247,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000001, y: 2.0000002, z: 1.0000002}
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &2090366172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090366164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc70b6e7b887b65419a7a7aa66ad2b50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patrolRadius: 10
-  patrolInterval: 5
-  taverneEntrance: {fileID: 451133429}
-  navMeshAgent: {fileID: 0}
-  patrolDestination: {x: 0, y: 0, z: 0}
-  timer: 0
-  decisionManager: {fileID: 0}
-  movingStatus: 0
 --- !u!114 &2090366173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16306,7 +16271,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2090366164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a762c101a9b41499e09fc9fe6133d3, type: 3}
+  m_Script: {fileID: 11500000, guid: c7539666c739136419f8d44ac899ab3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 256131682}
@@ -16320,7 +16285,21 @@ MonoBehaviour:
   endQuestConversation: {fileID: 127520476}
   inFrontOfSphynx: {fileID: 1764227016}
   awakeningPotion: {fileID: 1533862512}
-  decisionManager: {fileID: 0}
+--- !u!114 &2090366175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090366164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c428f48927e3f4989f3304485da16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolRadius: 10
+  patrolInterval: 5
+  taverneEntrance: {fileID: 451133429}
 --- !u!1 &2100365139
 GameObject:
   m_ObjectHideFlags: 0
@@ -16499,17 +16478,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2100365139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f71a4050f997004d94341b2768418f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a53bd52fb4a2f549b6a4f99ba8edabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolRadius: 10
-  patrolInterval: 5
-  prison: {fileID: 1547643560}
-  navMeshAgent: {fileID: 0}
-  patrolDestination: {x: 0, y: 0, z: 0}
-  timer: 0
-  decisionManager: {fileID: 0}
-  movingStatus: 0
+  casualConversation: {fileID: 1075110449}
+  inJailConversation: {fileID: 134027072}
+  outOfJailConversation: {fileID: 1386380141}
 --- !u!114 &2100365150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16519,13 +16493,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2100365139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03662a5fca9864f47929e07ec5761999, type: 3}
+  m_Script: {fileID: 11500000, guid: 48bf07edb5481dc4e8d7633631cb22db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casualConversation: {fileID: 1075110449}
-  inJailConversation: {fileID: 134027072}
-  outofJailConversation: {fileID: 1386380141}
-  decisionManager: {fileID: 0}
+  patrolRadius: 10
+  patrolInterval: 5
+  prison: {fileID: 1547643560}
 --- !u!1 &2105368077
 GameObject:
   m_ObjectHideFlags: 0

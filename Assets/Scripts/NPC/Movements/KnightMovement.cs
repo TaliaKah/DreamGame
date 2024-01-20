@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class RandomPatrol : MonoBehaviour
+public class KnightMovement : MonoBehaviour
 {
     public float patrolRadius = 10f;  // Rayon de patrouille
     public float patrolInterval = 5f; // Intervalle entre les destinations de patrouille

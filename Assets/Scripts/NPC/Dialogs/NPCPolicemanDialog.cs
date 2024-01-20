@@ -7,7 +7,7 @@ public class NPCPolicemanDialog : MonoBehaviour
 {
     public NPCConversation casualConversation;
     public NPCConversation inJailConversation;
-    public NPCConversation outofJailConversation;
+    public NPCConversation outOfJailConversation;
 
     private DecisionManager decisionManager;
 
@@ -24,7 +24,7 @@ public class NPCPolicemanDialog : MonoBehaviour
             {
                 if (decisionManager.GetDecision(DecisionManager.Decision.AllerALaMontagneDuDesespoir))
                 {
-                    ConversationManager.Instance.StartConversation(outofJailConversation);
+                    ConversationManager.Instance.StartConversation(outOfJailConversation);
                 }
                 else
                 {
