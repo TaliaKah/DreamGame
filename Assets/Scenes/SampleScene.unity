@@ -840,6 +840,7 @@ GameObject:
   - component: {fileID: 62188774}
   - component: {fileID: 62188773}
   - component: {fileID: 62188775}
+  - component: {fileID: 62188776}
   m_Layer: 0
   m_Name: "Acc\xE8s au Ch\xE2teau 2"
   m_TagString: Untagged
@@ -928,6 +929,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &62188776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62188770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c44c0a65ff1e64d87a425debe4e4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &73669775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,6 +3610,7 @@ GameObject:
   - component: {fileID: 361692906}
   - component: {fileID: 361692905}
   - component: {fileID: 361692907}
+  - component: {fileID: 361692908}
   m_Layer: 0
   m_Name: "Acc\xE8s au Ch\xE2teau 1"
   m_TagString: Untagged
@@ -3685,6 +3699,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &361692908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361692902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c44c0a65ff1e64d87a425debe4e4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &376506993
 GameObject:
   m_ObjectHideFlags: 0
@@ -8285,7 +8311,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1085726769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3fc7685f257df7489ece1957dfde943, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bd0033ead62b31498bd697243e9d22e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1097974950
@@ -13090,6 +13116,7 @@ GameObject:
   - component: {fileID: 1682031531}
   - component: {fileID: 1682031530}
   - component: {fileID: 1682031529}
+  - component: {fileID: 1682031532}
   m_Layer: 0
   m_Name: "Acc\xE8s \xE0 la Montagne 1"
   m_TagString: Untagged
@@ -13183,6 +13210,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682031527}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1682031532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682031527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe6f24a76d5b9b41878ecccc95506cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1698126139
 GameObject:
   m_ObjectHideFlags: 0
@@ -14919,6 +14958,7 @@ GameObject:
   - component: {fileID: 1988446936}
   - component: {fileID: 1988446935}
   - component: {fileID: 1988446937}
+  - component: {fileID: 1988446938}
   m_Layer: 0
   m_Name: "Acc\xE8s \xE0 la Montagne 2"
   m_TagString: Untagged
@@ -15007,6 +15047,18 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1988446938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988446932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe6f24a76d5b9b41878ecccc95506cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2015099459
 GameObject:
   m_ObjectHideFlags: 0
