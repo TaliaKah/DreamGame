@@ -5,8 +5,9 @@ using DialogueEditor;
 
 public class NPCFairyDialog : MonoBehaviour
 {
-    public NPCConversation firstConversation;
+    public NPCConversation meetingConversation;
     public NPCConversation casualConversation;
+
     private DecisionManager decisionManager;
 
     void Start()
@@ -20,16 +21,18 @@ public class NPCFairyDialog : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (!decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion)
-                && !decisionManager.GetDecision(DecisionManager.Decision.RefuserDeRejoindreLaRebellion))
+                if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine))
                 {
-                    ConversationManager.Instance.StartConversation(firstConversation);
-                    }
+                    ConversationManager.Instance.StartConversation(meetingConversation);
+                }
                 else
                 {
-                    ConversationManager.Instance.StartConversation(casualConversation);
-                    ConversationManager.Instance.SetBool("AccepteRebellion", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion));
-                    ConversationManager.Instance.SetBool("RefusRebellion", decisionManager.GetDecision(DecisionManager.Decision.RefuserDeRejoindreLaRebellion));
+                if (!decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau))
+                    {
+                        ConversationManager.Instance.StartConversation(casualConversation);
+                        ConversationManager.Instance.SetBool("AccepteRebellion", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion));
+                        ConversationManager.Instance.SetBool("RefusRebellion", decisionManager.GetDecision(DecisionManager.Decision.RefuserDeRejoindreLaRebellion));
+                    }
                 }
             }
         }

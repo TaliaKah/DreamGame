@@ -5,8 +5,9 @@ using DialogueEditor;
 
 public class NPCTavernDialog : MonoBehaviour
 {
-    public NPCConversation firstConversation;
+    public NPCConversation meetingConversation;
     public NPCConversation casualConversation;
+
     private DecisionManager decisionManager;
 
     void Start()
@@ -20,13 +21,14 @@ public class NPCTavernDialog : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier))
+                if (decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier))
                 {
                     ConversationManager.Instance.StartConversation(casualConversation);
                 }
                 else
                 {
-                    ConversationManager.Instance.StartConversation(firstConversation);
+                    ConversationManager.Instance.StartConversation(meetingConversation);
+                    ConversationManager.Instance.SetBool("EtreChevalier", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeDevenirChevalier));
                 }
             }
         }

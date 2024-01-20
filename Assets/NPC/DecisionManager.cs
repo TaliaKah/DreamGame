@@ -31,6 +31,10 @@ public class DecisionManager : MonoBehaviour
         BoireLaPotionDEveil,
         AllerAuChateau,
         TrouverLaFleurDeVerite,
+        TaperMechant,
+        BattreMechant,
+        TaperFee,
+        BattreFee,
     }
 
     private Dictionary<Decision, bool> _decisions;
@@ -214,5 +218,17 @@ public class DecisionManager : MonoBehaviour
     {
         _decisions[Decision.AllerAuChateau] = true;
         Debug.LogWarning($"{Decision.AllerAuChateau} est {_decisions[Decision.AllerAuChateau]}");
+    }  
+    
+    public void TaperMechant()
+    {
+        _decisions[Decision.TaperMechant] = true;
+        Debug.LogWarning($"{Decision.TaperMechant} est {_decisions[Decision.TaperMechant]}");
+    }  
+
+    public void TaperFee()
+    {
+        _decisions[Decision.TaperFee] = true;
+        Debug.LogWarning($"{Decision.TaperFee} est {_decisions[Decision.TaperFee]}");
     }           
 }
