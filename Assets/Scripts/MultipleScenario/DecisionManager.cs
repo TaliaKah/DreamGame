@@ -68,6 +68,18 @@ public class DecisionManager : MonoBehaviour
         }
     }
 
+    public void SetDecisionToTrue(Decision decision)
+    {
+        if (_decisions.ContainsKey(decision))
+        {
+            _decisions[decision] = true;
+        }
+        else
+        {
+            UnityEngine.Debug.LogWarning($"La décision {decision} n'existe pas dans le dictionnaire.");
+        }
+    }
+
     public void SetDecision(Decision decision, bool value)
     {
         if (_decisions.ContainsKey(decision))
