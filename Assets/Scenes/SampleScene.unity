@@ -941,6 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c44c0a65ff1e64d87a425debe4e4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decisionManager: {fileID: 0}
 --- !u!1 &73669775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,6 +2790,7 @@ MonoBehaviour:
   outOfJailConversation: {fileID: 2016502600}
   finalConversation: {fileID: 901916342}
   afterFightConversation: {fileID: 1391439727}
+  decisionManager: {fileID: 0}
 --- !u!1 &332081678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3711,6 +3713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c44c0a65ff1e64d87a425debe4e4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decisionManager: {fileID: 0}
 --- !u!1 &376506993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,6 +3998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 468673413}
   casualConversation: {fileID: 251182094}
+  decisionManager: {fileID: 0}
 --- !u!1 &441502694
 GameObject:
   m_ObjectHideFlags: 0
@@ -5252,7 +5256,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2032246610}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: ResetPosition
         m_Mode: 1
@@ -6456,6 +6460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casualConversation: {fileID: 1496766473}
+  decisionManager: {fileID: 0}
 --- !u!1 &862570362
 GameObject:
   m_ObjectHideFlags: 0
@@ -7016,6 +7021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 287450287}
   casualConversation: {fileID: 305468967}
+  decisionManager: {fileID: 0}
 --- !u!1 &947265517
 GameObject:
   m_ObjectHideFlags: 0
@@ -7294,7 +7300,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: "PJ Cam\xE9ra"
   m_TagString: MainCamera
@@ -7376,21 +7381,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8103b01aafb2df54885d577e93b7a0ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 2032246608}
-  offset: {x: 0, y: 5, z: -5}
-  smoothSpeed: 0.125
 --- !u!1 &974152362
 GameObject:
   m_ObjectHideFlags: 0
@@ -7633,6 +7623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 244713723}
+  decisionManager: {fileID: 0}
 --- !u!1 &1003380014
 GameObject:
   m_ObjectHideFlags: 0
@@ -8314,6 +8305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd0033ead62b31498bd697243e9d22e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decisionManager: {fileID: 0}
 --- !u!1 &1097974950
 GameObject:
   m_ObjectHideFlags: 0
@@ -9082,7 +9074,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2032246610}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: GoToJail
         m_Mode: 1
@@ -9391,6 +9383,11 @@ MonoBehaviour:
   patrolRadius: 10
   patrolInterval: 5
   taverneEntrance: {fileID: 451133429}
+  navMeshAgent: {fileID: 0}
+  patrolDestination: {x: 0, y: 0, z: 0}
+  timer: 0
+  decisionManager: {fileID: 0}
+  movingStatus: 0
 --- !u!114 &1140964981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9414,6 +9411,7 @@ MonoBehaviour:
   endQuestConversation: {fileID: 127520476}
   inFrontOfSphynx: {fileID: 1764227016}
   awakeningPotion: {fileID: 1533862512}
+  decisionManager: {fileID: 0}
 --- !u!114 &1140964982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9427,6 +9425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightConversation: {fileID: 1064727176}
+  decisionManager: {fileID: 0}
 --- !u!1 &1161617991
 GameObject:
   m_ObjectHideFlags: 0
@@ -9750,6 +9749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casualConversation: {fileID: 1496766473}
+  decisionManager: {fileID: 0}
 --- !u!1 &1185646451
 GameObject:
   m_ObjectHideFlags: 0
@@ -13021,6 +13021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meetingConversation: {fileID: 287450287}
   casualConversation: {fileID: 305468967}
+  decisionManager: {fileID: 0}
 --- !u!1 &1631524306
 GameObject:
   m_ObjectHideFlags: 0
@@ -13222,6 +13223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe6f24a76d5b9b41878ecccc95506cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decisionManager: {fileID: 0}
 --- !u!1 &1698126139
 GameObject:
   m_ObjectHideFlags: 0
@@ -14303,6 +14305,7 @@ MonoBehaviour:
   meetingConversation: {fileID: 838650510}
   casualConversation: {fileID: 974152364}
   quest2Conversation: {fileID: 1185646453}
+  decisionManager: {fileID: 0}
 --- !u!1 &1930036323
 GameObject:
   m_ObjectHideFlags: 0
@@ -15059,6 +15062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe6f24a76d5b9b41878ecccc95506cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decisionManager: {fileID: 0}
 --- !u!1 &2015099459
 GameObject:
   m_ObjectHideFlags: 0
@@ -15204,7 +15208,6 @@ GameObject:
   - component: {fileID: 2032246607}
   - component: {fileID: 2032246606}
   - component: {fileID: 2032246609}
-  - component: {fileID: 2032246610}
   - component: {fileID: 2032246611}
   - component: {fileID: 2032246612}
   m_Layer: 0
@@ -15301,20 +15304,6 @@ NavMeshAgent:
   m_BaseOffset: 1.0000001
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2032246610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032246604}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e3d67c95604f74f828db4a1049b36d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corridor: {fileID: 1698126139}
-  prison: {fileID: 451133429}
 --- !u!114 &2032246611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15620,6 +15609,11 @@ MonoBehaviour:
   patrolRadius: 10
   patrolInterval: 5
   taverneEntrance: {fileID: 451133429}
+  navMeshAgent: {fileID: 0}
+  patrolDestination: {x: 0, y: 0, z: 0}
+  timer: 0
+  decisionManager: {fileID: 0}
+  movingStatus: 0
 --- !u!114 &2090366173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15658,6 +15652,7 @@ MonoBehaviour:
   endQuestConversation: {fileID: 127520476}
   inFrontOfSphynx: {fileID: 1764227016}
   awakeningPotion: {fileID: 1533862512}
+  decisionManager: {fileID: 0}
 --- !u!1 &2100365139
 GameObject:
   m_ObjectHideFlags: 0
@@ -15842,6 +15837,11 @@ MonoBehaviour:
   patrolRadius: 10
   patrolInterval: 5
   prison: {fileID: 1547643560}
+  navMeshAgent: {fileID: 0}
+  patrolDestination: {x: 0, y: 0, z: 0}
+  timer: 0
+  decisionManager: {fileID: 0}
+  movingStatus: 0
 --- !u!114 &2100365150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15857,6 +15857,7 @@ MonoBehaviour:
   casualConversation: {fileID: 1075110449}
   inJailConversation: {fileID: 134027072}
   outofJailConversation: {fileID: 1386380141}
+  decisionManager: {fileID: 0}
 --- !u!1 &2105368077
 GameObject:
   m_ObjectHideFlags: 0
@@ -16446,7 +16447,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2032246610}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: ResetPosition
         m_Mode: 1
