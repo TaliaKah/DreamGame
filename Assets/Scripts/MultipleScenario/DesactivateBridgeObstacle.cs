@@ -14,7 +14,7 @@ public class DesactivateBrigdeObstacle : MonoBehaviour
     void Update()
     {
         if (decisionManager != null &&
-            (decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau)) || decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison))
+            ((decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau)) || decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison)))
         {
             gameObject.SetActive(false);
             Debug.Log("Obstacle des ponts désactivé !");
