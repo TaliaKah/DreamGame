@@ -18,7 +18,7 @@ public class NPCWitchDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        base.MouseOver(() =>
+        AddDialogCallback(() =>
         {
             if (decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete2))
             {

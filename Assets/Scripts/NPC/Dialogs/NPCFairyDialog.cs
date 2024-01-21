@@ -17,24 +17,21 @@ public class NPCFairyDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        if (decisionManager != null)
+        AddDialogCallback(() =>
         {
-            base.MouseOver(() =>
+            if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine))
             {
-                if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine))
+                ConversationManager.Instance.StartConversation(meetingConversation);
+            }
+            else
+            {
+                if (!decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau))
                 {
-                    ConversationManager.Instance.StartConversation(meetingConversation);
+                    ConversationManager.Instance.StartConversation(casualConversation);
+                    ConversationManager.Instance.SetBool("AccepteRebellion", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion));
+                    ConversationManager.Instance.SetBool("RefusRebellion", decisionManager.GetDecision(DecisionManager.Decision.RefuserDeRejoindreLaRebellion));
                 }
-                else
-                {
-                    if (!decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau))
-                    {
-                        ConversationManager.Instance.StartConversation(casualConversation);
-                        ConversationManager.Instance.SetBool("AccepteRebellion", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion));
-                        ConversationManager.Instance.SetBool("RefusRebellion", decisionManager.GetDecision(DecisionManager.Decision.RefuserDeRejoindreLaRebellion));
-                    }
-                }
-            });
-        }
+            }
+        });
     }
 }

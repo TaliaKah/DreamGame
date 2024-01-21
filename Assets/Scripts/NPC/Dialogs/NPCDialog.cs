@@ -44,7 +44,7 @@ public class NPCDialog : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 
-    protected virtual void MouseOver(Action callbackScript)
+    protected void AddDialogCallback(Action callbackScript)
     {
         // Cursor visible on hover, to show that the NPC is interactable.
         Cursor.visible = true;

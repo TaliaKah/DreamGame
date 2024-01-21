@@ -16,7 +16,7 @@ public class NPCGoblinDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        base.MouseOver(() =>
+        AddDialogCallback(() =>
         {
             ConversationManager.Instance.StartConversation(casualConversation);
             ConversationManager.Instance.SetBool("Avoir autorisation", decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau));

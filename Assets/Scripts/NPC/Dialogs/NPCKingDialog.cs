@@ -19,7 +19,7 @@ public class NPCKingDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        base.MouseOver(() =>
+        AddDialogCallback(() =>
         {
             if (decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison))
             {

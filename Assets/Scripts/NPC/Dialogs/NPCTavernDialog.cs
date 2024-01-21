@@ -17,7 +17,7 @@ public class NPCTavernDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        base.MouseOver(() =>
+        AddDialogCallback(() =>
         {
             if (decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier))
             {

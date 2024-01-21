@@ -16,7 +16,7 @@ public class NPCSphynxDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        base.MouseOver(() =>
+        AddDialogCallback(() =>
         {
             if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerSphynx))
             {
