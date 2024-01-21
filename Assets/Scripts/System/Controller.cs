@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
@@ -124,10 +126,12 @@ public class Controller : MonoBehaviour
                 PauseTheGame();
                 SceneLoaderAsync.Instance.LoadScene("Game Menu", LoadSceneMode.Additive);
             }
-        }
 
-        if (Input.GetButtonDown("Run")) {
-            Debug.Log("");
+            Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
+            Vector2 screenCenterFloored = new Vector2((float) Math.Floor(screenCenter.x), (float) Math.Floor(Screen.height / 2f));
+            if (new Vector2(Input.mousePosition.x, Input.mousePosition.y) != screenCenterFloored) {
+                Mouse.current.WarpCursorPosition(screenCenter);
+            }
         }
     }
 }
