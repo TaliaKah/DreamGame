@@ -5,15 +5,23 @@ public class GameManager : MonoBehaviour
 {
     public NPCConversation startConversation;
 
+    private DecisionManager decisionManager;
+
     void Start()
     {
-        // Assurez-vous que cet objet persiste entre les scènes
+        decisionManager = FindObjectOfType<DecisionManager>();
         DontDestroyOnLoad(gameObject);
-
-        // Lancez la conversation au moment approprié
         if (ConversationManager.Instance != null)
         {
             ConversationManager.Instance.StartConversation(startConversation);
+        }
+    }
+
+    private void Update()
+    {
+        if (decisionManager.GetDecision(DecisionManager.Decision.SeReveiller))
+        {
+            SceneLoaderAsync.Instance.LoadScene("Credits");
         }
     }
 }

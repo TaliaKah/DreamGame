@@ -35,7 +35,8 @@ public class DecisionManager : MonoBehaviour
         BattreMechant,
         TaperFee,
         BattreFee,
-        TrouverPoudreDEscampette
+        TrouverPoudreDEscampette,
+        SeReveiller
     }
 
     private Dictionary<Decision, bool> _decisions;
@@ -243,5 +244,11 @@ public class DecisionManager : MonoBehaviour
     {
         _decisions[Decision.TaperFee] = true;
         Debug.LogWarning($"{Decision.TaperFee} est {_decisions[Decision.TaperFee]}");
-    }           
+    }    
+
+    public void SeReveiller()
+    {
+        _decisions[Decision.SeReveiller] = true;
+        Debug.LogWarning($"{Decision.SeReveiller} est {_decisions[Decision.SeReveiller]}");
+    }         
 }
