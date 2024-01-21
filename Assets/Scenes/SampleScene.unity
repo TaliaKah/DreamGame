@@ -1676,6 +1676,7 @@ GameObject:
   - component: {fileID: 199552766}
   - component: {fileID: 199552765}
   - component: {fileID: 199552764}
+  - component: {fileID: 199552767}
   m_Layer: 0
   m_Name: Fleur de lys
   m_TagString: Untagged
@@ -1769,6 +1770,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199552762}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &199552767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199552762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decision: 9
 --- !u!1 &207960807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,6 +2500,7 @@ GameObject:
   - component: {fileID: 304166215}
   - component: {fileID: 304166214}
   - component: {fileID: 304166213}
+  - component: {fileID: 304166216}
   m_Layer: 0
   m_Name: "Potion d'\xE9veil"
   m_TagString: Untagged
@@ -2579,6 +2594,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304166211}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &304166216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304166211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decision: 21
 --- !u!1 &305468965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2933,7 +2961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 0
+  decision: 24
 --- !u!1 &329349046
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,6 +3142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1e68d853f5ef649898ab965210b9a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   inJailConversation: {fileID: 1631524308}
   outOfJailConversation: {fileID: 2016502600}
   finalConversation: {fileID: 901916342}
@@ -4322,6 +4351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44812d5849ee2741a91ecef018cd22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   meetingConversation: {fileID: 468673413}
   casualConversation: {fileID: 251182094}
 --- !u!1 &441502694
@@ -5135,125 +5165,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603066584}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &610088403
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 610088404}
-  - component: {fileID: 610088408}
-  - component: {fileID: 610088407}
-  - component: {fileID: 610088406}
-  - component: {fileID: 610088405}
-  m_Layer: 0
-  m_Name: TestObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &610088404
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610088403}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -433.88, y: -1.42, z: -180.41}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 688699546}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &610088405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610088403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  decision: 0
---- !u!65 &610088406
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610088403}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &610088407
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610088403}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &610088408
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610088403}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &619467724
 GameObject:
   m_ObjectHideFlags: 0
@@ -6016,7 +5927,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 610088404}
   - {fileID: 316348817}
   - {fileID: 1055171465}
   - {fileID: 304166212}
@@ -6942,6 +6852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe86faeea5715a648b98f89d663f7e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   casualConversation: {fileID: 1496766473}
 --- !u!1 &862570362
 GameObject:
@@ -7501,6 +7412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04dee33bccf6e78439910ceaa2b899d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   meetingConversation: {fileID: 287450287}
   casualConversation: {fileID: 305468967}
 --- !u!1 &947265517
@@ -8103,6 +8015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ed339b260cbfa47941188914a3b703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   meetingConversation: {fileID: 244713723}
 --- !u!1 &1003380014
 GameObject:
@@ -8337,6 +8250,7 @@ GameObject:
   - component: {fileID: 1055171468}
   - component: {fileID: 1055171467}
   - component: {fileID: 1055171466}
+  - component: {fileID: 1055171469}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -8430,6 +8344,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055171464}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1055171469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055171464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decision: 20
 --- !u!1 &1057123698
 GameObject:
   m_ObjectHideFlags: 0
@@ -8442,6 +8369,7 @@ GameObject:
   - component: {fileID: 1057123702}
   - component: {fileID: 1057123701}
   - component: {fileID: 1057123700}
+  - component: {fileID: 1057123703}
   m_Layer: 0
   m_Name: Lettre
   m_TagString: Untagged
@@ -8535,6 +8463,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057123698}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1057123703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057123698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decision: 15
 --- !u!1 &1061407284
 GameObject:
   m_ObjectHideFlags: 0
@@ -10069,6 +10010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7539666c739136419f8d44ac899ab3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   meetingConversation: {fileID: 256131682}
   goingToTavernConversation: {fileID: 1003380016}
   Quest1Conversation: {fileID: 1061407285}
@@ -10430,6 +10372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe86faeea5715a648b98f89d663f7e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   casualConversation: {fileID: 1496766473}
 --- !u!1 &1185646451
 GameObject:
@@ -10525,6 +10468,7 @@ GameObject:
   - component: {fileID: 1197492083}
   - component: {fileID: 1197492082}
   - component: {fileID: 1197492081}
+  - component: {fileID: 1197492084}
   m_Layer: 0
   m_Name: "Ep\xE9e"
   m_TagString: Untagged
@@ -10618,6 +10562,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197492079}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1197492084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197492079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decision: 12
 --- !u!1 &1211151482
 GameObject:
   m_ObjectHideFlags: 0
@@ -13850,6 +13807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04dee33bccf6e78439910ceaa2b899d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   meetingConversation: {fileID: 287450287}
   casualConversation: {fileID: 305468967}
 --- !u!1 &1631524306
@@ -15131,6 +15089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5fe0684815c3524a8d9108ff0ee89ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   meetingConversation: {fileID: 838650510}
   casualConversation: {fileID: 974152364}
   quest2Conversation: {fileID: 1185646453}
@@ -16449,6 +16408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7539666c739136419f8d44ac899ab3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
   meetingConversation: {fileID: 256131682}
   goingToTavernConversation: {fileID: 1003380016}
   Quest1Conversation: {fileID: 1072141267}
@@ -16949,6 +16909,7 @@ GameObject:
   - component: {fileID: 2112163394}
   - component: {fileID: 2112163393}
   - component: {fileID: 2112163392}
+  - component: {fileID: 2112163395}
   m_Layer: 0
   m_Name: Poudre d'escampette
   m_TagString: Untagged
@@ -17042,6 +17003,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112163390}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2112163395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112163390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decision: 29
 --- !u!1 &2119017940
 GameObject:
   m_ObjectHideFlags: 0

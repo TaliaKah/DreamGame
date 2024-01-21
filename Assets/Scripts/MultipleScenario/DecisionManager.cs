@@ -35,6 +35,7 @@ public class DecisionManager : MonoBehaviour
         BattreMechant,
         TaperFee,
         BattreFee,
+        TrouverPoudreDEscampette
     }
 
     private Dictionary<Decision, bool> _decisions;
