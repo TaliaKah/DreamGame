@@ -27,8 +27,8 @@ public class Controller : MonoBehaviour
     public float RunningSpeed = 7.5f;
 
     float m_VerticalAngle, m_HorizontalAngle;
-    bool m_IsPaused;
-    bool m_IsInConversation;
+    bool m_IsPaused = false;
+    public bool m_IsInConversation = false;
 
     void Awake()
     {
@@ -41,7 +41,7 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
-        PauseFlags(false);
+        SetPauseFlags();
         m_VerticalAngle = 0.0f;
         m_HorizontalAngle = transform.localEulerAngles.y;
 
@@ -60,27 +60,34 @@ public class Controller : MonoBehaviour
         return !m_IsPaused && !m_IsInConversation;
     }
 
-    public void PauseFlags(bool display)
+    public void SetPauseFlags()
     {
-        m_IsPaused = display;
+        bool display = m_IsPaused | m_IsInConversation;
         Cursor.lockState = display ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = display;
-        m_IsInConversation = display;
+    }
+
+    public void SetConversationMode(bool value) {
+        m_IsInConversation = value;
+        SetPauseFlags();
     }
 
     public void PauseTheGame()
     {
-        PauseFlags(true);
+        m_IsPaused = true;
+        SetPauseFlags();
     }
 
     public void TogglePause()
     {
-        PauseFlags(!m_IsPaused);
+        m_IsPaused = !m_IsPaused;
+        SetPauseFlags();
     }
 
     public void ResumeTheGame()
     {
-        PauseFlags(false);
+        m_IsPaused = false;
+        SetPauseFlags();
     }
 
     void Update()

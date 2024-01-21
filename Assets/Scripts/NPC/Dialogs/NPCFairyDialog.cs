@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
 
-public class NPCFairyDialog : MonoBehaviour
+public class NPCFairyDialog : NPCDialog
 {
     public NPCConversation meetingConversation;
     public NPCConversation casualConversation;
@@ -15,10 +15,11 @@ public class NPCFairyDialog : MonoBehaviour
         decisionManager = FindObjectOfType<DecisionManager>();
     }
 
-    private void OnMouseOver()
+    protected override void OnMouseOver()
     {
         if(decisionManager != null)
         {
+            base.OnMouseOver();
             if (Input.GetMouseButtonDown(0))
             {
                 if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine))

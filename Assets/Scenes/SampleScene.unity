@@ -16102,7 +16102,8 @@ MonoBehaviour:
   CameraPosition: {fileID: 2032246608}
   MouseSensitivity: 50
   PlayerSpeed: 5
-  RunningSpeed: 7
+  RunningSpeed: 40
+  m_IsInConversation: 0
 --- !u!143 &2032246612
 CharacterController:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
 
-public class NPCTavernDialog : MonoBehaviour
+public class NPCTavernDialog : NPCDialog
 {
     public NPCConversation meetingConversation;
     public NPCConversation casualConversation;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
 
-public class NPCKingDialog : MonoBehaviour
+public class NPCKingDialog : NPCDialog
 {
     public NPCConversation inJailConversation;
     public NPCConversation outOfJailConversation;

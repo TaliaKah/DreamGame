@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
 
-public class NPCSphynxDialog : MonoBehaviour
+public class NPCSphynxDialog : NPCDialog
 {
     public NPCConversation meetingConversation;
 
