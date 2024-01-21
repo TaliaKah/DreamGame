@@ -14,6 +14,8 @@ public class PickObject : MonoBehaviour
 
     private void OnMouseOver()
     {
+        Cursor.visible = true;
+        
         if (Input.GetMouseButtonDown(0))
         {
             decisionManager.SetDecisionToTrue(decision);
