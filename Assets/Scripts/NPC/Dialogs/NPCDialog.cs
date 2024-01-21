@@ -1,14 +1,40 @@
 using System;
+using System.IO;
 using UnityEngine;
 using DialogueEditor;
 
 public class NPCDialog : MonoBehaviour
 {
-    public Texture2D cursorTexture;
+    static Texture2D cursorTexture = null;
+    static readonly object lockObject = new();
     private CursorMode cursorMode = CursorMode.Auto;
-    private Vector2 hotSpot = Vector2.zero;
+    private Vector2 hotSpot = new Vector2(32, 32);
 
-    protected void OnMouseEnter() {
+    private void Awake()
+    {
+        lock (lockObject)
+        {
+            if (cursorTexture is null)
+            {
+                byte[] fileData;
+                string filePath = "Assets/Icons/speech-bubble.png";
+
+                if (File.Exists(filePath))
+                {
+                    fileData = File.ReadAllBytes(filePath);
+                    cursorTexture = new Texture2D(64, 64);
+                    cursorTexture.LoadImage(fileData); //..this will auto-resize the texture dimensions.
+                }
+                else
+                {
+                    Debug.Log(filePath + " does not exist");
+                }
+            }
+        }
+    }
+
+    protected void OnMouseEnter()
+    {
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
 
@@ -18,11 +44,13 @@ public class NPCDialog : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 
-    protected virtual void MouseOver(Action callbackScript) {
+    protected virtual void MouseOver(Action callbackScript)
+    {
         // Cursor visible on hover, to show that the NPC is interactable.
         Cursor.visible = true;
 
-        if (!Controller.Instance.IsInConversation && Input.GetMouseButtonDown(0)) {
+        if (!Controller.Instance.IsInConversation && Input.GetMouseButtonDown(0))
+        {
             callbackScript();
         }
     }
