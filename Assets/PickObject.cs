@@ -16,7 +16,7 @@ public class PickObject : MonoBehaviour
     {
         Cursor.visible = true;
         
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !Controller.Instance.IsInConversation)
         {
             decisionManager.SetDecisionToTrue(decision);
             gameObject.SetActive(false);

@@ -19,14 +19,14 @@ public class NPCKingDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        base.MouseOver(() =>
         {
-            if(decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison))
+            if (decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison))
             {
-                if(decisionManager.GetDecision(DecisionManager.Decision.AllerALaMontagneDuDesespoir))
+                if (decisionManager.GetDecision(DecisionManager.Decision.AllerALaMontagneDuDesespoir))
                 {
                     ConversationManager.Instance.StartConversation(inJailConversation);
-                    }
+                }
                 else
                 {
                     ConversationManager.Instance.StartConversation(outOfJailConversation);
@@ -34,7 +34,8 @@ public class NPCKingDialog : NPCDialog
             }
             else
             {
-                if (!decisionManager.GetDecision(DecisionManager.Decision.BattreMechant)){
+                if (!decisionManager.GetDecision(DecisionManager.Decision.BattreMechant))
+                {
                     ConversationManager.Instance.StartConversation(finalConversation);
                     ConversationManager.Instance.SetBool("Avoir fleur de vérité", decisionManager.GetDecision(DecisionManager.Decision.TrouverLaFleurDeVerite));
                     ConversationManager.Instance.SetBool("Etre dans la rébellion", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion));
@@ -46,6 +47,6 @@ public class NPCKingDialog : NPCDialog
                     ConversationManager.Instance.StartConversation(afterFightConversation);
                 }
             }
-        }
+        });
     }
 }

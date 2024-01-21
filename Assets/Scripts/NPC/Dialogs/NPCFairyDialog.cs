@@ -15,12 +15,11 @@ public class NPCFairyDialog : NPCDialog
         decisionManager = FindObjectOfType<DecisionManager>();
     }
 
-    protected override void OnMouseOver()
+    private void OnMouseOver()
     {
-        if(decisionManager != null)
+        if (decisionManager != null)
         {
-            base.OnMouseOver();
-            if (Input.GetMouseButtonDown(0))
+            base.MouseOver(() =>
             {
                 if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine))
                 {
@@ -28,14 +27,14 @@ public class NPCFairyDialog : NPCDialog
                 }
                 else
                 {
-                if (!decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau))
+                    if (!decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau))
                     {
                         ConversationManager.Instance.StartConversation(casualConversation);
                         ConversationManager.Instance.SetBool("AccepteRebellion", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion));
                         ConversationManager.Instance.SetBool("RefusRebellion", decisionManager.GetDecision(DecisionManager.Decision.RefuserDeRejoindreLaRebellion));
                     }
                 }
-            }
+            });
         }
     }
 }

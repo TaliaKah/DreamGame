@@ -16,11 +16,11 @@ public class NPCGoblinDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        base.MouseOver(() =>
         {
             ConversationManager.Instance.StartConversation(casualConversation);
             ConversationManager.Instance.SetBool("Avoir autorisation", decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau));
-        }
+        });
     }
-    
+
 }

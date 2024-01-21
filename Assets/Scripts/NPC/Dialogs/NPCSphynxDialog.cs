@@ -16,14 +16,14 @@ public class NPCSphynxDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        base.MouseOver(() =>
         {
-            if(!decisionManager.GetDecision(DecisionManager.Decision.RencontrerSphynx))
+            if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerSphynx))
             {
                 ConversationManager.Instance.StartConversation(meetingConversation);
                 ConversationManager.Instance.SetBool("Recherche potion éveil", decisionManager.GetDecision(DecisionManager.Decision.RechercherLaPotionDEveil));
                 ConversationManager.Instance.SetBool("Recherche cube", decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison));
             }
-        }
+        });
     }
 }

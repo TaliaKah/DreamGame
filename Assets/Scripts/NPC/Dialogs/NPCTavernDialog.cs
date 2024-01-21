@@ -17,20 +17,17 @@ public class NPCTavernDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        if(decisionManager != null)
+        base.MouseOver(() =>
         {
-            if (Input.GetMouseButtonDown(0))
+            if (decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier))
             {
-                if (decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier))
-                {
-                    ConversationManager.Instance.StartConversation(casualConversation);
-                }
-                else
-                {
-                    ConversationManager.Instance.StartConversation(meetingConversation);
-                    ConversationManager.Instance.SetBool("EtreChevalier", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeDevenirChevalier));
-                }
+                ConversationManager.Instance.StartConversation(casualConversation);
             }
-        }
+            else
+            {
+                ConversationManager.Instance.StartConversation(meetingConversation);
+                ConversationManager.Instance.SetBool("EtreChevalier", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeDevenirChevalier));
+            }
+        });
     }
 }

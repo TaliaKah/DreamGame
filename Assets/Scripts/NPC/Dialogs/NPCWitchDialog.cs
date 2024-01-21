@@ -18,16 +18,16 @@ public class NPCWitchDialog : NPCDialog
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        base.MouseOver(() =>
         {
-            if(decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete2))
+            if (decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete2))
             {
                 ConversationManager.Instance.StartConversation(quest2Conversation);
                 ConversationManager.Instance.SetBool("Avoir rencontré sorcière", decisionManager.GetDecision(DecisionManager.Decision.RencontrerSorciere));
             }
             else
             {
-                if(decisionManager.GetDecision(DecisionManager.Decision.RencontrerSorciere))
+                if (decisionManager.GetDecision(DecisionManager.Decision.RencontrerSorciere))
                 {
                     ConversationManager.Instance.StartConversation(meetingConversation);
                 }
@@ -36,6 +36,6 @@ public class NPCWitchDialog : NPCDialog
                     ConversationManager.Instance.StartConversation(casualConversation);
                 }
             }
-        }
+        });
     }
 }

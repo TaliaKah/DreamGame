@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using DialogueEditor;
 
@@ -19,7 +18,12 @@ public class NPCDialog : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 
-    protected virtual void OnMouseOver() {
+    protected virtual void MouseOver(Action callbackScript) {
+        // Cursor visible on hover, to show that the NPC is interactable.
         Cursor.visible = true;
+
+        if (!Controller.Instance.IsInConversation && Input.GetMouseButtonDown(0)) {
+            callbackScript();
+        }
     }
 }

@@ -28,7 +28,9 @@ public class Controller : MonoBehaviour
 
     float m_VerticalAngle, m_HorizontalAngle;
     bool m_IsPaused = false;
-    public bool m_IsInConversation = false;
+    bool m_IsInConversation = false;
+    public bool IsInConversation => m_IsInConversation;
+
 
     void Awake()
     {

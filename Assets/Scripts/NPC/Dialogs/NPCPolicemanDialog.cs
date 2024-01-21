@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;
 
-public class NPCPolicemanDialog : MonoBehaviour
+public class NPCPolicemanDialog : NPCDialog
 {
     public NPCConversation casualConversation;
     public NPCConversation inJailConversation;
@@ -18,7 +18,7 @@ public class NPCPolicemanDialog : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        base.MouseOver(() =>
         {
             if (decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison))
             {
@@ -35,7 +35,7 @@ public class NPCPolicemanDialog : MonoBehaviour
             {
                 ConversationManager.Instance.StartConversation(casualConversation);
             }
-        }
+        });
     }
-    
+
 }
