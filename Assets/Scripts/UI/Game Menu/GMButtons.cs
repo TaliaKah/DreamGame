@@ -13,8 +13,19 @@ public class GMButtons : MonoBehaviour
     {
         controller = Controller.Instance;
         loader = SceneLoaderAsync.Instance;
+        StartCoroutine(PrintCurrentScene());
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Game Menu"));
     }
-    
+
+    IEnumerator PrintCurrentScene()
+    {
+        while (true)
+        {
+            Debug.Log($"Current scene: {SceneManager.GetActiveScene().name}");
+            yield return new WaitForSeconds(1.0f);
+        }
+    }
+
     void Update()
     {
         if (Input.GetButtonDown("Cancel"))
@@ -24,17 +35,27 @@ public class GMButtons : MonoBehaviour
         }
     }
 
+    private bool Active()
+    {
+        return SceneManager.GetActiveScene().name == "Game Menu";
+    }
+
     public void Resume()
     {
         // TODO
-        SceneManager.UnloadSceneAsync("Game Menu");
-        controller.ResumeTheGame();
+        if (Active())
+        {
+            SceneManager.UnloadSceneAsync("Game Menu");
+            controller.ResumeTheGame();
+        }
     }
 
     public void ShowOptions()
     {
         // TODO
-        SceneManager.LoadScene("Options", LoadSceneMode.Additive);
+        if (Active()) {
+            SceneManager.LoadScene("Options", LoadSceneMode.Additive);
+        }
     }
 
     public void Save()
@@ -50,6 +71,7 @@ public class GMButtons : MonoBehaviour
     public void MainMenu()
     {
         // TODO
-        loader.LoadScene("Main Menu");
+        if (Active())
+            loader.LoadScene("Main Menu");
     }
 }
