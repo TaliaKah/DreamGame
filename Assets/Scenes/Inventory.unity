@@ -736,7 +736,8 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 468776878070353271, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
@@ -1360,6 +1361,10 @@ PrefabInstance:
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 1738747962}
+    - target: {fileID: 4275056794475518185, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel
