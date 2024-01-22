@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]private GameObject slotHolder;
     [SerializeField]private ItemClass itemToAdd;
     [SerializeField]private ItemClass itemToRemove;
+    [SerializeField]private InventoryDescription itemDescription;
     public List<ItemClass> Inventory = new List<ItemClass>();
     private GameObject[] slots;
     private string saveFilePath;
@@ -23,10 +24,11 @@ public class InventoryManager : MonoBehaviour
         }
         
         
-        
         RefreshUI();
-        Add(itemToAdd);
-        if (itemToRemove != null){
+        itemDescription.RefreshDescription();
+        if (itemToRemove != null && itemToAdd != null)
+        {
+            Add(itemToAdd);
             Remove(itemToRemove);
             RefreshUI();
         }
@@ -53,13 +55,19 @@ public class InventoryManager : MonoBehaviour
 
     public void Add(ItemClass item)
     {
-        Inventory.Add(item);
-        SaveInventory();
+        if(item != null)
+        {
+            Inventory.Add(item);
+            SaveInventory();
+        }
     }
     public void Remove(ItemClass item)
     {
-        Inventory.Remove(item);
-        SaveInventory();
+        if(item != null)
+        {
+            Inventory.Remove(item);
+            SaveInventory();
+        }
     }
 
     private void Awake()
@@ -70,19 +78,59 @@ public class InventoryManager : MonoBehaviour
 
     public void SaveInventory()
     {
-        string json = JsonUtility.ToJson(new Serialization<ItemClass>(Inventory));
-        File.WriteAllText(saveFilePath, json);
-        Debug.Log("Saving inventory to: " + saveFilePath);
+        try
+        {
+            var itemsToSave = Inventory.FindAll(item => item != null); // Filter out null items
+            string json = JsonUtility.ToJson(new Serialization<ItemClass>(itemsToSave));
+            File.WriteAllText(saveFilePath, json);
+            Debug.Log("Saving inventory to: " + saveFilePath);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Error saving inventory: " + ex.Message);
+        }
     }
 
     public void LoadInventory()
     {
-        if (File.Exists(saveFilePath)) {
-            string json = File.ReadAllText(saveFilePath);
-            Serialization<ItemClass> data = JsonUtility.FromJson<Serialization<ItemClass>>(json);
-            Inventory = data.ToList();
-        } else {
-            Debug.LogWarning("Inventory file not found");
+        try
+        {
+            if (File.Exists(saveFilePath))
+            {
+                string json = File.ReadAllText(saveFilePath);
+                Serialization<ItemClass> data = JsonUtility.FromJson<Serialization<ItemClass>>(json);
+                Inventory = data.ToList().FindAll(item => item != null); // Filter out null items after load
+                Debug.Log("Loaded inventory from: " + saveFilePath);
+            }
+            else
+            {
+                Debug.LogWarning("Inventory file not found at: " + saveFilePath);
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Error loading inventory: " + ex.Message);
+        }
+    }
+
+    public void OnItemClicked(int itemIndex)
+    {
+        if (itemIndex < 0 || itemIndex >= Inventory.Count) return;
+
+        ItemClass item = Inventory[itemIndex];
+        if (item != null)
+        {
+            // Update the description panel
+            itemDescription.SetDescription(item);
+        }
+    }
+
+    public void SetupInventorySlots()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            int index = i;  // Local copy for the closure below
+            slots[i].GetComponent<SlotClick>().slotIndex = index;
         }
     }
 
@@ -96,5 +144,4 @@ public class InventoryManager : MonoBehaviour
             this.target = target;
         }
     }
-
 }
