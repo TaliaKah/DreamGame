@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class SlotClick : MonoBehaviour
+public class SlotClick : MonoBehaviour, IPointerClickHandler
 {
     public int slotIndex;
     public InventoryManager inventoryManager;
-    public void OnMouseDown()
+    public void OnPointerClick(PointerEventData eventData)
     {
         if (inventoryManager != null)
         {

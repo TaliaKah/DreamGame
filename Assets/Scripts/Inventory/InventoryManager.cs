@@ -33,6 +33,7 @@ public class InventoryManager : MonoBehaviour
             RefreshUI();
         }
         
+        SetupInventorySlots();
     }
 
     public void RefreshUI()

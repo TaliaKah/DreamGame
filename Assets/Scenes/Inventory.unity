@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (12)
@@ -488,6 +492,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (4)
@@ -594,6 +602,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (10)
@@ -828,6 +840,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (7)
@@ -1028,6 +1044,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (13)
@@ -1134,6 +1154,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (9)
@@ -1332,6 +1356,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel
@@ -1529,6 +1557,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (14)
@@ -1738,6 +1770,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (11)
@@ -1844,6 +1880,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (2)
@@ -1898,9 +1938,6 @@ MonoBehaviour:
   Inventory:
   - {fileID: 0}
   - {fileID: 0}
-  image: {fileID: 21300000, guid: 1e0a13d8c7a585f4591696dbfd22efde, type: 3}
-  title: 
-  description: 
 --- !u!4 &1738747963
 Transform:
   m_ObjectHideFlags: 0
@@ -2072,6 +2109,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (8)
@@ -2255,6 +2296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (5)
@@ -2411,6 +2456,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (6)
@@ -2517,6 +2566,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (1)
@@ -2626,7 +2679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 62183791}
   itemName: {fileID: 1058460252}
-  itemDescription: {fileID: 20621748}
+  itemDescriptionText: {fileID: 0}
 --- !u!1001 &661653711823302665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2715,6 +2768,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740730859914598809, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1738747962}
     - target: {fileID: 7330396487731898671, guid: 429857055035d2a4dafb5e60c590a5fe, type: 3}
       propertyPath: m_Name
       value: SlotPanel (3)
