@@ -2684,7 +2684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 62183791}
   itemName: {fileID: 1058460252}
-  itemDescriptionText: {fileID: 0}
+  itemDescriptionText: {fileID: 20621748}
 --- !u!1001 &661653711823302665
 PrefabInstance:
   m_ObjectHideFlags: 0
