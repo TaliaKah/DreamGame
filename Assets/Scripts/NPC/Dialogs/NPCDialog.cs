@@ -16,6 +16,7 @@ public class NPCDialog : MonoBehaviour
         {
             if (cursorTexture is null)
             {
+                // Source : https://stackoverflow.com/questions/31186215/loading-an-image-as-texture2d
                 byte[] fileData;
                 string filePath = "Assets/Icons/speech-bubble.png";
 
