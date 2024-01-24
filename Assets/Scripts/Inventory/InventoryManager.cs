@@ -10,12 +10,14 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]private ItemClass itemToAdd;
     [SerializeField]private ItemClass itemToRemove;
     [SerializeField]private InventoryDescription itemDescription;
-    public List<ItemClass> Inventory = new List<ItemClass>();
+    private InventoryStash stash;
     private GameObject[] slots;
     private string saveFilePath;
 
     public void Start()
     {
+        stash = InventoryStash.Instance;
+
         slots = new GameObject[slotHolder.transform.childCount];
         // set all the slots in the array
         for (int i = 0; i < slotHolder.transform.childCount; i++)
@@ -26,14 +28,18 @@ public class InventoryManager : MonoBehaviour
         
         RefreshUI();
         itemDescription.RefreshDescription();
+        DebugInventoryTest();
+        
+        SetupInventorySlots();
+    }
+
+    public void DebugInventoryTest() {
         if (itemToRemove != null && itemToAdd != null)
         {
             Add(itemToAdd);
             Remove(itemToRemove);
             RefreshUI();
         }
-        
-        SetupInventorySlots();
     }
 
     public void RefreshUI()
@@ -43,7 +49,7 @@ public class InventoryManager : MonoBehaviour
             try
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
-                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = Inventory[i].itemIcon;
+                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = stash.Items[i].itemIcon;
             }
             catch (System.Exception)
             {
@@ -58,7 +64,7 @@ public class InventoryManager : MonoBehaviour
     {
         if(item != null)
         {
-            Inventory.Add(item);
+            stash.AddItem(item);
             SaveInventory();
         }
     }
@@ -66,7 +72,7 @@ public class InventoryManager : MonoBehaviour
     {
         if(item != null)
         {
-            Inventory.Remove(item);
+            stash.RemoveItem(item);
             SaveInventory();
         }
     }
@@ -81,8 +87,7 @@ public class InventoryManager : MonoBehaviour
     {
         try
         {
-            var itemsToSave = Inventory.FindAll(item => item != null); // Filter out null items
-            string json = JsonUtility.ToJson(new Serialization<ItemClass>(itemsToSave));
+            string json = stash.ToJSON();
             File.WriteAllText(saveFilePath, json);
             Debug.Log("Saving inventory to: " + saveFilePath);
         }
@@ -99,8 +104,9 @@ public class InventoryManager : MonoBehaviour
             if (File.Exists(saveFilePath))
             {
                 string json = File.ReadAllText(saveFilePath);
-                Serialization<ItemClass> data = JsonUtility.FromJson<Serialization<ItemClass>>(json);
-                Inventory = data.ToList().FindAll(item => item != null); // Filter out null items after load
+                stash.FromJSON(json);
+                
+                // Filter out null items after load
                 Debug.Log("Loaded inventory from: " + saveFilePath);
             }
             else
@@ -116,9 +122,9 @@ public class InventoryManager : MonoBehaviour
 
     public void OnItemClicked(int itemIndex)
     {
-        if (itemIndex < 0 || itemIndex >= Inventory.Count) return;
+        if (itemIndex < 0 || itemIndex >= stash.Items.Count) return;
 
-        ItemClass item = Inventory[itemIndex];
+        ItemClass item = stash.Items[itemIndex];
         if (item != null)
         {
             // Update the description panel
@@ -132,17 +138,6 @@ public class InventoryManager : MonoBehaviour
         {
             int index = i;  // Local copy for the closure below
             slots[i].GetComponent<SlotClick>().slotIndex = index;
-        }
-    }
-
-    [System.Serializable]
-    private class Serialization<T> {
-        [SerializeField]
-        private List<T> target;
-        public List<T> ToList() { return target; }
-
-        public Serialization(List<T> target) {
-            this.target = target;
         }
     }
 }
