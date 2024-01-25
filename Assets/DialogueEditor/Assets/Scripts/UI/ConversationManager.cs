@@ -626,11 +626,11 @@ namespace DialogueEditor
 
         private void setConversationMode(bool value)
         {
-            if (Controller.Instance is null)
+            if (MainController.Instance is null)
             {
                 return;
             }
-            Controller.Instance.SetConversationMode(value);
+            MainController.Instance.SetConversationMode(value);
         }
 
         private void TurnOnUI()

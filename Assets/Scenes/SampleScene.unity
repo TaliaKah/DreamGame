@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.39542893, g: 0.22839624, b: 0.2999, a: 1}
+  m_IndirectSpecularColor: {r: 0.39540225, g: 0.2283802, b: 0.29990682, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17357,7 +17357,6 @@ GameObject:
   - component: {fileID: 2032246606}
   - component: {fileID: 2032246609}
   - component: {fileID: 2032246611}
-  - component: {fileID: 2032246612}
   m_Layer: 0
   m_Name: PJ
   m_TagString: Untagged
@@ -17469,32 +17468,6 @@ MonoBehaviour:
   MouseSensitivity: 50
   PlayerSpeed: 5
   RunningSpeed: 40
---- !u!143 &2032246612
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2032246604}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2.0000002
-  m_Radius: 0.5000001
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2033367386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18207,9 +18180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bf07edb5481dc4e8d7633631cb22db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolRadius: 10
-  patrolInterval: 5
-  prison: {fileID: 1547643560}
 --- !u!136 &2100365151
 CapsuleCollider:
   m_ObjectHideFlags: 0

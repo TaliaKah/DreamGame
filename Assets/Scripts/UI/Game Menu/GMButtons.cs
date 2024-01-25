@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GMButtons : MonoBehaviour
 {
-    private Controller controller = null;
+    private MainController controller = null;
     private SceneLoaderAsync loader;
 
     void Start()
     {
-        controller = Controller.Instance;
+        controller = MainController.Instance;
         loader = SceneLoaderAsync.Instance;
         StartCoroutine(PrintCurrentScene());
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("Game Menu"));

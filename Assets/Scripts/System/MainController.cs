@@ -6,17 +6,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class Controller : MonoBehaviour
+public class MainController : MonoBehaviour
 {
-    private static Controller instance;
-    public static Controller Instance
+    private static MainController instance;
+    public static MainController Instance
     {
         get; private set;
     }
 
     public Camera MainCamera;
     public Transform CameraPosition;
-    CharacterController m_CharacterController;
     private UnityEngine.AI.NavMeshAgent navMeshAgent;
 
     [Header("Control Settings")]
@@ -51,7 +50,6 @@ public class Controller : MonoBehaviour
         MainCamera.transform.localPosition = Vector3.zero;
         MainCamera.transform.localRotation = Quaternion.identity;
 
-        m_CharacterController = GetComponent<CharacterController>();
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 

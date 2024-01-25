@@ -19,13 +19,13 @@ public class SaveManager : MonoBehaviour
         get; private set;
     }
 
-    private Controller controller = null;
+    private MainController controller = null;
     private InventoryStash inventoryStash = null;
     private DecisionTracker decisionTracker = null;
 
     void Start()
     {
-        controller = Controller.Instance;
+        controller = MainController.Instance;
         inventoryStash = InventoryStash.Instance;
         decisionTracker = DecisionTracker.Instance;
 

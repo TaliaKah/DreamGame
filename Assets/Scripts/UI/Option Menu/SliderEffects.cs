@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SliderEffects : MonoBehaviour
 {
-    private Controller controller = null;
+    private MainController controller = null;
     public Slider mouseSensitivitySlider;
     public Text minValueText;
     public Text maxValueText;
@@ -16,7 +16,7 @@ public class SliderEffects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = Controller.Instance;
+        controller = MainController.Instance;
         mouseSensitivitySlider.minValue = controller.MinSensitivity;
         mouseSensitivitySlider.maxValue = controller.MaxSensitivity;
         mouseSensitivitySlider.value = controller.MouseSensitivity;

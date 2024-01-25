@@ -50,7 +50,7 @@ public class NPCDialog : MonoBehaviour
         // Cursor visible on hover, to show that the NPC is interactable.
         Cursor.visible = true;
 
-        if (!Controller.Instance.IsInConversation && Input.GetMouseButtonDown(0))
+        if (!MainController.Instance.IsInConversation && Input.GetMouseButtonDown(0))
         {
             callbackScript();
         }
