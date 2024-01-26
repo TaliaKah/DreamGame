@@ -22008,7 +22008,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2086660104}
   - component: {fileID: 2086660103}
-  - component: {fileID: 2086660102}
   m_Layer: 0
   m_Name: MKing_baseMesh
   m_TagString: Untagged
@@ -22016,41 +22015,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2086660102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086660101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd31874fbd85cf44bb2594e211e57d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CrownItem: {fileID: 0}
-  ShoulderItem: {fileID: 0}
-  MKBarItem: {fileID: 0}
-  currentAnim: 0
-  AnimDisplayed: {fileID: 0}
-  tCrown: {fileID: 0}
-  tShoulder: {fileID: 0}
-  tMKBar: {fileID: 0}
-  MKanimator: {fileID: 0}
-  animationList:
-  - Idle
-  - MK_attackWhirl
-  - MK_bigCollapse
-  - MK_blockAttack
-  - MK_walk1
-  - MK_ComboKick
-  - MK_dieFromBellyStab
-  - MK_diyingFromFward
-  - MK_getUpFront
-  - Mk_hitfFfront
-  - MK_quickSwipe
-  - MK_runningForward
-  - MK_stabJumpFward
 --- !u!95 &2086660103
 Animator:
   serializedVersion: 5
