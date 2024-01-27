@@ -39,7 +39,6 @@ public class NPCKnightDialog : NPCDialog
                 if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier))
                 {
                     ConversationManager.Instance.StartConversation(goingToTavernConversation);
-                    ConversationManager.Instance.SetBool("EtreChevalier", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeDevenirChevalier));
                 }
                 else
                 {

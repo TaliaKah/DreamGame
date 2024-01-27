@@ -61,16 +61,16 @@ public class KnightMovement : MonoBehaviour
                 StopMoving();
             }
         }
-        if (movingStatus == MovingStatus.RandomlyMoving)
-        {
-            if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.1f && timer >= patrolInterval)
-            {
-                RandomlyMoving();
-                timer = 0f;
-            }
+        // if (movingStatus == MovingStatus.RandomlyMoving)
+        // {
+        //     if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.1f && timer >= patrolInterval)
+        //     {
+        //         RandomlyMoving();
+        //         timer = 0f;
+        //     }
 
-            timer += Time.deltaTime;
-        }
+        //     timer += Time.deltaTime;
+        // }
     }
 
     void SetRandomDestination()
