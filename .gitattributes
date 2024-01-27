@@ -1,0 +1,2 @@
+Assets/Decors/ASTROFISH_GAMES/* filter=lfs diff=lfs merge=lfs -text
+Assets/Decors/ASTROFISH_GAMES/** filter=lfs diff=lfs merge=lfs -text
