@@ -47,13 +47,11 @@ public class MainController : MonoBehaviour
         m_HorizontalAngle = transform.localEulerAngles.y;
 
         MainCamera.transform.SetParent(CameraPosition, false);
-        MainCamera.transform.localPosition = Vector3.zero;
+        MainCamera.transform.localPosition = Vector3.zero + new Vector3(0.0f, 0.6f,0.0f);
         MainCamera.transform.localRotation = Quaternion.identity;
 
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
-
-
 
     bool IsUpdatable()
     {

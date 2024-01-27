@@ -31649,7 +31649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 963194227}
   CameraPosition: {fileID: 2032246608}
-  MouseSensitivity: 50
+  MouseSensitivity: 10
   PlayerSpeed: 5
   RunningSpeed: 40
 --- !u!1001 &2033367386
