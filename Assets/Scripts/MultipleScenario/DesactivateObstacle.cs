@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DesactivateMountainObstacle : MonoBehaviour
+public class DesactivateObstacle : MonoBehaviour
 {
+    public DecisionManager.Decision decision;
     private DecisionManager decisionManager;
 
     void Start()
@@ -14,10 +15,9 @@ public class DesactivateMountainObstacle : MonoBehaviour
     void Update()
     {
         if (decisionManager != null &&
-            (decisionManager.GetDecision(DecisionManager.Decision.AllerALaMontagneDuDesespoir)))
+            (decisionManager.GetDecision(decision)))
         {
             gameObject.SetActive(false);
-            Debug.Log("Blocage de la montagne désactivé !");
         }
     }
 }
