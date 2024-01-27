@@ -104,7 +104,7 @@ public class NPCKnightDialog : NPCDialog
                             ConversationManager.Instance.StartConversation(awakeningPotion);
                             ConversationManager.Instance.SetBool("Potion trouvée", decisionManager.GetDecision(DecisionManager.Decision.TrouverLaPotionDEveil));
                             ConversationManager.Instance.SetBool("Potion bue", decisionManager.GetDecision(DecisionManager.Decision.BoireLaPotionDEveil));
-                            ConversationManager.Instance.SetBool("trouver cube", decisionManager.GetDecision(DecisionManager.Decision.TrouverLeCube));
+                            ConversationManager.Instance.SetBool("Trouver cube", decisionManager.GetDecision(DecisionManager.Decision.TrouverLeCube));
                         }
                     }
                 }
