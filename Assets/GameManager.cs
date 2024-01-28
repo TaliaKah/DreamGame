@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        if (ConversationManager.Instance != null)
+        if (ConversationManager.Instance != null && !DecisionTracker.Instance.Decisions[DecisionManager.Decision.MechantIntro])
         {
             ConversationManager.Instance.StartConversation(startConversation);
         }

@@ -5,6 +5,7 @@ public class DecisionManager : MonoBehaviour
 {
     public enum Decision
     {
+        MechantIntro,
         RencontrerLesChevaliersDansLaPlaine,
         SurprendreLesFees,
         AccepterDeDevenirChevalier,
@@ -83,6 +84,12 @@ public class DecisionManager : MonoBehaviour
         {
             UnityEngine.Debug.LogWarning($"La décision {decision} n'existe pas dans le dictionnaire.");
         }
+    }
+
+    public void MechantIntro()
+    {
+        Decisions[Decision.MechantIntro] = true;
+        Debug.LogWarning($"{Decision.MechantIntro} est {Decisions[Decision.MechantIntro]}");
     }
 
     public void RencontrerLesChevaliersDansLaPlaine()
