@@ -15,7 +15,7 @@ public class MainController : MonoSingleton<MainController>
 
     [Header("Control Settings")]
     public float MouseSensitivity = 50.0f;
-    public readonly float MinSensitivity = 20.0f;
+    public readonly float MinSensitivity = 0.0f;
     public readonly float MaxSensitivity = 100.0f;
     public float PlayerSpeed = 5.0f;
     public float RunningSpeed = 7.5f;
@@ -125,5 +125,13 @@ public class MainController : MonoSingleton<MainController>
                 Mouse.current.WarpCursorPosition(screenCenter);
             }
         }
+    }
+
+    public void WarpAt(Vector3 position) {
+        navMeshAgent.Warp(position);
+    }
+
+    public Vector3 GetCurrentPosition() {
+        return navMeshAgent.transform.position;
     }
 }

@@ -61,11 +61,16 @@ public class GMButtons : MonoBehaviour
     public void Save()
     {
         // TODO
+        SaveManager.Instance.save();
     }
 
     public void Load()
     {
         // TODO
+        if (SaveManager.Instance.load()) {
+            MainController.Instance.WarpAt(SaveManager.Instance.LoadPosition);
+            SaveManager.Instance.Loaded();
+        }
     }
 
     public void MainMenu()

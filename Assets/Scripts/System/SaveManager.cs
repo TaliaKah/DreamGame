@@ -25,10 +25,20 @@ public static class VectorExtensions
 
 public class SaveManager : MonoSingleton<SaveManager>
 {
+    private const string SAVE_PATH = "Save/JustASaveFile.json";
 
-    private Vector3 characterPosition;
+    private Vector3 characterLoadPosition;
+    public Vector3 LoadPosition => characterLoadPosition;
+
     private InventoryStash inventoryStash = null;
     private DecisionTracker decisionTracker = null;
+
+    private bool loadOrder = false;
+    public bool LoadOrder => loadOrder;
+    public void Loaded()
+    {
+        loadOrder = false;
+    }
 
     public List<ItemClass> testInventory = new();
 
@@ -40,17 +50,64 @@ public class SaveManager : MonoSingleton<SaveManager>
         decisionTracker = DecisionTracker.Instance;
         // save();
         // load();
+
+        try
+        {
+            if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "Save")))
+            {
+                Directory.CreateDirectory(Path.Combine(Application.persistentDataPath, "Save"));
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Debug.Log("SaveManager: Couldn't create save directory: " + ex.Message);
+        }
     }
 
-    public void load()
+    public bool CanLoad()
+    {
+        return File.Exists(BuildSavePath());
+    }
+
+    private string BuildSavePath()
+    {
+        return Path.Combine(Application.persistentDataPath, SAVE_PATH);
+    }
+
+    public void ClearSave()
+    {
+        if (CanLoad())
+        {
+            File.Delete(BuildSavePath());
+        }
+    }
+
+    public bool load()
     {
         // Load settings : with PlayerPrefs
         // https://docs.unity3d.com/ScriptReference/PlayerPrefs.html
         //loadPrefs();
 
-        JsonData jsonData = JsonConvert.DeserializeObject<JsonData>(tmp);
+        if (!CanLoad())
+        {
+            Debug.Log($"Load attempted but no save file found.");
+            return false;
+        }
 
-        
+        string json;
+        try
+        {
+            json = File.ReadAllText(BuildSavePath());
+            Debug.Log($"Reading: {json}");
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Error loading save file: " + ex.Message);
+            return false;
+        }
+
+        JsonData jsonData = JsonConvert.DeserializeObject<JsonData>(json);
+
         Debug.Log($"Inventory: {jsonData.Inventory.Count}");
         foreach (var item in jsonData.Inventory)
         {
@@ -63,8 +120,11 @@ public class SaveManager : MonoSingleton<SaveManager>
         }
 
         jsonData.Inventory.ForEach(i => inventoryStash.AddItem(i));
-        characterPosition = new Vector3((float) jsonData.Position[0],(float) jsonData.Position[1], (float) jsonData.Position[2]);
+        characterLoadPosition = new Vector3((float)jsonData.Position[0], (float)jsonData.Position[1], (float)jsonData.Position[2]);
         decisionTracker.Decisions = jsonData.Decisions;
+
+        loadOrder = true;
+        return true;
     }
 
     public void test()
@@ -89,19 +149,29 @@ public class SaveManager : MonoSingleton<SaveManager>
         JsonData jsonData = new();
 
         // Test data
-        Vector3 position = new Vector3(5, 3, 2);
+        // Vector3 position = new Vector3(5, 3, 2);
         // Dictionary<DecisionManager.Decision, bool> tmpdecisions = new();
         // tmpdecisions[DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine] = false;
 
         jsonData.Inventory = testInventory;
         // jsonData.Inventory = inventoryStash.Items;
-        jsonData.Position = position.ToDoubleArray();
+        jsonData.Position = MainController.Instance.GetCurrentPosition().ToDoubleArray();
         jsonData.Decisions = decisionTracker.Decisions;
 
         string json = JsonConvert.SerializeObject(jsonData);
         Debug.Log(json);
         tmp = json;
 
+        try
+        {
+            string path = BuildSavePath();
+            Debug.Log("Saving game to: " + path);
+            File.WriteAllText(path, json);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Error saving game: " + ex.Message);
+        }
 
         // string inventoryString = inventoryStash.ToJSON();
         // Debug.Log(inventoryString);

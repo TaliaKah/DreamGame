@@ -19,9 +19,11 @@ public class DecisionTracker : MonoSingleton<DecisionTracker>
     private void Initialize() {
         foreach (DecisionManager.Decision decision in Enum.GetValues(typeof(DecisionManager.Decision)))
         {
-            _decisions.Add(decision, false);
-            UnityEngine.Debug.Log($"{decision} est ajouté dans le dictionnaire avec la valeur {Decisions[decision]}");
+            _decisions.Add(decision, false);   
         }
+        string debug = string.Join(", ",Enum.GetValues(typeof(DecisionManager.Decision)));
+        Debug.Log($"All these following values have been set to false: {debug}");
+
         UnityEngine.Debug.Log($"Les décisions ont été initialisées.");
     }
 }

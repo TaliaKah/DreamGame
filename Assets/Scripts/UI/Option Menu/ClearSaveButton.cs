@@ -6,6 +6,6 @@ public class ClearSave : MonoBehaviour
 {
     // Start is called before the first frame update
     public void Clear() {
-       // SaveManager.Instance.ClearSave();
+       SaveManager.Instance.ClearSave();
     }
 }
