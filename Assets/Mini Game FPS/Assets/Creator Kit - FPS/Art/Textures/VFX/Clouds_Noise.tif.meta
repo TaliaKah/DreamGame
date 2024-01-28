@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<<< Updated upstream:Assets/Objects/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGrid_Emission.png.meta
-guid: 53b5d42668fc70348b7038dbb7521ff4
-timeCreated: 1505515843
-========
 guid: 039619e8304ca2642abd7f060be738f4
 timeCreated: 1505743871
->>>>>>>> Stashed changes:Assets/Mini Game FPS/Assets/Creator Kit - FPS/Art/Textures/VFX/Clouds_Noise.tif.meta
 licenseType: Store
 TextureImporter:
   fileIDToRecycleName: {}

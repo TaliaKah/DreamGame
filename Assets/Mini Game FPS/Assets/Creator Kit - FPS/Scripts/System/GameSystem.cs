@@ -104,7 +104,8 @@ public class GameSystem : MonoBehaviour
         Controller.Instance.DisplayCursor(true);
         Controller.Instance.CanPause = false;
         Debug.Log("RunTime: " + RunTime);
-        if(RunTime < 10.0f)
+        Debug.Log("Score: " + m_Score);
+        if(RunTime < 60.0f & m_Score > 20.0f)
         {
             FinalScoreUI.Instance.Display();
         }
