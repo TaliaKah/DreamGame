@@ -19,6 +19,8 @@ public class NPCKnightDialog : NPCDialog
     public NPCConversation inFrontOfSphynx;
     public NPCConversation awakeningPotion;
 
+    public bool badGuy = false;
+
     private DecisionManager decisionManager;
 
     void Start()
@@ -48,13 +50,27 @@ public class NPCKnightDialog : NPCDialog
                         {
                             if (!decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete1))
                             {
-                                if (!decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete1))
+                                if (badGuy)
                                 {
-                                    ConversationManager.Instance.StartConversation(Quest1Conversation);
+                                    if (!decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete1))
+                                    {
+                                        ConversationManager.Instance.StartConversation(Quest1Conversation);
+                                    }
+                                    else
+                                    {
+                                        ConversationManager.Instance.StartConversation(summaryQuest1Conversation);
+                                    }
                                 }
                                 else
                                 {
-                                    ConversationManager.Instance.StartConversation(summaryQuest1Conversation);
+                                    if (!decisionManager.GetDecision(DecisionManager.Decision.RechercherQuete1))
+                                    {
+                                        ConversationManager.Instance.StartConversation(Quest1Conversation);
+                                    }
+                                    else
+                                    {
+                                        ConversationManager.Instance.StartConversation(summaryQuest1Conversation);
+                                    }
                                 }
                             }
                             else 

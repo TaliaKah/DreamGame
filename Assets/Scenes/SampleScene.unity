@@ -15547,7 +15547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 36
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":211.599976,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Va
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":184.4,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Va
     trouver mon coll\xE8gue il saura quoi te dire !\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
     1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0}]}"
   saveVersion: 110
@@ -15561,19 +15561,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2090366173}
-        m_TargetAssemblyTypeName: PNJ, Assembly-CSharp
-        m_MethodName: LookAtUs
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &773534242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15980,12 +15968,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 35
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":211.599976,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bonjour
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":184.4,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bonjour
     \xE0 toi jeune voyageur. Tu es \xE0 la recherche d'un moyen de te r\xE9veiller,
-    n'est-ce pas?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sorci\xE8re\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":207.599976,\"yPos\":163.8},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ne
+    n'est-ce pas?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sorci\xE8re\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":180.4,\"yPos\":163.8},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ne
     sois pas surpris. Je suis une sorci\xE8re qui connait toute les v\xE9rit\xE9s
-    de ce monde.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sorci\xE8re\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":34}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":217.599976,\"yPos\":279.8},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Malheureusement
-    je ne peux rien te dire.\",\"parentUIDs\":[32],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sorci\xE8re\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":217.599976,\"yPos\":405.8},\"ID\":34,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Peut-\xEAtre
+    de ce monde.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sorci\xE8re\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":34}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":190.4,\"yPos\":279.8},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Malheureusement
+    je ne peux rien te dire.\",\"parentUIDs\":[32],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sorci\xE8re\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":190.4,\"yPos\":405.8},\"ID\":34,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Peut-\xEAtre
     nous reverrons nous. Tout d\xE9pends d'o\xF9 te m\xE8ne ce r\xEAve. N\xE9anmoins
     m\xE9fies toi des apparences.\",\"parentUIDs\":[33],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Sorci\xE8re\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -16002,31 +15990,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1376172973}
-        m_TargetAssemblyTypeName: DecisionManager, Assembly-CSharp
-        m_MethodName: RencontrerSorciere
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1907089407}
-        m_TargetAssemblyTypeName: PNJ, Assembly-CSharp
-        m_MethodName: LookAtUs
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &839713974
 GameObject:
   m_ObjectHideFlags: 0
@@ -18222,17 +18186,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 42
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":34}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":102.8,\"yPos\":140.800064},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Non.\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":35}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":369.800049,\"yPos\":141.800064},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oui.\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":211.599976,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bonjour
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":34}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-7.399994,\"yPos\":-168.199921},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Non.\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":35}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":259.600037,\"yPos\":-167.199921},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oui.\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":101.399979,\"yPos\":-287},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bonjour
     jeune apprenti chevalier. Tu viens demander ta premi\xE8re qu\xEAte ?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
-    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":101.8,\"yPos\":254.800064},\"ID\":34,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dommage,
+    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-8.399994,\"yPos\":-54.19992},\"ID\":34,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dommage,
     revient me voir quand tu seras pr\xEAt !\",\"parentUIDs\":[32],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
-    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":36}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":369.800049,\"yPos\":247.800064},\"ID\":35,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parfait
+    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":36}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":259.600037,\"yPos\":-61.19992},\"ID\":35,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Parfait
     ! Il est donc temps de te dire en quoi cela consiste !\",\"parentUIDs\":[33],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
-    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":39}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":370.800049,\"yPos\":377.800049},\"ID\":36,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Que
+    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":39}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":260.600037,\"yPos\":68.8000641},\"ID\":36,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Que
     fallait-il faire d\xE9j\xE0 ?\",\"parentUIDs\":[35],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
-    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":40}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":369.800049,\"yPos\":501.8},\"ID\":39,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"En
+    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":40}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":259.600037,\"yPos\":192.8},\"ID\":39,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"En
     as-tu une id\xE9e cher accolyte?\",\"parentUIDs\":[36],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
-    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":369.800049,\"yPos\":629.8},\"ID\":40,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
+    1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":259.600037,\"yPos\":320.8},\"ID\":40,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
     mon dieu mais o\xF9 est-il pass\xE9 ?!! Retrouve-le !\",\"parentUIDs\":[39],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
     1\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -18253,9 +18217,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2090366173}
-        m_TargetAssemblyTypeName: PNJ, Assembly-CSharp
-        m_MethodName: LookAtUs
+      - m_Target: {fileID: 1376172973}
+        m_TargetAssemblyTypeName: DecisionManager, Assembly-CSharp
+        m_MethodName: RechercherQuete1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19755,6 +19719,7 @@ MonoBehaviour:
   endQuestConversation: {fileID: 127520476}
   inFrontOfSphynx: {fileID: 1407044011}
   awakeningPotion: {fileID: 2081740611}
+  badGuy: 1
 --- !u!114 &1140964981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19768,6 +19733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fightConversation: {fileID: 1064727176}
+  riverConversation: {fileID: 0}
 --- !u!114 &1140964982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44329,6 +44295,7 @@ MonoBehaviour:
   endQuestConversation: {fileID: 127520476}
   inFrontOfSphynx: {fileID: 1764227016}
   awakeningPotion: {fileID: 1533862512}
+  badGuy: 0
 --- !u!114 &2090366175
 MonoBehaviour:
   m_ObjectHideFlags: 0
