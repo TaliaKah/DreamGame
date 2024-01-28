@@ -167,7 +167,7 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineEnabled: 1
     - _OutlineMode: 0
-    - _OutlineWidth: 6.1
+    - _OutlineWidth: 4.72
     - _OverrideShadowColor: 0
     - _Parallax: 0.02
     - _QueueOffset: 0
@@ -175,7 +175,7 @@ Material:
     - _RimEnabled: 1
     - _RimLightAlign: -0.81
     - _RimLightSmoothness: 0
-    - _RimPower: 0.55
+    - _RimPower: 0.259
     - _Shininess: 0
     - _SizeFalloff: 0
     - _Smoothness: 0.5
