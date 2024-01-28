@@ -8,11 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public NPCConversation startConversation;
 
-    private DecisionManager decisionManager;
-
     void Start()
     {
-        decisionManager = FindObjectOfType<DecisionManager>();
         DontDestroyOnLoad(gameObject);
         if (ConversationManager.Instance != null)
         {
@@ -23,12 +20,9 @@ public class GameManager : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 1f;
 
-    private void Update()
+    public void EndOfTheGame()
     {
-        if (decisionManager.GetDecision(DecisionManager.Decision.SeReveiller))
-        {
-            StartCoroutine(LoadSceneWithDelay("Credits"));
-        }
+        StartCoroutine(LoadSceneWithDelay("Credits"));
     }
 
     IEnumerator LoadSceneWithDelay(string sceneName)
