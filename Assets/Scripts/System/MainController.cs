@@ -6,13 +6,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class MainController : MonoBehaviour
+public class MainController : MonoSingleton<MainController>
 {
-    private static MainController instance;
-    public static MainController Instance
-    {
-        get; private set;
-    }
 
     public Camera MainCamera;
     public Transform CameraPosition;
@@ -29,17 +24,7 @@ public class MainController : MonoBehaviour
     bool m_IsPaused = false;
     bool m_IsInConversation = false;
     public bool IsInConversation => m_IsInConversation;
-
-
-    void Awake()
-    {
-        if (Instance == null) {
-            Instance = this;
-        } else {
-            Debug.LogError("Creation failed: Controller already exists");
-        }
-    }
-
+    
     void Start()
     {
         SetPauseFlags();

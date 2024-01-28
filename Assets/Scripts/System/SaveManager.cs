@@ -23,13 +23,8 @@ public static class VectorExtensions
     }
 }
 
-public class SaveManager : MonoBehaviour
+public class SaveManager : MonoSingleton<SaveManager>
 {
-    private static SaveManager instance;
-    public static SaveManager Instance
-    {
-        get; private set;
-    }
 
     private Vector3 characterPosition;
     private InventoryStash inventoryStash = null;
@@ -57,7 +52,8 @@ public class SaveManager : MonoBehaviour
 
         
         Debug.Log($"Inventory: {jsonData.Inventory.Count}");
-        foreach (var item in jsonData.Inventory) {
+        foreach (var item in jsonData.Inventory)
+        {
             Debug.Log($"- {item}");
         }
         Debug.Log($"{jsonData.Position[0]}, {jsonData.Position[1]}, {jsonData.Position[2]}");
@@ -159,7 +155,7 @@ public class SaveManager : MonoBehaviour
 
     private void savePrefs()
     {
-       // PlayerPrefs.SetFloat(Enum.GetName(typeof(SaveKeys), SaveKeys.MouseSensitivity), 40);
+        // PlayerPrefs.SetFloat(Enum.GetName(typeof(SaveKeys), SaveKeys.MouseSensitivity), 40);
     }
 }
 
