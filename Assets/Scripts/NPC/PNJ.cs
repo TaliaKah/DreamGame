@@ -9,6 +9,8 @@ public class PNJ : MonoBehaviour
     public string description;
 
     public Transform playerTransform;
+    
+    public float rotationSpeed = 5.0f; 
 
     public void LookAtUs()
     {
