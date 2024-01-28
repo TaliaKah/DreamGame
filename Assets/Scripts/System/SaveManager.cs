@@ -11,6 +11,18 @@ public enum SaveKeys
     MouseSensitivity
 }
 
+public static class VectorExtensions
+{
+    public static double[] ToDoubleArray(this Vector3 vector)
+    {
+        double[] result = new double[3];
+        result[0] = vector.x;
+        result[1] = vector.y;
+        result[2] = vector.z;
+        return result;
+    }
+}
+
 public class SaveManager : MonoBehaviour
 {
     private static SaveManager instance;
@@ -19,35 +31,48 @@ public class SaveManager : MonoBehaviour
         get; private set;
     }
 
-    private MainController controller = null;
+    private Vector3 characterPosition;
     private InventoryStash inventoryStash = null;
     private DecisionTracker decisionTracker = null;
 
+    public List<ItemClass> testInventory = new();
+
+    private string tmp;
+
     void Start()
     {
-        controller = MainController.Instance;
         inventoryStash = InventoryStash.Instance;
         decisionTracker = DecisionTracker.Instance;
-
-        save();
+        // save();
+        // load();
     }
 
     public void load()
     {
         // Load settings : with PlayerPrefs
         // https://docs.unity3d.com/ScriptReference/PlayerPrefs.html
-        loadPrefs();
+        //loadPrefs();
 
-        // Load position
+        JsonData jsonData = JsonConvert.DeserializeObject<JsonData>(tmp);
 
-        // Load current scene
+        
+        Debug.Log($"Inventory: {jsonData.Inventory.Count}");
+        foreach (var item in jsonData.Inventory) {
+            Debug.Log($"- {item}");
+        }
+        Debug.Log($"{jsonData.Position[0]}, {jsonData.Position[1]}, {jsonData.Position[2]}");
+        foreach (var decision in jsonData.Decisions)
+        {
+            Debug.Log($"- {decision.Key}: {decision.Value}");
+        }
 
-        // Load current progress
-
-        // Load inventory
+        jsonData.Inventory.ForEach(i => inventoryStash.AddItem(i));
+        characterPosition = new Vector3((float) jsonData.Position[0],(float) jsonData.Position[1], (float) jsonData.Position[2]);
+        decisionTracker.Decisions = jsonData.Decisions;
     }
 
-    public void test() {
+    public void test()
+    {
         string json = @"{""key1"":""value1"",""key2"":""value2""}";
 
         Dictionary<string, string> values = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
@@ -65,54 +90,143 @@ public class SaveManager : MonoBehaviour
 
         // Get all items needed
         // Vector3 position = controller.MainCamera.transform.position;
-        string inventoryString = inventoryStash.ToJSON();
-        Debug.Log(inventoryString);
-        Dictionary<DecisionManager.Decision, bool> decisions = decisionTracker.Decisions;
+        JsonData jsonData = new();
 
-        // Save all other things
-        StringBuilder sb = new StringBuilder();
-        StringWriter sw = new StringWriter(sb);
+        // Test data
+        Vector3 position = new Vector3(5, 3, 2);
+        // Dictionary<DecisionManager.Decision, bool> tmpdecisions = new();
+        // tmpdecisions[DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine] = false;
 
-        using (JsonWriter writer = new JsonTextWriter(sw))
-        {
-            writer.WriteStartObject();
+        jsonData.Inventory = testInventory;
+        // jsonData.Inventory = inventoryStash.Items;
+        jsonData.Position = position.ToDoubleArray();
+        jsonData.Decisions = decisionTracker.Decisions;
 
-            // Save inventory
-            writer.WritePropertyName("inventory");
-            writer.WriteRawValue(inventoryString);
+        string json = JsonConvert.SerializeObject(jsonData);
+        Debug.Log(json);
+        tmp = json;
 
-            Debug.Log(sb);
 
-            // Save position
-            writer.WritePropertyName("position");
-            writer.WriteStartArray();
-            Vector3 position = new Vector3(5, 3, 2);
-            writer.WriteValue(position.x);
-            writer.WriteValue(position.y);
-            writer.WriteValue(position.z);
-            writer.WriteEnd();
+        // string inventoryString = inventoryStash.ToJSON();
+        // Debug.Log(inventoryString);
+        // Dictionary<DecisionManager.Decision, bool> decisions = decisionTracker.Decisions;
 
-            // Save decisions
-            writer.WritePropertyName("decisions");
-            writer.WriteRawValue(JsonConvert.SerializeObject(decisions));
+        // // Save all other things
+        // StringBuilder sb = new StringBuilder();
+        // StringWriter sw = new StringWriter(sb);
 
-            // Save current scene
+        // using (JsonWriter writer = new JsonTextWriter(sw))
+        // {
+        //     writer.WriteStartObject();
 
-            // Save current progress
+        //     // Save inventory
+        //     writer.WritePropertyName("inventory");
+        //     writer.WriteRawValue(inventoryString);
 
-            writer.WriteEndObject();
+        //     Debug.Log(sb);
 
-            Debug.Log(sb);
-        }
+        //     // Save position
+        //     writer.WritePropertyName("position");
+        //     writer.WriteStartArray();
+
+        //     // TODO Replace with actual position
+        //     Vector3 position = new Vector3(5, 3, 2);
+        //     writer.WriteValue(position.x);
+        //     writer.WriteValue(position.y);
+        //     writer.WriteValue(position.z);
+        //     writer.WriteEnd();
+
+        //     // Save decisions
+        //     writer.WritePropertyName("decisions");
+        //     //writer.WriteRawValue(JsonConvert.SerializeObject(decisions));
+        //     Dictionary<DecisionManager.Decision, bool> tmpdecisions = new();
+        //     tmpdecisions[DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine] = false;
+        //     writer.WriteRawValue(JsonConvert.SerializeObject(tmpdecisions));
+
+        //     // Save current scene ?
+
+        //     writer.WriteEndObject();
+
+        //     Debug.Log(sb);
+        //     tmp = sb.ToString();
+        // }
     }
 
     private void loadPrefs()
     {
-        controller.MouseSensitivity = PlayerPrefs.GetFloat(Enum.GetName(typeof(SaveKeys),SaveKeys.MouseSensitivity));
+        // controller.MouseSensitivity = PlayerPrefs.GetFloat(Enum.GetName(typeof(SaveKeys), SaveKeys.MouseSensitivity));
     }
 
     private void savePrefs()
     {
-        PlayerPrefs.SetFloat(Enum.GetName(typeof(SaveKeys), SaveKeys.MouseSensitivity), controller.MouseSensitivity);
+       // PlayerPrefs.SetFloat(Enum.GetName(typeof(SaveKeys), SaveKeys.MouseSensitivity), 40);
+    }
+}
+
+// Define a class to represent the structure of your JSON data
+public class JsonData
+{
+    [JsonProperty("inventory")]
+    [JsonConverter(typeof(ItemClassListConverter))]
+    public List<ItemClass> Inventory { get; set; }
+
+    [JsonProperty("position")]
+    public double[] Position { get; set; }
+
+    [JsonProperty("decisions")]
+    public Dictionary<DecisionManager.Decision, bool> Decisions { get; set; }
+}
+
+public class ItemClassListConverter : JsonConverter<List<ItemClass>>
+{
+    public override void WriteJson(JsonWriter writer, List<ItemClass> value, JsonSerializer serializer)
+    {
+        string json = JsonConvert.SerializeObject(value.ConvertAll(x => x.itemID).ToArray());
+        Debug.Log(json);
+        writer.WriteRawValue(json);
+    }
+
+    public override List<ItemClass> ReadJson(JsonReader reader, Type objectType, List<ItemClass> existingValue, bool hasExistingValue, JsonSerializer serializer)
+    {
+        if (reader.TokenType == JsonToken.StartArray)
+        {
+            // Move to the next token (inside the array)
+            reader.Read();
+
+            // Check if the array is empty
+            if (reader.TokenType == JsonToken.EndArray)
+            {
+                return new List<ItemClass>();
+            }
+
+            // Use JsonUtility to deserialize the array
+            List<ItemClass> items = new();
+
+            do
+            {
+                items.Add(Resources.Load<ItemClass>("Items/Item_" + reader.Value));
+            }
+            while (reader.Read() && reader.TokenType != JsonToken.EndArray);
+
+            // jsonArray = jsonArray.TrimEnd(',') + "]";
+            // ItemClass[] itemsArray = JsonConvert.DeserializeObject<ItemClass[]>(jsonArray);
+            // return new List<ItemClass>(itemsArray).FindAll(item => item != null);
+            return items.FindAll(item => item != null);
+        }
+
+        return null;
+    }
+
+    [System.Serializable]
+    private class Serialization<T>
+    {
+        [SerializeField]
+        private List<T> target;
+        public List<T> ToList() { return target; }
+
+        public Serialization(List<T> target)
+        {
+            this.target = target;
+        }
     }
 }
