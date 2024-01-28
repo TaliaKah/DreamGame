@@ -47,7 +47,7 @@ public class MainController : MonoBehaviour
         m_HorizontalAngle = transform.localEulerAngles.y;
 
         MainCamera.transform.SetParent(CameraPosition, false);
-        MainCamera.transform.localPosition = Vector3.zero + new Vector3(0.0f, 0.6f,0.0f);
+        MainCamera.transform.localPosition = Vector3.zero + new Vector3(0.0f, 0.6f, 0.0f);
         MainCamera.transform.localRotation = Quaternion.identity;
 
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -65,7 +65,8 @@ public class MainController : MonoBehaviour
         Cursor.visible = display;
     }
 
-    public void SetConversationMode(bool value) {
+    public void SetConversationMode(bool value)
+    {
         m_IsInConversation = value;
         SetPauseFlags();
     }
@@ -133,8 +134,9 @@ public class MainController : MonoBehaviour
             }
 
             Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
-            Vector2 screenCenterFloored = new Vector2((float) Math.Floor(screenCenter.x), (float) Math.Floor(Screen.height / 2f));
-            if (new Vector2(Input.mousePosition.x, Input.mousePosition.y) != screenCenterFloored) {
+            Vector2 screenCenterFloored = new Vector2((float)Math.Floor(screenCenter.x), (float)Math.Floor(Screen.height / 2f));
+            if (new Vector2(Input.mousePosition.x, Input.mousePosition.y) != screenCenterFloored)
+            {
                 Mouse.current.WarpCursorPosition(screenCenter);
             }
         }
