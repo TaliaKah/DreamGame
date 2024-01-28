@@ -73,3 +73,12 @@ crashlytics-build.properties
 
 # macOS
 *.DS_Store
+
+#dylib
+/[Aa]ssets/Mini Game FPS/Library/
+/[Aa]ssets/Mini Game FPS/[Tt]emp/
+/[Aa]ssets/Mini Game FPS/[Oo]bj/
+/[Aa]ssets/Mini Game FPS/[Bb]uild/
+/[Aa]ssets/Mini Game FPS/[Bb]uilds/
+/[Aa]ssets/Mini Game FPS/[Ll]ogs/
+/[Aa]ssets/Mini Game FPS/[Uu]ser[Ss]ettings/
