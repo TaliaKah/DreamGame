@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_2
   m_EditorClassIdentifier: 
   itemName: Sword
-  itemIcon: {fileID: 21300000, guid: 2206cd4b74bd36342b9f79295453ece2, type: 3}
+  itemIcon: {fileID: 21300000, guid: 7ac41a60c7e0d5e4cb661c4ab5be433e, type: 3}
   itemID: 2
-  itemDescription: 
+  itemDescription: The bane of fist fighters.
   toolType: 0
