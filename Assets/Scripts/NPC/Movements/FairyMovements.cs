@@ -33,6 +33,7 @@ public class FairyMovements : MonoBehaviour
     public void GoingToCastle()
     {
         movingStatus = MovingStatus.InCastle;
+        transform.position = finalPosition.transform.position;
         Debug.Log($"{transform.name} is in castle");
     }
     
