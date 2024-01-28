@@ -57,54 +57,56 @@ public class NPCKnightDialog : NPCDialog
                                     ConversationManager.Instance.StartConversation(summaryQuest1Conversation);
                                 }
                             }
-                            if (
-                                decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete1) &&
-                                !decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete2)
-                            )
+                            else 
                             {
-                                if (!decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete2))
+                                if (decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete1) &&
+                                    !decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete2))
                                 {
-                                    ConversationManager.Instance.StartConversation(Quest2Conversation);
+                                    if (!decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete2))
+                                    {
+                                        ConversationManager.Instance.StartConversation(Quest2Conversation);
+                                    }
+                                    else
+                                    {
+                                        ConversationManager.Instance.StartConversation(summaryQuest2Conversation);
+                                    }
                                 }
                                 else
                                 {
-                                    ConversationManager.Instance.StartConversation(summaryQuest2Conversation);
+                                    if (decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete2) &&
+                                        !decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete3))
+                                    {
+                                        if (!decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete3))
+                                        {
+                                            ConversationManager.Instance.StartConversation(Quest3Conversation);
+                                        }
+                                        else
+                                        {
+                                            ConversationManager.Instance.StartConversation(summaryQuest3Conversation);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        ConversationManager.Instance.StartConversation(endQuestConversation);
+                                        ConversationManager.Instance.SetBool("Quest 2 succeded", decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete2));
+                                        ConversationManager.Instance.SetBool("Quest 3 succeded", decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete3));
+                                    }
                                 }
                             }
-                            if (
-                                decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete2) &&
-                                !decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete3)
-                            )
-                            {
-                                if (!decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete3))
-                                {
-                                    ConversationManager.Instance.StartConversation(Quest3Conversation);
-                                }
-                                else
-                                {
-                                    ConversationManager.Instance.StartConversation(summaryQuest3Conversation);
-                                }
-                            }
-                            else
-                            {
-                                ConversationManager.Instance.StartConversation(endQuestConversation);
-                                ConversationManager.Instance.SetBool("Quest 2 succeded", decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete2));
-                                ConversationManager.Instance.SetBool("Quest 3 succeded", decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete3));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerSphynx))
-                        {
-                            ConversationManager.Instance.StartConversation(inFrontOfSphynx);
                         }
                         else
                         {
-                            ConversationManager.Instance.StartConversation(awakeningPotion);
-                            ConversationManager.Instance.SetBool("Potion trouvée", decisionManager.GetDecision(DecisionManager.Decision.TrouverLaPotionDEveil));
-                            ConversationManager.Instance.SetBool("Potion bue", decisionManager.GetDecision(DecisionManager.Decision.BoireLaPotionDEveil));
-                            ConversationManager.Instance.SetBool("Trouver cube", decisionManager.GetDecision(DecisionManager.Decision.TrouverLeCube));
+                            if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerSphynx))
+                            {
+                                ConversationManager.Instance.StartConversation(inFrontOfSphynx);
+                            }
+                            else
+                            {
+                                ConversationManager.Instance.StartConversation(awakeningPotion);
+                                ConversationManager.Instance.SetBool("Potion trouvée", decisionManager.GetDecision(DecisionManager.Decision.TrouverLaPotionDEveil));
+                                ConversationManager.Instance.SetBool("Potion bue", decisionManager.GetDecision(DecisionManager.Decision.BoireLaPotionDEveil));
+                                ConversationManager.Instance.SetBool("Trouver cube", decisionManager.GetDecision(DecisionManager.Decision.TrouverLeCube));
+                            }
                         }
                     }
                 }
