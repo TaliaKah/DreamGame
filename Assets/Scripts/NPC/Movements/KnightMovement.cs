@@ -6,7 +6,10 @@ public class KnightMovement : MonoBehaviour
     public float patrolRadius = 10f;  // Rayon de patrouille
     public float patrolInterval = 5f; // Intervalle entre les destinations de patrouille
 
-    public GameObject taverneEntrance;
+    public GameObject tavernPosition;
+    public GameObject castlePosition;
+    public GameObject mountainPosition;
+    public GameObject riverPosition;
 
     private NavMeshAgent navMeshAgent;
     private Vector3 patrolDestination;
@@ -16,30 +19,32 @@ public class KnightMovement : MonoBehaviour
 
     enum MovingStatus
     {
-        Stop,
-        RandomlyMoving,
-        GoingToTavern
+        GoingToTavern,
+        GoingToCastle,
+        InRiver,
+        InTavern,
+        InCastle,
+        InMountain,
     }
 
     private MovingStatus movingStatus;
 
-    public void RandomlyMoving()
-    {
-        movingStatus = MovingStatus.RandomlyMoving;
-        SetRandomDestination();
-        Debug.Log($"{transform.name} is randomly moving");
-    }
-
     public void GoingToTavern()
     {
         movingStatus = MovingStatus.GoingToTavern;
-        navMeshAgent.SetDestination(taverneEntrance.transform.position);
+        navMeshAgent.SetDestination(tavernPosition.transform.position);
         Debug.Log($"{transform.name} is going to tavern.");
+    }
+
+    public void GoingToCastle()
+    {
+        movingStatus = MovingStatus.GoingToCastle;
+        navMeshAgent.SetDestination(castlePosition.transform.position);
+        Debug.Log($"{transform.name} is going to castle.");
     }
 
     public void StopMoving()
     {
-        movingStatus = MovingStatus.Stop;
         navMeshAgent.SetDestination(transform.position);
         Debug.Log($"{transform.name} have stopped moving");
     }
@@ -48,28 +53,46 @@ public class KnightMovement : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         decisionManager = FindObjectOfType<DecisionManager>();
-        movingStatus = MovingStatus.RandomlyMoving;
-        SetRandomDestination();
+    }
+
+    void GoingTo(MovingStatus status, GameObject position)
+    {
+        if ((Mathf.Abs(transform.position.x - position.transform.position.x) < 2f && Mathf.Abs(transform.position.z - position.transform.position.z) < 2f))
+        {
+            StopMoving();
+            movingStatus = status;
+        }
     }
 
     void Update()
     {
         if (movingStatus == MovingStatus.GoingToTavern)
         {
-            if ((Mathf.Abs(transform.position.x - taverneEntrance.transform.position.x) < 2f && Mathf.Abs(transform.position.z - taverneEntrance.transform.position.z) < 2f))
-            {
-                StopMoving();
-            }
+            GoingTo(movingStatus, tavernPosition);
         }
-        if (movingStatus == MovingStatus.RandomlyMoving)
+        if (movingStatus == MovingStatus.GoingToCastle)
         {
-            if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.1f && timer >= patrolInterval)
-            {
-                RandomlyMoving();
-                timer = 0f;
-            }
+            GoingTo(movingStatus, castlePosition);
+        }
 
-            timer += Time.deltaTime;
+        if (decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier) && !(movingStatus == MovingStatus.InTavern))
+        {
+            transform.position = tavernPosition.transform.position;
+            movingStatus = MovingStatus.InTavern;
+        }
+        if (decisionManager.GetDecision(DecisionManager.Decision.AllerALaMontagneDuDesespoir))
+        {
+            transform.position = mountainPosition.transform.position;
+            movingStatus = MovingStatus.InMountain;
+        }
+        if (decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau) && !(movingStatus == MovingStatus.InCastle))
+        {
+            transform.position = castlePosition.transform.position;
+        }
+        if (riverPosition !=null && decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete1))
+        {
+            transform.position = riverPosition.transform.position;
+            movingStatus = MovingStatus.InRiver;
         }
     }
 

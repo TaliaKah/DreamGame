@@ -65,7 +65,7 @@ public class InventoryManager : MonoBehaviour
         if(item != null)
         {
             stash.AddItem(item);
-            SaveInventory();
+            // SaveInventory();
         }
     }
     public void Remove(ItemClass item)
@@ -73,52 +73,52 @@ public class InventoryManager : MonoBehaviour
         if(item != null)
         {
             stash.RemoveItem(item);
-            SaveInventory();
+            // SaveInventory();
         }
     }
 
     private void Awake()
     {
         saveFilePath = Path.Combine(Application.persistentDataPath, "Inventory.json");
-        LoadInventory();
+        // LoadInventory();
     }
 
-    public void SaveInventory()
-    {
-        try
-        {
-            string json = stash.ToJSON();
-            File.WriteAllText(saveFilePath, json);
-            Debug.Log("Saving inventory to: " + saveFilePath);
-        }
-        catch (System.Exception ex)
-        {
-            Debug.LogError("Error saving inventory: " + ex.Message);
-        }
-    }
+    // public void SaveInventory()
+    // {
+    //     try
+    //     {
+    //         string json = stash.ToJSON();
+    //         File.WriteAllText(saveFilePath, json);
+    //         Debug.Log("Saving inventory to: " + saveFilePath);
+    //     }
+    //     catch (System.Exception ex)
+    //     {
+    //         Debug.LogError("Error saving inventory: " + ex.Message);
+    //     }
+    // }
 
-    public void LoadInventory()
-    {
-        try
-        {
-            if (File.Exists(saveFilePath))
-            {
-                string json = File.ReadAllText(saveFilePath);
-                stash.FromJSON(json);
+    // public void LoadInventory()
+    // {
+    //     try
+    //     {
+    //         if (File.Exists(saveFilePath))
+    //         {
+    //             string json = File.ReadAllText(saveFilePath);
+    //             stash.FromJSON(json);
                 
-                // Filter out null items after load
-                Debug.Log("Loaded inventory from: " + saveFilePath);
-            }
-            else
-            {
-                Debug.LogWarning("Inventory file not found at: " + saveFilePath);
-            }
-        }
-        catch (System.Exception ex)
-        {
-            Debug.LogError("Error loading inventory: " + ex.Message);
-        }
-    }
+    //             // Filter out null items after load
+    //             Debug.Log("Loaded inventory from: " + saveFilePath);
+    //         }
+    //         else
+    //         {
+    //             Debug.LogWarning("Inventory file not found at: " + saveFilePath);
+    //         }
+    //     }
+    //     catch (System.Exception ex)
+    //     {
+    //         Debug.LogError("Error loading inventory: " + ex.Message);
+    //     }
+    // }
 
     public void OnItemClicked(int itemIndex)
     {

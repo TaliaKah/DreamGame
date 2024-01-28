@@ -1,5 +1,4 @@
 using UnityEngine;
-using System;
 using System.Collections.Generic;
 
 public class DecisionManager : MonoBehaviour
@@ -7,6 +6,7 @@ public class DecisionManager : MonoBehaviour
     public enum Decision
     {
         RencontrerLesChevaliersDansLaPlaine,
+        SurprendreLesFees,
         AccepterDeDevenirChevalier,
         AccepterDeRejoindreLaRebellion,
         RefuserDeRejoindreLaRebellion,
@@ -45,17 +45,6 @@ public class DecisionManager : MonoBehaviour
     private void Start()
     {
         _decisionTracker = DecisionTracker.Instance;
-        InitializeDecisions();
-    }
-
-    private void InitializeDecisions()
-    {
-        foreach (Decision decision in Enum.GetValues(typeof(Decision)))
-        {
-            Decisions.Add(decision, false);
-            UnityEngine.Debug.Log($"{decision} est ajouté dans le dictionnaire avec la valeur {Decisions[decision]}");
-        }
-        UnityEngine.Debug.Log($"Les décisions ont été initialisées.");
     }
 
     public bool GetDecision(Decision decision)
@@ -100,6 +89,12 @@ public class DecisionManager : MonoBehaviour
     {
         Decisions[Decision.RencontrerLesChevaliersDansLaPlaine] = true;
         Debug.LogWarning($"{Decision.RencontrerLesChevaliersDansLaPlaine} est {Decisions[Decision.RencontrerLesChevaliersDansLaPlaine]}");
+    }
+
+    public void SurprendreLesFees()
+    {
+        Decisions[Decision.SurprendreLesFees] = true;
+        Debug.LogWarning($"{Decision.SurprendreLesFees} est {Decisions[Decision.SurprendreLesFees]}");
     }
 
     public void AccepterDeDevenirChevalier()

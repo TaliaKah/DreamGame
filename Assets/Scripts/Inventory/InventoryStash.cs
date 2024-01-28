@@ -25,31 +25,4 @@ public class InventoryStash : MonoBehaviour {
     public void RemoveItem(ItemClass item) {
         items.Remove(item);
     }
-
-    public string ToJSON() {
-        return JsonUtility.ToJson(new Serialization<ItemClass>(items));
-    }
-
-    /**
-     * <remarks>
-     * This method overrides the current items stored with what is contained in the JSON.
-     * </remarks>
-     * 
-     * <param name="rawJson">A JSON string representation of items stored</param>
-     */
-    public void FromJSON(string rawJson) {
-        Serialization<ItemClass> data = JsonUtility.FromJson<Serialization<ItemClass>>(rawJson);
-        items = data.ToList().FindAll(item => item != null);
-    }
-
-    [System.Serializable]
-    private class Serialization<T> {
-        [SerializeField]
-        private List<T> target;
-        public List<T> ToList() { return target; }
-
-        public Serialization(List<T> target) {
-            this.target = target;
-        }
-    }
 }

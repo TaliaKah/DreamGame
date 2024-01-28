@@ -39,7 +39,6 @@ public class NPCKnightDialog : NPCDialog
                 if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier))
                 {
                     ConversationManager.Instance.StartConversation(goingToTavernConversation);
-                    ConversationManager.Instance.SetBool("EtreChevalier", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeDevenirChevalier));
                 }
                 else
                 {
@@ -59,7 +58,7 @@ public class NPCKnightDialog : NPCDialog
                                 }
                             }
                             if (
-                                !decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete1) &&
+                                decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete1) &&
                                 !decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete2)
                             )
                             {
@@ -73,7 +72,7 @@ public class NPCKnightDialog : NPCDialog
                                 }
                             }
                             if (
-                                !decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete2) &&
+                                decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete2) &&
                                 !decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete3)
                             )
                             {
@@ -105,6 +104,7 @@ public class NPCKnightDialog : NPCDialog
                             ConversationManager.Instance.StartConversation(awakeningPotion);
                             ConversationManager.Instance.SetBool("Potion trouvée", decisionManager.GetDecision(DecisionManager.Decision.TrouverLaPotionDEveil));
                             ConversationManager.Instance.SetBool("Potion bue", decisionManager.GetDecision(DecisionManager.Decision.BoireLaPotionDEveil));
+                            ConversationManager.Instance.SetBool("Trouver cube", decisionManager.GetDecision(DecisionManager.Decision.TrouverLeCube));
                         }
                     }
                 }
