@@ -498,19 +498,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810306549101296171, guid: 9108149b2610790459d0672a7788c571, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.47765827
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1810306549101296171, guid: 9108149b2610790459d0672a7788c571, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810306549101296171, guid: 9108149b2610790459d0672a7788c571, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.87854576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810306549101296171, guid: 9108149b2610790459d0672a7788c571, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810306549101296171, guid: 9108149b2610790459d0672a7788c571, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -518,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1810306549101296171, guid: 9108149b2610790459d0672a7788c571, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -122.935
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1810306549101296171, guid: 9108149b2610790459d0672a7788c571, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5542,7 +5542,7 @@ Transform:
   m_GameObject: {fileID: 329349046}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2265.3, y: 114.297, z: 1313.6}
+  m_LocalPosition: {x: 2265.3, y: 114.48, z: 1313.6}
   m_LocalScale: {x: 1, y: 1.82, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5606,9 +5606,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
-  m_Height: 2.71
+  m_Height: 2.2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: 0.16, z: -0.00000008940697}
 --- !u!33 &329349053
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6730,14 +6730,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381524237}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.70381767, z: -0, w: 0.71038073}
+  m_LocalRotation: {x: -0, y: 0.34991363, z: -0, w: 0.93678194}
   m_LocalPosition: {x: 1554.72, y: -97.86, z: 221.66}
   m_LocalScale: {x: 1, y: 1.82, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1275402479}
   m_Father: {fileID: 947265518}
-  m_LocalEulerAnglesHint: {x: 0, y: -89.468, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 40.964, z: 0}
 --- !u!114 &381524239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16839,7 +16839,7 @@ Transform:
   m_GameObject: {fileID: 941876371}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 368.36, y: -32.949, z: 199.67}
+  m_LocalPosition: {x: 367.36, y: -32.86, z: 204.03}
   m_LocalScale: {x: 1, y: 1.82, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17423,14 +17423,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003251658}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.56707937, z: -0, w: 0.8236632}
   m_LocalPosition: {x: 370.75, y: -87.516, z: 1102.98}
   m_LocalScale: {x: 1, y: 1.82, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2067217571}
   m_Father: {fileID: 947265518}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 69.094, z: 0}
 --- !u!114 &1003251660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20166,14 +20166,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182108679}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1585.14, y: -91.96, z: 1145.94}
+  m_LocalRotation: {x: -0, y: -0.90816617, z: -0, w: 0.41860998}
+  m_LocalPosition: {x: 1585.14, y: -92, z: 1145.94}
   m_LocalScale: {x: 1, y: 1.82, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 11699959}
   m_Father: {fileID: 947265518}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -130.506, z: 0}
 --- !u!114 &1182108681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20254,7 +20254,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 1.32
   m_Direction: 1
-  m_Center: {x: 0, y: -0.47, z: 0}
+  m_Center: {x: 0, y: -0.42, z: 0}
 --- !u!1 &1185646451
 GameObject:
   m_ObjectHideFlags: 0
@@ -21876,15 +21876,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.23361504
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9723292
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalRotation.z
@@ -21896,7 +21896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -207.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -26417,12 +26417,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 25
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":421.199951,\"yPos\":222.799988},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bof.\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":49.19995,\"yPos\":237.799988},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pourquoi
-    pas.\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":211.599976,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
+  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":393.999969,\"yPos\":222.799988},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bof.\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":21.99997,\"yPos\":237.799988},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pourquoi
+    pas.\",\"parentUIDs\":[0],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":184.4,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
     veux en savoir plus sur moi? \",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
-    2\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":45.19995,\"yPos\":336.799927},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
+    2\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":17.99997,\"yPos\":336.799927},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
     suis chevalier depuis peu de temps. J'ai mes propres ambitions que je ne pr\xE9f\xE8res
-    pas partager. Je suis du genre \xE9ngmatique.\",\"parentUIDs\":[21],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
+    pas partager. Je suis du genre \xE9nigmatique.\",\"parentUIDs\":[21],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Chevalier
     2\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Chevalier 1
@@ -26440,7 +26440,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1140964982}
         m_TargetAssemblyTypeName: KnightMovement, Assembly-CSharp
-        m_MethodName: GoingToTavern
+        m_MethodName: StopMoving
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1140964979}
+        m_TargetAssemblyTypeName: PNJ, Assembly-CSharp
+        m_MethodName: LookAtUs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27600,7 +27612,7 @@ Transform:
   m_GameObject: {fileID: 1624620367}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9936623, z: -0, w: 0.11240669}
-  m_LocalPosition: {x: 368.25003, y: -32.583, z: 202.66}
+  m_LocalPosition: {x: 367.25003, y: -32.583, z: 207.02002}
   m_LocalScale: {x: 1, y: 1.82, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28104,7 +28116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664704616}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.1040758, z: -0, w: -0.99456936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.000030517578, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 0.5494506, z: 1}
   m_ConstrainProportionsScale: 1
@@ -38192,19 +38204,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.719846
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6941339
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38212,7 +38224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 87.916
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4361374554138886284, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
