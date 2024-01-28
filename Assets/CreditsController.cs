@@ -13,7 +13,9 @@ public class CreditsController : MonoBehaviour
 
     IEnumerator ReturnToMainMenuAfterDelay()
     {
+        Debug.Log("Avant d'attendre le délai.");
         yield return new WaitForSeconds(timeBeforeMainMenu);
+        Debug.Log("Après avoir attendu le délai. Chargement de la scène Main Menu.");
         SceneManager.LoadScene("Main Menu");
     }
 }
