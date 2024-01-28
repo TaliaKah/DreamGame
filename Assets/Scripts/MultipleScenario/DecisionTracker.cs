@@ -3,19 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DecisionTracker : MonoBehaviour
+public class DecisionTracker : MonoSingleton<DecisionTracker>
 {
-    private static DecisionTracker _instance;
-    public static DecisionTracker Instance => _instance;
-
     private Dictionary<DecisionManager.Decision, bool> _decisions = new ();
     public Dictionary<DecisionManager.Decision, bool> Decisions {
         get => _decisions; set => _decisions = value;
     }
 
-    private void Awake() {
-        if (_instance is null) {
-            _instance = this;
+    private void Start() {
+        if (Instance == this) {
             Initialize();
         }
     }
