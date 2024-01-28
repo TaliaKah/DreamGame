@@ -11,9 +11,7 @@ public class RestartLevel : MonoBehaviour
     public void NextLevel()
     {
         UIAudioPlayer.PlayPositive();
-       //GameSystem.Instance.NextLevel();
-       //SceneManager.LoadScene("Example Scene");
-       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       SceneManager.LoadScene("Scenes/SampleScene");
     }
 
 }
