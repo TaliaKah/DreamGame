@@ -27,7 +27,7 @@ public class NPCWitchDialog : NPCDialog
             }
             else
             {
-                if (decisionManager.GetDecision(DecisionManager.Decision.RencontrerSorciere))
+                if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerSorciere))
                 {
                     ConversationManager.Instance.StartConversation(meetingConversation);
                 }
