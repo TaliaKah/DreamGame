@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Objects/SineVFX/TranslucentCrystals/Resources/Textures/CrystalMaps/TranslucentCrystal01_Emission.png.meta
 guid: c4cb56ed45fb93d428f0b362c9985f7c
 timeCreated: 1512125888
+========
+guid: 4cac81b5211748e4e982bff8014df8d8
+timeCreated: 1505515843
+>>>>>>>> Stashed changes:Assets/Objects/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGrid_Emission.png.meta
 licenseType: Store
 TextureImporter:
   fileIDToRecycleName: {}

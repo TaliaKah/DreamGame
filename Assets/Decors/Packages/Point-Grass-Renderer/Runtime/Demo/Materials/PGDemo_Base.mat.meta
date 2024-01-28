@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Decors/Packages/Point-Grass-Renderer/Runtime/Demo/Materials/PGDemo_Base.mat.meta
 guid: 1de1e948446a71c46b3490091328b310
 labels:
 - Material
 - Vegetation
+========
+guid: 6cf0651f7f7c83e429867ab937644cea
+>>>>>>>> Stashed changes:Assets/Mini Game FPS/Assets/Creator Kit - FPS/Art/Materials/Door and Key/Key.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

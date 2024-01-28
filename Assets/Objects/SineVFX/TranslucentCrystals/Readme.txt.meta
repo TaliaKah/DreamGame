@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Objects/SineVFX/TranslucentCrystals/Readme.txt.meta
 guid: 61d3c52476456584b8752c3f87a03969
 timeCreated: 1512124515
+========
+guid: eabc9546105bf4accac1fd62a63e88e6
+timeCreated: 1487337779
+>>>>>>>> Stashed changes:Assets/Mini Game FPS/Assets/Creator Kit - FPS/TutorialInfo/Layout.wlt.meta
 licenseType: Store
 TextScriptImporter:
   userData: 

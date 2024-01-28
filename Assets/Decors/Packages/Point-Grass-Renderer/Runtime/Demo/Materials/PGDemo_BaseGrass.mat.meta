@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Decors/Packages/Point-Grass-Renderer/Runtime/Demo/Materials/PGDemo_BaseGrass.mat.meta
 guid: 92869a14dfff78c4e8425c88819f0516
 labels:
 - Material
@@ -6,6 +7,12 @@ labels:
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
+========
+guid: 9b78081a88c0a4f4499a76851d14c5f1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+>>>>>>>> Stashed changes:Assets/Decors/Packages/Point-Grass-Renderer/Runtime/Presets/PGR_Default.preset.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

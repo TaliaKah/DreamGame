@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Objects/SineVFX/TranslucentCrystals/Resources/EnvironmentMaterials/PrototypeGridv01.mat.meta
 guid: cce4daf3bbd4bcb4fab49b956ee8af2f
 timeCreated: 1505495052
+========
+guid: 6bf795c07ada0594f8f064dd364759dc
+timeCreated: 1503321242
+>>>>>>>> Stashed changes:Assets/Mini Game FPS/Assets/Creator Kit - FPS/Art/Materials/VFX/AcidParticle.mat.meta
 licenseType: Store
 NativeFormatImporter:
   mainObjectFileID: 2100000

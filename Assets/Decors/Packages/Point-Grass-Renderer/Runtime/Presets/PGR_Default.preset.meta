@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Decors/Packages/Point-Grass-Renderer/Runtime/Presets/PGR_Default.preset.meta
 guid: 9b78081a88c0a4f4499a76851d14c5f1
+========
+guid: 9bfa9b4427ef59d47be8a18e47afc14f
+>>>>>>>> Stashed changes:Assets/Mini Game FPS/Assets/Creator Kit - FPS/Scenes/TutoSettings.lighting.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2655988077585873504
