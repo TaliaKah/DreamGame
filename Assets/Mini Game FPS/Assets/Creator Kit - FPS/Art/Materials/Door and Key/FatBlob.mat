@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FatBlob
-  m_Shader: {fileID: -6465566751694194690, guid: c067e96f89b31254db96f15e6ac1ac6b,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: c067e96f89b31254db96f15e6ac1ac6b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -110,13 +109,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_716b82d6a3c14941adf9b769f4aadfe7_Texture_1:
-        m_Texture: {fileID: 28006490866237874, guid: d5540cbcd59304a1e9be960dcdf78d68,
-          type: 2}
+        m_Texture: {fileID: 28006490866237874, guid: d5540cbcd59304a1e9be960dcdf78d68, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_716b82d6a3c14941adf9b769f4aadfe7_Texture_1_Texture2D:
-        m_Texture: {fileID: 28006490866237874, guid: d5540cbcd59304a1e9be960dcdf78d68,
-          type: 2}
+        m_Texture: {fileID: 28006490866237874, guid: d5540cbcd59304a1e9be960dcdf78d68, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_13ca5342eda44936b3955c77541eae03_Texture_1:
@@ -124,7 +121,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_13ca5342eda44936b3955c77541eae03_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 039619e8304ca2642abd7f060be738f4, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Specular:
