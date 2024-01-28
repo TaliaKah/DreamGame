@@ -58,7 +58,7 @@ public class NPCKnightDialog : NPCDialog
                                 }
                             }
                             if (
-                                !decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete1) &&
+                                decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete1) &&
                                 !decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete2)
                             )
                             {
@@ -72,7 +72,7 @@ public class NPCKnightDialog : NPCDialog
                                 }
                             }
                             if (
-                                !decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete2) &&
+                                decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete2) &&
                                 !decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete3)
                             )
                             {

@@ -7,7 +7,7 @@ public class NPCWitchDialog : NPCDialog
 {
     public NPCConversation meetingConversation;
     public NPCConversation casualConversation;
-    public NPCConversation quest2Conversation;
+    public NPCConversation quest3Conversation;
 
     private DecisionManager decisionManager;
 
@@ -20,9 +20,9 @@ public class NPCWitchDialog : NPCDialog
     {
         AddDialogCallback(() =>
         {
-            if (decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete2))
+            if (decisionManager.GetDecision(DecisionManager.Decision.DebuterQuete3))
             {
-                ConversationManager.Instance.StartConversation(quest2Conversation);
+                ConversationManager.Instance.StartConversation(quest3Conversation);
                 ConversationManager.Instance.SetBool("Avoir rencontré sorcière", decisionManager.GetDecision(DecisionManager.Decision.RencontrerSorciere));
             }
             else

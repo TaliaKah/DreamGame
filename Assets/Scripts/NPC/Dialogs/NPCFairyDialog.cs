@@ -19,7 +19,8 @@ public class NPCFairyDialog : NPCDialog
     {
         AddDialogCallback(() =>
         {
-            if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine))
+            if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerLesChevaliersDansLaPlaine) && 
+            !decisionManager.GetDecision(DecisionManager.Decision.SurprendreLesFees))
             {
                 ConversationManager.Instance.StartConversation(meetingConversation);
             }

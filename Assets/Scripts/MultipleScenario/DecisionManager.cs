@@ -7,6 +7,7 @@ public class DecisionManager : MonoBehaviour
     public enum Decision
     {
         RencontrerLesChevaliersDansLaPlaine,
+        SurprendreLesFees,
         AccepterDeDevenirChevalier,
         AccepterDeRejoindreLaRebellion,
         RefuserDeRejoindreLaRebellion,
@@ -100,6 +101,12 @@ public class DecisionManager : MonoBehaviour
     {
         Decisions[Decision.RencontrerLesChevaliersDansLaPlaine] = true;
         Debug.LogWarning($"{Decision.RencontrerLesChevaliersDansLaPlaine} est {Decisions[Decision.RencontrerLesChevaliersDansLaPlaine]}");
+    }
+
+    public void SurprendreLesFees()
+    {
+        Decisions[Decision.SurprendreLesFees] = true;
+        Debug.LogWarning($"{Decision.SurprendreLesFees} est {Decisions[Decision.SurprendreLesFees]}");
     }
 
     public void AccepterDeDevenirChevalier()

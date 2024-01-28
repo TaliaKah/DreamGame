@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FairyMovements : MonoBehaviour
 {
-   public float patrolRadius = 10f;  // Rayon de patrouille
+    public float patrolRadius = 10f;  // Rayon de patrouille
     public float patrolInterval = 5f; // Intervalle entre les destinations de patrouille
 
     public GameObject finalPosition;
