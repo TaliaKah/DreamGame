@@ -91,6 +91,8 @@ public class KnightMovement : MonoBehaviour
         }
     }
 
+    private bool leaveRiver = true;
+
     void Update()
     {
         if (movingStatus == MovingStatus.GoingToTavern)
@@ -100,6 +102,13 @@ public class KnightMovement : MonoBehaviour
         if (movingStatus == MovingStatus.GoingToCastle)
         {
             ArrivedAt(castlePosition);
+        }
+        if (decisionManager.GetDecision(DecisionManager.Decision.ReussirQuete1) &&
+            !decisionManager.GetDecision(DecisionManager.Decision.AcheverQuete1) &&
+            leaveRiver)
+        {
+            TPAtTavern();
+            leaveRiver = false;
         }
     }
 }
