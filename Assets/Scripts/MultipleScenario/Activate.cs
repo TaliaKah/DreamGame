@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Activate : MonoBehaviour
+public class DesactivateObstacle : MonoBehaviour
 {
     public DecisionManager.Decision decision;
     private DecisionManager decisionManager;
@@ -17,7 +17,7 @@ public class Activate : MonoBehaviour
         if (decisionManager != null &&
             (decisionManager.GetDecision(decision)))
         {
-            gameObject.SetActive(false);
+            gameObject.SetActive(true);
         }
     }
 }

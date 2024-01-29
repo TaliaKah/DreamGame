@@ -39,7 +39,8 @@ public class DecisionManager : MonoBehaviour
         BattreFee,
         TrouverPoudreDEscampette,
         SeReveiller,
-        DecouvrirMechant
+        DecouvrirMechant,
+        RencontrerLeRoi,
     }
 
     private DecisionTracker _decisionTracker;
@@ -267,5 +268,11 @@ public class DecisionManager : MonoBehaviour
     {
         Decisions[Decision.SeReveiller] = true;
         Debug.LogWarning($"{Decision.SeReveiller} est {Decisions[Decision.SeReveiller]}");
-    }         
+    }  
+
+    public void RencontrerLeRoi()
+    {
+        Decisions[Decision.RencontrerLeRoi] = true;
+        Debug.LogWarning($"{Decision.RencontrerLeRoi} est {Decisions[Decision.RencontrerLeRoi]}");
+    }        
 }
