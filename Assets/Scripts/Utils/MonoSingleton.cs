@@ -36,6 +36,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : Component
         if (instance is null)
         {
             instance = this as T;
+            DontDestroyOnLoad(this.gameObject);
         }
     }
 

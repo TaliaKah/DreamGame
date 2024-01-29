@@ -4,19 +4,64 @@ using System.Collections;
 
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingleton<GameManager>
 {
     public NPCConversation startConversation;
+    private bool m_IsPaused = false;
+    private bool m_IsInConversation = false;
+    public bool IsInConversation => m_IsInConversation;
+
+    #region Settings
+    public readonly float MinSensitivity = 0.0f;
+    public readonly float MaxSensitivity = 100.0f;
+    #endregion
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
         if (ConversationManager.Instance != null && !DecisionTracker.Instance.Decisions[DecisionManager.Decision.MechantIntro])
         {
             ConversationManager.Instance.StartConversation(startConversation);
         }
+
+        SetPauseFlags();
     }
-    public float delayBeforeLoad = 3f; 
+
+    public bool IsUpdatable()
+    {
+        return !m_IsPaused && !m_IsInConversation;
+    }
+
+    public void SetPauseFlags()
+    {
+        bool display = m_IsPaused | m_IsInConversation;
+        Cursor.lockState = display ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = display;
+    }
+
+    public void SetConversationMode(bool value)
+    {
+        m_IsInConversation = value;
+        SetPauseFlags();
+    }
+
+    public void PauseTheGame()
+    {
+        m_IsPaused = true;
+        SetPauseFlags();
+    }
+
+    public void ResetStates() {
+        m_IsPaused = false;
+        m_IsInConversation = false;
+    }
+
+    public void ResumeTheGame()
+    {
+        m_IsPaused = false;
+        SetPauseFlags();
+    }
+
+    public float delayBeforeLoad = 3f;
     public Image fadeImage;
     public float fadeDuration = 1f;
 

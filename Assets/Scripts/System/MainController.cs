@@ -6,28 +6,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class MainController : MonoSingleton<MainController>
+public class MainController : MonoBehaviour
 {
-
     public Camera MainCamera;
     public Transform CameraPosition;
     private UnityEngine.AI.NavMeshAgent navMeshAgent;
 
     [Header("Control Settings")]
-    public float MouseSensitivity = 50.0f;
-    public readonly float MinSensitivity = 0.0f;
-    public readonly float MaxSensitivity = 100.0f;
     public float PlayerSpeed = 5.0f;
     public float RunningSpeed = 7.5f;
 
     float m_VerticalAngle, m_HorizontalAngle;
-    bool m_IsPaused = false;
-    bool m_IsInConversation = false;
-    public bool IsInConversation => m_IsInConversation;
-    
+
     void Start()
     {
-        SetPauseFlags();
         m_VerticalAngle = 0.0f;
         m_HorizontalAngle = transform.localEulerAngles.y;
 
@@ -36,49 +28,24 @@ public class MainController : MonoSingleton<MainController>
         MainCamera.transform.localRotation = Quaternion.identity;
 
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-    }
 
-    bool IsUpdatable()
-    {
-        return !m_IsPaused && !m_IsInConversation;
-    }
+        if (SaveManager.Instance.LoadOrder) {
+            WarpAt(SaveManager.Instance.LoadPosition);
+            transform.position = SaveManager.Instance.LoadPosition;
+            SaveManager.Instance.Loaded();
+            Debug.Log("Character warped to: " + SaveManager.Instance.LoadPosition);
+        } else {
+            Debug.Log("No load ordered.");
+        }
 
-    public void SetPauseFlags()
-    {
-        bool display = m_IsPaused | m_IsInConversation;
-        Cursor.lockState = display ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = display;
-    }
-
-    public void SetConversationMode(bool value)
-    {
-        m_IsInConversation = value;
-        SetPauseFlags();
-    }
-
-    public void PauseTheGame()
-    {
-        m_IsPaused = true;
-        SetPauseFlags();
-    }
-
-    public void TogglePause()
-    {
-        m_IsPaused = !m_IsPaused;
-        SetPauseFlags();
-    }
-
-    public void ResumeTheGame()
-    {
-        m_IsPaused = false;
-        SetPauseFlags();
+        SaveManager.Instance.LinkPosition(transform);
     }
 
     void Update()
     {
         Vector3 move = Vector3.zero;
 
-        if (IsUpdatable())
+        if (GameManager.Instance.IsUpdatable())
         {
             // Move around with ZQSD
             move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
@@ -94,7 +61,7 @@ public class MainController : MonoSingleton<MainController>
             navMeshAgent.Move(move * Time.deltaTime * navMeshAgent.speed);
 
             // Turn player
-            float turnPlayer = Input.GetAxis("Mouse X") * MouseSensitivity;
+            float turnPlayer = Input.GetAxis("Mouse X") * PlayerSettings.Instance.MouseSensitivity;
             m_HorizontalAngle = m_HorizontalAngle + turnPlayer;
 
             if (m_HorizontalAngle > 360) m_HorizontalAngle -= 360.0f;
@@ -106,7 +73,7 @@ public class MainController : MonoSingleton<MainController>
 
             // Camera look up/down
             var turnCam = -Input.GetAxis("Mouse Y");
-            turnCam = turnCam * MouseSensitivity;
+            turnCam = turnCam * PlayerSettings.Instance.MouseSensitivity;
             m_VerticalAngle = Mathf.Clamp(turnCam + m_VerticalAngle, -89.0f, 89.0f);
             currentAngles = CameraPosition.transform.localEulerAngles;
             currentAngles.x = m_VerticalAngle;
@@ -114,7 +81,7 @@ public class MainController : MonoSingleton<MainController>
 
             if (Input.GetButtonDown("Cancel"))
             {
-                PauseTheGame();
+                GameManager.Instance.PauseTheGame();
                 SceneLoaderAsync.Instance.LoadScene("Game Menu", LoadSceneMode.Additive);
             }
 

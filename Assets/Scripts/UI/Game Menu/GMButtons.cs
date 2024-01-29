@@ -7,14 +7,11 @@ using UnityEngine.SceneManagement;
 public class GMButtons : MonoBehaviour
 {
     private MainController controller = null;
-    private SceneLoaderAsync loader;
-
     void Start()
     {
-        controller = MainController.Instance;
-        loader = SceneLoaderAsync.Instance;
-        StartCoroutine(PrintCurrentScene());
+        // StartCoroutine(PrintCurrentScene());
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("Game Menu"));
+        controller = GameObject.Find("PJ").GetComponent<MainController>();
     }
 
     IEnumerator PrintCurrentScene()
@@ -46,7 +43,7 @@ public class GMButtons : MonoBehaviour
         if (Active())
         {
             SceneManager.UnloadSceneAsync("Game Menu");
-            controller.ResumeTheGame();
+            GameManager.Instance.ResumeTheGame();
         }
     }
 
@@ -68,7 +65,7 @@ public class GMButtons : MonoBehaviour
     {
         // TODO
         if (SaveManager.Instance.load()) {
-            MainController.Instance.WarpAt(SaveManager.Instance.LoadPosition);
+            controller.WarpAt(SaveManager.Instance.LoadPosition);
             SaveManager.Instance.Loaded();
         }
     }
@@ -76,7 +73,9 @@ public class GMButtons : MonoBehaviour
     public void MainMenu()
     {
         // TODO
-        if (Active())
-            loader.LoadScene("Main Menu");
+        if (Active()) {
+            SceneLoaderAsync.Instance.LoadScene("Main Menu");
+            GameManager.Instance.ResetStates();
+        }
     }
 }

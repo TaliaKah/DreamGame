@@ -64,6 +64,10 @@ public class SaveManager : MonoSingleton<SaveManager>
         }
     }
 
+    public void LinkPosition(Transform transform) {
+        characterLoadPosition = transform.position;
+    }
+
     public bool CanLoad()
     {
         return File.Exists(BuildSavePath());
@@ -86,7 +90,7 @@ public class SaveManager : MonoSingleton<SaveManager>
     {
         // Load settings : with PlayerPrefs
         // https://docs.unity3d.com/ScriptReference/PlayerPrefs.html
-        //loadPrefs();
+        loadPrefs();
 
         if (!CanLoad())
         {
@@ -142,7 +146,7 @@ public class SaveManager : MonoSingleton<SaveManager>
 
     public void save()
     {
-        // savePrefs();
+        savePrefs();
 
         // Get all items needed
         // Vector3 position = controller.MainCamera.transform.position;
@@ -155,7 +159,7 @@ public class SaveManager : MonoSingleton<SaveManager>
 
         jsonData.Inventory = testInventory;
         // jsonData.Inventory = inventoryStash.Items;
-        jsonData.Position = MainController.Instance.GetCurrentPosition().ToDoubleArray();
+        jsonData.Position = characterLoadPosition.ToDoubleArray();
         jsonData.Decisions = decisionTracker.Decisions;
 
         string json = JsonConvert.SerializeObject(jsonData);
@@ -220,12 +224,12 @@ public class SaveManager : MonoSingleton<SaveManager>
 
     private void loadPrefs()
     {
-        // controller.MouseSensitivity = PlayerPrefs.GetFloat(Enum.GetName(typeof(SaveKeys), SaveKeys.MouseSensitivity));
+        PlayerSettings.Instance.MouseSensitivity = PlayerPrefs.GetFloat(Enum.GetName(typeof(SaveKeys), SaveKeys.MouseSensitivity));
     }
 
     private void savePrefs()
     {
-        // PlayerPrefs.SetFloat(Enum.GetName(typeof(SaveKeys), SaveKeys.MouseSensitivity), 40);
+        PlayerPrefs.SetFloat(Enum.GetName(typeof(SaveKeys), SaveKeys.MouseSensitivity), PlayerSettings.Instance.MouseSensitivity);
     }
 }
 
