@@ -19,7 +19,8 @@ public class NPCGoblinDialog : NPCDialog
         AddDialogCallback(() =>
         {
             ConversationManager.Instance.StartConversation(casualConversation);
-            ConversationManager.Instance.SetBool("Avoir autorisation", decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau) || decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison));
+            ConversationManager.Instance.SetBool("Avoir autorisation", decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau));
+            ConversationManager.Instance.SetBool("Prison", decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison));
         });
     }
 
