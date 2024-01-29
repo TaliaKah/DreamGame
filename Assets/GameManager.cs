@@ -53,7 +53,11 @@ public class GameManager : MonoSingleton<GameManager>
     public void ResetStates() {
         m_IsPaused = false;
         m_IsInConversation = false;
-        SetPauseFlags();
+    }
+
+    public void DisplayCursor() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
     }
 
     public void ResumeTheGame()
@@ -80,6 +84,7 @@ public class GameManager : MonoSingleton<GameManager>
         yield return new WaitForSeconds(delayBeforeLoad);
 
         ResetStates();
+        DisplayCursor();
 
         // Chargement de la scène
         SceneLoaderAsync.Instance.LoadScene(sceneName);
