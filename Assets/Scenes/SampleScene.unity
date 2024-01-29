@@ -2547,7 +2547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 10
+  decision: 12
 --- !u!136 &199552768
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5307,7 +5307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 22
+  decision: 24
 --- !u!136 &304166217
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5592,7 +5592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 25
+  decision: 27
 --- !u!65 &316348822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6725,7 +6725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb8fbd870e8c404abf875f2635fbfc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 24
+  decision: 26
 --- !u!114 &361692909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6738,7 +6738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb8fbd870e8c404abf875f2635fbfc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 6
+  decision: 8
 --- !u!1 &376506993
 GameObject:
   m_ObjectHideFlags: 0
@@ -18139,7 +18139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 21
+  decision: 23
 --- !u!136 &1055171470
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18751,7 +18751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb8fbd870e8c404abf875f2635fbfc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 0
+  decision: 1
 --- !u!1 &1097974950
 GameObject:
   m_ObjectHideFlags: 0
@@ -20790,7 +20790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fa309003f150e4bb85e6c8bb6f6320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 13
+  decision: 15
 --- !u!136 &1197492085
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -28051,24 +28051,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 40
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":35}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":646.4,\"yPos\":272.8001},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
-    non piti\xE9 ! Je veux me r\xE9veiller.\",\"parentUIDs\":[32],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":35}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":399.400024,\"yPos\":273.8001},\"ID\":34,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Peut-\xEAtre
-    que si je meurs, je me r\xE9veillerais de ce cauchemar.\",\"parentUIDs\":[32],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":495,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Alors
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":35}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":298.600037,\"yPos\":-342.19986},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oh
+    non piti\xE9 ! Je veux me r\xE9veiller.\",\"parentUIDs\":[32],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":35}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":51.6000366,\"yPos\":-341.19986},\"ID\":34,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Peut-\xEAtre
+    que si je meurs, je me r\xE9veillerais de ce cauchemar.\",\"parentUIDs\":[32],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":156.200027,\"yPos\":-593},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Alors
     comme \xE7a, on paie pas son verre, c'est vraiment mal ! Le roi va te punir.
-    D'ailleurs le voici. Votre Patast\xE9 !\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Policier\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":34}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":503.400024,\"yPos\":174.800171},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
+    D'ailleurs le voici. Votre Patast\xE9 !\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Policier\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.1,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":34}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":155.600037,\"yPos\":-440.1998},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
     vois que tu es emprisonn\xE9. Tu as commis l'irr\xE9parable. Je vais \xEAtre
     oblig\xE9 de t'ex\xE9cuter.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
-    Patate\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":36}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":467.400024,\"yPos\":382.8001},\"ID\":35,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ai-je
+    Patate\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":36}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":119.600037,\"yPos\":-232.19986},\"ID\":35,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ai-je
     bien entendu? Ton souhait est de te r\xE9veiller ? Ainsi, tu quitterais notre
     monde ?\",\"parentUIDs\":[33,34],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
-    Patate\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":39}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":472.400024,\"yPos\":501.800018},\"ID\":36,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
+    Patate\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":39}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":124.600037,\"yPos\":-113.199936},\"ID\":36,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Je
     pourrais l'exaucer. Malheureusement, je n'aide pas les criminels. N\xE9anmoins,
     je peux te laisser une chance.\",\"parentUIDs\":[35],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
-    Patate\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":38}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":472.400024,\"yPos\":714.8},\"ID\":37,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Votre
-    Patast\xE9...\",\"parentUIDs\":[39],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Policier\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":472.400024,\"yPos\":837.8},\"ID\":38,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
+    Patate\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":38}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":124.600037,\"yPos\":99.79999},\"ID\":37,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Votre
+    Patast\xE9...\",\"parentUIDs\":[39],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Policier\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":124.600037,\"yPos\":222.799988},\"ID\":38,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
     seras avec deux chevaliers cheuvron\xE9s. Rejoins-les pr\xE8s de la montagne
     du d\xE9sespoir !\",\"parentUIDs\":[37],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
-    Patate\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":37}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":480.2,\"yPos\":597.800049},\"ID\":39,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Va
+    Patate\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":37}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":132.400024,\"yPos\":-17.19994},\"ID\":39,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Va
     sur la montagne du d\xE9sespoir et rapporte-moi l'objet \xE9trange. J'acc\xE8derais
     peut-\xEAtre \xE0 ta demande si tu t'illustres en faits d'armes.\",\"parentUIDs\":[36],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
     Patate\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
@@ -28091,9 +28091,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2100365142}
-        m_TargetAssemblyTypeName: PNJ, Assembly-CSharp
-        m_MethodName: LookAtUs
+      - m_Target: {fileID: 1376172973}
+        m_TargetAssemblyTypeName: DecisionManager, Assembly-CSharp
+        m_MethodName: AllerALaMontagneDuDesespoir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28103,9 +28103,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 329349055}
-        m_TargetAssemblyTypeName: KingMovements, Assembly-CSharp
-        m_MethodName: GoingToJail
+      - m_Target: {fileID: 2090366175}
+        m_TargetAssemblyTypeName: KnightMovement, Assembly-CSharp
+        m_MethodName: TPAtMountain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1140964982}
+        m_TargetAssemblyTypeName: KnightMovement, Assembly-CSharp
+        m_MethodName: TPAtMountain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35358,7 +35370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb8fbd870e8c404abf875f2635fbfc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decision: 18
+  decision: 20
 --- !u!208 &1884698103
 NavMeshObstacle:
   m_ObjectHideFlags: 0
