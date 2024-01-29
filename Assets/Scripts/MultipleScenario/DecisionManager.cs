@@ -12,6 +12,7 @@ public class DecisionManager : MonoBehaviour
         AccepterDeRejoindreLaRebellion,
         RefuserDeRejoindreLaRebellion,
         RencontrerLeTavernier,
+        BoireUnVerre,
         AllerEnPrison,
         RencontrerSorciere,
         RechercherQuete1,
@@ -126,6 +127,12 @@ public class DecisionManager : MonoBehaviour
     {
         Decisions[Decision.RencontrerLeTavernier] = true;
         Debug.LogWarning($"{Decision.RencontrerLeTavernier} est {Decisions[Decision.RencontrerLeTavernier]}");
+    }
+
+    public void BoireUnVerre()
+    {
+        Decisions[Decision.BoireUnVerre] = true;
+        Debug.LogWarning($"{Decision.BoireUnVerre} est {Decisions[Decision.BoireUnVerre]}");
     }
     
     public void AllerEnPrison()

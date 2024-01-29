@@ -19,7 +19,7 @@ public class NPCTavernDialog : NPCDialog
     {
         AddDialogCallback(() =>
         {
-            if (decisionManager.GetDecision(DecisionManager.Decision.RencontrerLeTavernier))
+            if (decisionManager.GetDecision(DecisionManager.Decision.BoireUnVerre))
             {
                 ConversationManager.Instance.StartConversation(casualConversation);
             }
