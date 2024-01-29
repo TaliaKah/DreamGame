@@ -14841,7 +14841,7 @@ GameObject:
   - component: {fileID: 705573380}
   - component: {fileID: 705573379}
   - component: {fileID: 705573378}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Rendu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17211,7 +17211,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.6832738, z: 0, w: 0.7301623}
-  m_LocalPosition: {x: 1049.4, y: 126.9, z: 818.6}
+  m_LocalPosition: {x: 1837.8, y: 45.8, z: 1053.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
