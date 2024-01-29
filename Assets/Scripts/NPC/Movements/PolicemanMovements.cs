@@ -14,8 +14,6 @@ public class PolicemanMovements : MonoBehaviour
     private Vector3 patrolDestination;
     private float timer = 0f;
 
-    private DecisionManager decisionManager;
-
     enum MovingStatus
     {
         Stop,
@@ -33,6 +31,7 @@ public class PolicemanMovements : MonoBehaviour
     
     public void GoingToJail()
     {
+        StopMoving();
         navMeshAgent.Warp(prison.transform.position);
         Debug.Log(transform.name + "TP at prison position : " + transform.position);
     }
@@ -46,7 +45,6 @@ public class PolicemanMovements : MonoBehaviour
     void Start()
     {
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        decisionManager = FindObjectOfType<DecisionManager>();
         movingStatus = MovingStatus.RandomlyMoving;
         SetRandomDestination();
     }
