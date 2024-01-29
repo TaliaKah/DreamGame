@@ -2909,7 +2909,7 @@ MonoBehaviour:
     m_LayerIndex: 0
   pointCount: 10
   multiplyByArea: 1
-  pointLODFactor: 0.443
+  pointLODFactor: 0.305
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
@@ -19667,6 +19667,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Gate_Door
       objectReference: {fileID: 0}
+    - target: {fileID: 5818562691647285250, guid: 314d8309ecc37b841991fa5ae0997742, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.6198596
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818562691647285250, guid: 314d8309ecc37b841991fa5ae0997742, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.09946636
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20123,6 +20131,18 @@ PrefabInstance:
     - target: {fileID: 4039704011521570291, guid: 62bebc5ad00467c4c8dc046506d81a68, type: 3}
       propertyPath: m_Name
       value: TowerS (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439224949474351160, guid: 62bebc5ad00467c4c8dc046506d81a68, type: 3}
+      propertyPath: m_FadeMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439224949474351160, guid: 62bebc5ad00467c4c8dc046506d81a68, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.5989333
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439224949474351160, guid: 62bebc5ad00467c4c8dc046506d81a68, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.0293133
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28543,6 +28563,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7035545438485903218, guid: 112d075ab48b1b943b155b6543f0b096, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.5682163
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035545438485903218, guid: 112d075ab48b1b943b155b6543f0b096, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.027778696
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30010,6 +30038,14 @@ PrefabInstance:
     - target: {fileID: 4039704011521570291, guid: 62bebc5ad00467c4c8dc046506d81a68, type: 3}
       propertyPath: m_Name
       value: TowerS (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439224949474351160, guid: 62bebc5ad00467c4c8dc046506d81a68, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.38683984
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439224949474351160, guid: 62bebc5ad00467c4c8dc046506d81a68, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.04209331
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35241,6 +35277,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7035545438485903218, guid: 112d075ab48b1b943b155b6543f0b096, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.5920375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035545438485903218, guid: 112d075ab48b1b943b155b6543f0b096, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.1202532
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35896,6 +35940,14 @@ PrefabInstance:
     - target: {fileID: 3220786531298745017, guid: 112d075ab48b1b943b155b6543f0b096, type: 3}
       propertyPath: m_Name
       value: Wall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035545438485903218, guid: 112d075ab48b1b943b155b6543f0b096, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.5548235
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035545438485903218, guid: 112d075ab48b1b943b155b6543f0b096, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.06720491
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45087,6 +45139,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7035545438485903218, guid: 112d075ab48b1b943b155b6543f0b096, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.58860457
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035545438485903218, guid: 112d075ab48b1b943b155b6543f0b096, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.0832036
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45944,7 +46004,7 @@ MonoBehaviour:
     m_LayerIndex: 0
   pointCount: 10
   multiplyByArea: 1
-  pointLODFactor: 0.443
+  pointLODFactor: 0.25
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
@@ -46005,7 +46065,7 @@ MonoBehaviour:
     m_LayerIndex: 0
   pointCount: 10
   multiplyByArea: 1
-  pointLODFactor: 0.443
+  pointLODFactor: 0.255
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
@@ -46074,7 +46134,7 @@ MonoBehaviour:
     m_LayerIndex: 0
   pointCount: 10
   multiplyByArea: 1
-  pointLODFactor: 0.443
+  pointLODFactor: 0.24
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
@@ -46128,7 +46188,7 @@ MonoBehaviour:
     m_LayerIndex: 0
   pointCount: 10
   multiplyByArea: 1
-  pointLODFactor: 0.443
+  pointLODFactor: 0.235
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
@@ -46184,7 +46244,7 @@ MonoBehaviour:
     m_LayerIndex: 0
   pointCount: 10
   multiplyByArea: 1
-  pointLODFactor: 0.443
+  pointLODFactor: 0.25
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
