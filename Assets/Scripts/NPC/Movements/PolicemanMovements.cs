@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PolicemanMovements : MonoBehaviour
 {
@@ -32,8 +33,12 @@ public class PolicemanMovements : MonoBehaviour
     
     public void GoingToJail()
     {
-        transform.position = prison.transform.position;
-        Debug.Log($"{transform.name} is going to jail");
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(prison.transform.position, out hit, 1.0f, NavMesh.AllAreas))
+        {
+            transform.position = hit.position;
+            Debug.Log(transform.name + "TP at prison position : " + transform.position);
+        }
     }
 
     public void StopMoving()

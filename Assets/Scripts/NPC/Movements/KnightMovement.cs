@@ -61,25 +61,31 @@ public class KnightMovement : MonoBehaviour
 
     public void TPAtTavern()
     {
-        if (movingStatus != MovingStatus.GoingToTavern)
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(tavernPosition.transform.position, out hit, 1.0f, NavMesh.AllAreas))
         {
-            transform.position = tavernPosition.transform.position;
+            transform.position = hit.position;
+            Debug.Log(transform.name + "TP at tavern position : " + transform.position);
         }
     }
 
     public void TPAtMountain()
     {
-        if (movingStatus != MovingStatus.GoingToMountain)
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(mountainPosition.transform.position, out hit, 1.0f, NavMesh.AllAreas))
         {
-            transform.position = mountainPosition.transform.position;
+            transform.position = hit.position;
+            Debug.Log(transform.name + "TP at mountain position : " + transform.position);
         }
     }
 
     public void TPAtCastle()
     {
-        if (movingStatus != MovingStatus.GoingToCastle)
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(castlePosition.transform.position, out hit, 1.0f, NavMesh.AllAreas))
         {
-            transform.position = castlePosition.transform.position;
+            transform.position = hit.position;
+            Debug.Log(transform.name + "TP at castle position : " + transform.position);
         }
     }
 
@@ -87,9 +93,15 @@ public class KnightMovement : MonoBehaviour
     {
         if (riverPosition != null)
         {
-            transform.position = riverPosition.transform.position;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(riverPosition.transform.position, out hit, 1.0f, NavMesh.AllAreas))
+            {
+                transform.position = hit.position;
+                Debug.Log(transform.name + "TP at river position : " + transform.position);
+            }
         }
     }
+
 
     private bool leaveRiver = true;
 
