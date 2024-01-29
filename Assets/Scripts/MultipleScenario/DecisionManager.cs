@@ -38,7 +38,8 @@ public class DecisionManager : MonoBehaviour
         TaperFee,
         BattreFee,
         TrouverPoudreDEscampette,
-        SeReveiller
+        SeReveiller,
+        DecouvrirMechant
     }
 
     private DecisionTracker _decisionTracker;
@@ -254,6 +255,12 @@ public class DecisionManager : MonoBehaviour
     {
         Decisions[Decision.TaperFee] = true;
         Debug.LogWarning($"{Decision.TaperFee} est {Decisions[Decision.TaperFee]}");
+    }
+
+    public void DecouvrirMechant()
+    {
+        Decisions[Decision.DecouvrirMechant] = true;
+        Debug.LogWarning($"{Decision.DecouvrirMechant} est {Decisions[Decision.DecouvrirMechant]}");
     }    
 
     public void SeReveiller()
