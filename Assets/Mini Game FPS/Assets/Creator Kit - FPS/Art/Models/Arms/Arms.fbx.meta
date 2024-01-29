@@ -1,124 +1,356 @@
 fileFormatVersion: 2
 guid: 6da17b6fc3392da4e825d247643b1afe
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: ArmsMesh
-    100004: ArmsRig
-    100006: Body
-    100008: LeftArm
-    100010: LeftArmTwist
-    100012: LeftHand
-    100014: LeftMiddle1
-    100016: LeftMiddle2
-    100018: LeftMiddle3
-    100020: LeftMiddleEND
-    100022: LeftPinky1
-    100024: LeftPinky2
-    100026: LeftPinky3
-    100028: LeftPinkyEND
-    100030: LeftRing1
-    100032: LeftRing2
-    100034: LeftRing3
-    100036: LeftRingEND
-    100038: LeftShoulder
-    100040: LeftThumb1
-    100042: LeftThumb2
-    100044: LeftThumb2 1
-    100046: LeftThumb3
-    100048: LeftThumb3 1
-    100050: LeftThumb4
-    100052: LeftThumbEND
-    100054: LeftThumbEND 1
-    100056: LeftUppperArm
-    100058: RightArm
-    100060: RightArmTwist
-    100062: RightHand
-    100064: RightMiddle1
-    100066: RightMiddle2
-    100068: RightMiddle3
-    100070: RightMiddleEND
-    100072: RightPinky1
-    100074: RightPinky2
-    100076: RightPinky3
-    100078: RightPinkyEND
-    100080: RightRing1
-    100082: RightRing2
-    100084: RightRing3
-    100086: RightRingEND
-    100088: RightShoulder
-    100090: RightThumb1
-    100092: RightThumb2
-    100094: RightThumb2 1
-    100096: RightThumb3
-    100098: RightThumb3 1
-    100100: RightThumb4
-    100102: RightThumbEND
-    100104: RightThumbEND 1
-    100106: RightUppperArm
-    100108: Root
-    400000: //RootNode
-    400002: ArmsMesh
-    400004: ArmsRig
-    400006: Body
-    400008: LeftArm
-    400010: LeftArmTwist
-    400012: LeftHand
-    400014: LeftMiddle1
-    400016: LeftMiddle2
-    400018: LeftMiddle3
-    400020: LeftMiddleEND
-    400022: LeftPinky1
-    400024: LeftPinky2
-    400026: LeftPinky3
-    400028: LeftPinkyEND
-    400030: LeftRing1
-    400032: LeftRing2
-    400034: LeftRing3
-    400036: LeftRingEND
-    400038: LeftShoulder
-    400040: LeftThumb1
-    400042: LeftThumb2
-    400044: LeftThumb2 1
-    400046: LeftThumb3
-    400048: LeftThumb3 1
-    400050: LeftThumb4
-    400052: LeftThumbEND
-    400054: LeftThumbEND 1
-    400056: LeftUppperArm
-    400058: RightArm
-    400060: RightArmTwist
-    400062: RightHand
-    400064: RightMiddle1
-    400066: RightMiddle2
-    400068: RightMiddle3
-    400070: RightMiddleEND
-    400072: RightPinky1
-    400074: RightPinky2
-    400076: RightPinky3
-    400078: RightPinkyEND
-    400080: RightRing1
-    400082: RightRing2
-    400084: RightRing3
-    400086: RightRingEND
-    400088: RightShoulder
-    400090: RightThumb1
-    400092: RightThumb2
-    400094: RightThumb2 1
-    400096: RightThumb3
-    400098: RightThumb3 1
-    400100: RightThumb4
-    400102: RightThumbEND
-    400104: RightThumbEND 1
-    400106: RightUppperArm
-    400108: Root
-    2100000: 13 - Default
-    2100002: Arms
-    4300000: ArmsMesh
-    7400000: Take 001
-    9500000: //RootNode
-    13700000: ArmsMesh
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: ArmsMesh
+  - first:
+      1: 100004
+    second: ArmsRig
+  - first:
+      1: 100006
+    second: Body
+  - first:
+      1: 100008
+    second: LeftArm
+  - first:
+      1: 100010
+    second: LeftArmTwist
+  - first:
+      1: 100012
+    second: LeftHand
+  - first:
+      1: 100014
+    second: LeftMiddle1
+  - first:
+      1: 100016
+    second: LeftMiddle2
+  - first:
+      1: 100018
+    second: LeftMiddle3
+  - first:
+      1: 100020
+    second: LeftMiddleEND
+  - first:
+      1: 100022
+    second: LeftPinky1
+  - first:
+      1: 100024
+    second: LeftPinky2
+  - first:
+      1: 100026
+    second: LeftPinky3
+  - first:
+      1: 100028
+    second: LeftPinkyEND
+  - first:
+      1: 100030
+    second: LeftRing1
+  - first:
+      1: 100032
+    second: LeftRing2
+  - first:
+      1: 100034
+    second: LeftRing3
+  - first:
+      1: 100036
+    second: LeftRingEND
+  - first:
+      1: 100038
+    second: LeftShoulder
+  - first:
+      1: 100040
+    second: LeftThumb1
+  - first:
+      1: 100042
+    second: LeftThumb2
+  - first:
+      1: 100044
+    second: LeftThumb2 1
+  - first:
+      1: 100046
+    second: LeftThumb3
+  - first:
+      1: 100048
+    second: LeftThumb3 1
+  - first:
+      1: 100050
+    second: LeftThumb4
+  - first:
+      1: 100052
+    second: LeftThumbEND
+  - first:
+      1: 100054
+    second: LeftThumbEND 1
+  - first:
+      1: 100056
+    second: LeftUppperArm
+  - first:
+      1: 100058
+    second: RightArm
+  - first:
+      1: 100060
+    second: RightArmTwist
+  - first:
+      1: 100062
+    second: RightHand
+  - first:
+      1: 100064
+    second: RightMiddle1
+  - first:
+      1: 100066
+    second: RightMiddle2
+  - first:
+      1: 100068
+    second: RightMiddle3
+  - first:
+      1: 100070
+    second: RightMiddleEND
+  - first:
+      1: 100072
+    second: RightPinky1
+  - first:
+      1: 100074
+    second: RightPinky2
+  - first:
+      1: 100076
+    second: RightPinky3
+  - first:
+      1: 100078
+    second: RightPinkyEND
+  - first:
+      1: 100080
+    second: RightRing1
+  - first:
+      1: 100082
+    second: RightRing2
+  - first:
+      1: 100084
+    second: RightRing3
+  - first:
+      1: 100086
+    second: RightRingEND
+  - first:
+      1: 100088
+    second: RightShoulder
+  - first:
+      1: 100090
+    second: RightThumb1
+  - first:
+      1: 100092
+    second: RightThumb2
+  - first:
+      1: 100094
+    second: RightThumb2 1
+  - first:
+      1: 100096
+    second: RightThumb3
+  - first:
+      1: 100098
+    second: RightThumb3 1
+  - first:
+      1: 100100
+    second: RightThumb4
+  - first:
+      1: 100102
+    second: RightThumbEND
+  - first:
+      1: 100104
+    second: RightThumbEND 1
+  - first:
+      1: 100106
+    second: RightUppperArm
+  - first:
+      1: 100108
+    second: Root
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: ArmsMesh
+  - first:
+      4: 400004
+    second: ArmsRig
+  - first:
+      4: 400006
+    second: Body
+  - first:
+      4: 400008
+    second: LeftArm
+  - first:
+      4: 400010
+    second: LeftArmTwist
+  - first:
+      4: 400012
+    second: LeftHand
+  - first:
+      4: 400014
+    second: LeftMiddle1
+  - first:
+      4: 400016
+    second: LeftMiddle2
+  - first:
+      4: 400018
+    second: LeftMiddle3
+  - first:
+      4: 400020
+    second: LeftMiddleEND
+  - first:
+      4: 400022
+    second: LeftPinky1
+  - first:
+      4: 400024
+    second: LeftPinky2
+  - first:
+      4: 400026
+    second: LeftPinky3
+  - first:
+      4: 400028
+    second: LeftPinkyEND
+  - first:
+      4: 400030
+    second: LeftRing1
+  - first:
+      4: 400032
+    second: LeftRing2
+  - first:
+      4: 400034
+    second: LeftRing3
+  - first:
+      4: 400036
+    second: LeftRingEND
+  - first:
+      4: 400038
+    second: LeftShoulder
+  - first:
+      4: 400040
+    second: LeftThumb1
+  - first:
+      4: 400042
+    second: LeftThumb2
+  - first:
+      4: 400044
+    second: LeftThumb2 1
+  - first:
+      4: 400046
+    second: LeftThumb3
+  - first:
+      4: 400048
+    second: LeftThumb3 1
+  - first:
+      4: 400050
+    second: LeftThumb4
+  - first:
+      4: 400052
+    second: LeftThumbEND
+  - first:
+      4: 400054
+    second: LeftThumbEND 1
+  - first:
+      4: 400056
+    second: LeftUppperArm
+  - first:
+      4: 400058
+    second: RightArm
+  - first:
+      4: 400060
+    second: RightArmTwist
+  - first:
+      4: 400062
+    second: RightHand
+  - first:
+      4: 400064
+    second: RightMiddle1
+  - first:
+      4: 400066
+    second: RightMiddle2
+  - first:
+      4: 400068
+    second: RightMiddle3
+  - first:
+      4: 400070
+    second: RightMiddleEND
+  - first:
+      4: 400072
+    second: RightPinky1
+  - first:
+      4: 400074
+    second: RightPinky2
+  - first:
+      4: 400076
+    second: RightPinky3
+  - first:
+      4: 400078
+    second: RightPinkyEND
+  - first:
+      4: 400080
+    second: RightRing1
+  - first:
+      4: 400082
+    second: RightRing2
+  - first:
+      4: 400084
+    second: RightRing3
+  - first:
+      4: 400086
+    second: RightRingEND
+  - first:
+      4: 400088
+    second: RightShoulder
+  - first:
+      4: 400090
+    second: RightThumb1
+  - first:
+      4: 400092
+    second: RightThumb2
+  - first:
+      4: 400094
+    second: RightThumb2 1
+  - first:
+      4: 400096
+    second: RightThumb3
+  - first:
+      4: 400098
+    second: RightThumb3 1
+  - first:
+      4: 400100
+    second: RightThumb4
+  - first:
+      4: 400102
+    second: RightThumbEND
+  - first:
+      4: 400104
+    second: RightThumbEND 1
+  - first:
+      4: 400106
+    second: RightUppperArm
+  - first:
+      4: 400108
+    second: Root
+  - first:
+      21: 2100000
+    second: 13 - Default
+  - first:
+      21: 2100002
+    second: Arms
+  - first:
+      43: 4300000
+    second: ArmsMesh
+  - first:
+      74: 7400000
+    second: Take 001
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: ArmsMesh
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -126,7 +358,7 @@ ModelImporter:
       name: Arms
     second: {fileID: 2100000, guid: cc3bd57a0a1412e4589da15b371cdaf0, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 1
     materialSearch: 1
     materialLocation: 1
@@ -135,6 +367,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -152,32 +385,43 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -186,10 +430,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -199,13 +443,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

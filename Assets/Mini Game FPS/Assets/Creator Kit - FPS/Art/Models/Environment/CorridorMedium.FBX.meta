@@ -1,58 +1,158 @@
 fileFormatVersion: 2
 guid: 73f0333af89ffdb4d945f9e0b9eb7499
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: CoridorMedium_Door1
-    100002: CoridorMedium_Door2
-    100004: CoridorMedium_Door3
-    100006: CoridorMedium_Door4
-    100008: CoridorMedium_DoorSnap1
-    100010: CoridorMedium_DoorSnap2
-    100012: CoridorMedium_DoorSnap3
-    100014: CoridorMedium_DoorSnap4
-    100016: CoridorMedium_walls
-    100018: //RootNode
-    400000: CoridorMedium_Door1
-    400002: CoridorMedium_Door2
-    400004: CoridorMedium_Door3
-    400006: CoridorMedium_Door4
-    400008: CoridorMedium_DoorSnap1
-    400010: CoridorMedium_DoorSnap2
-    400012: CoridorMedium_DoorSnap3
-    400014: CoridorMedium_DoorSnap4
-    400016: CoridorMedium_walls
-    400018: //RootNode
-    2100000: lambert1
-    2100002: lambert2
-    2100004: Fleisch
-    2300000: CoridorMedium_Door1
-    2300002: CoridorMedium_Door2
-    2300004: CoridorMedium_Door3
-    2300006: CoridorMedium_Door4
-    2300008: CoridorMedium_DoorSnap1
-    2300010: CoridorMedium_DoorSnap2
-    2300012: CoridorMedium_DoorSnap3
-    2300014: CoridorMedium_DoorSnap4
-    2300016: CoridorMedium_walls
-    3300000: CoridorMedium_Door1
-    3300002: CoridorMedium_Door2
-    3300004: CoridorMedium_Door3
-    3300006: CoridorMedium_Door4
-    3300008: CoridorMedium_DoorSnap1
-    3300010: CoridorMedium_DoorSnap2
-    3300012: CoridorMedium_DoorSnap3
-    3300014: CoridorMedium_DoorSnap4
-    3300016: CoridorMedium_walls
-    4300000: CoridorMedium_DoorSnap2
-    4300002: CoridorMedium_Door2
-    4300004: CoridorMedium_DoorSnap4
-    4300006: CoridorMedium_Door4
-    4300008: CoridorMedium_DoorSnap1
-    4300010: CoridorMedium_Door1
-    4300012: CoridorMedium_DoorSnap3
-    4300014: CoridorMedium_Door3
-    4300016: CoridorMedium_walls
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: CoridorMedium_Door1
+  - first:
+      1: 100002
+    second: CoridorMedium_Door2
+  - first:
+      1: 100004
+    second: CoridorMedium_Door3
+  - first:
+      1: 100006
+    second: CoridorMedium_Door4
+  - first:
+      1: 100008
+    second: CoridorMedium_DoorSnap1
+  - first:
+      1: 100010
+    second: CoridorMedium_DoorSnap2
+  - first:
+      1: 100012
+    second: CoridorMedium_DoorSnap3
+  - first:
+      1: 100014
+    second: CoridorMedium_DoorSnap4
+  - first:
+      1: 100016
+    second: CoridorMedium_walls
+  - first:
+      1: 100018
+    second: //RootNode
+  - first:
+      4: 400000
+    second: CoridorMedium_Door1
+  - first:
+      4: 400002
+    second: CoridorMedium_Door2
+  - first:
+      4: 400004
+    second: CoridorMedium_Door3
+  - first:
+      4: 400006
+    second: CoridorMedium_Door4
+  - first:
+      4: 400008
+    second: CoridorMedium_DoorSnap1
+  - first:
+      4: 400010
+    second: CoridorMedium_DoorSnap2
+  - first:
+      4: 400012
+    second: CoridorMedium_DoorSnap3
+  - first:
+      4: 400014
+    second: CoridorMedium_DoorSnap4
+  - first:
+      4: 400016
+    second: CoridorMedium_walls
+  - first:
+      4: 400018
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: lambert1
+  - first:
+      21: 2100002
+    second: lambert2
+  - first:
+      21: 2100004
+    second: Fleisch
+  - first:
+      23: 2300000
+    second: CoridorMedium_Door1
+  - first:
+      23: 2300002
+    second: CoridorMedium_Door2
+  - first:
+      23: 2300004
+    second: CoridorMedium_Door3
+  - first:
+      23: 2300006
+    second: CoridorMedium_Door4
+  - first:
+      23: 2300008
+    second: CoridorMedium_DoorSnap1
+  - first:
+      23: 2300010
+    second: CoridorMedium_DoorSnap2
+  - first:
+      23: 2300012
+    second: CoridorMedium_DoorSnap3
+  - first:
+      23: 2300014
+    second: CoridorMedium_DoorSnap4
+  - first:
+      23: 2300016
+    second: CoridorMedium_walls
+  - first:
+      33: 3300000
+    second: CoridorMedium_Door1
+  - first:
+      33: 3300002
+    second: CoridorMedium_Door2
+  - first:
+      33: 3300004
+    second: CoridorMedium_Door3
+  - first:
+      33: 3300006
+    second: CoridorMedium_Door4
+  - first:
+      33: 3300008
+    second: CoridorMedium_DoorSnap1
+  - first:
+      33: 3300010
+    second: CoridorMedium_DoorSnap2
+  - first:
+      33: 3300012
+    second: CoridorMedium_DoorSnap3
+  - first:
+      33: 3300014
+    second: CoridorMedium_DoorSnap4
+  - first:
+      33: 3300016
+    second: CoridorMedium_walls
+  - first:
+      43: 4300000
+    second: CoridorMedium_DoorSnap2
+  - first:
+      43: 4300002
+    second: CoridorMedium_Door2
+  - first:
+      43: 4300004
+    second: CoridorMedium_DoorSnap4
+  - first:
+      43: 4300006
+    second: CoridorMedium_Door4
+  - first:
+      43: 4300008
+    second: CoridorMedium_DoorSnap1
+  - first:
+      43: 4300010
+    second: CoridorMedium_Door1
+  - first:
+      43: 4300012
+    second: CoridorMedium_DoorSnap3
+  - first:
+      43: 4300014
+    second: CoridorMedium_Door3
+  - first:
+      43: 4300016
+    second: CoridorMedium_walls
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -60,7 +160,7 @@ ModelImporter:
       name: Fleisch
     second: {fileID: 2100000, guid: 15ba03cbff6934c70b37e7b3b5daa482, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 1
     materialSearch: 2
     materialLocation: 1
@@ -69,6 +169,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -86,32 +187,43 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -120,10 +232,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -133,13 +245,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

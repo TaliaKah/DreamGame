@@ -1,51 +1,137 @@
 fileFormatVersion: 2
 guid: 9f25b69cae653eb449a5f8c234914504
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: BrainRoom_Door
-    100004: BrainRoom_Door2
-    100006: BrainRoom_DoorSnap1
-    100008: BrainRoom_DoorSnap2
-    100010: SkullRoom
-    100012: SkullRoom_Brain
-    100014: SkullRoom_Face
-    400000: //RootNode
-    400002: BrainRoom_Door
-    400004: BrainRoom_Door2
-    400006: BrainRoom_DoorSnap1
-    400008: BrainRoom_DoorSnap2
-    400010: SkullRoom
-    400012: SkullRoom_Brain
-    400014: SkullRoom_Face
-    2100000: 07 - Default
-    2100002: lambert1
-    2100004: 09 - Default
-    2100006: lambert2
-    2100008: BrainRoom
-    2100010: FleischSkullRoom
-    2300000: BrainRoom_Door
-    2300002: BrainRoom_Door2
-    2300004: BrainRoom_DoorSnap1
-    2300006: BrainRoom_DoorSnap2
-    2300008: SkullRoom
-    2300010: SkullRoom_Brain
-    2300012: SkullRoom_Face
-    3300000: BrainRoom_Door
-    3300002: BrainRoom_Door2
-    3300004: BrainRoom_DoorSnap1
-    3300006: BrainRoom_DoorSnap2
-    3300008: SkullRoom
-    3300010: SkullRoom_Brain
-    3300012: SkullRoom_Face
-    4300000: SkullRoom_Brain
-    4300002: SkullRoom_Face
-    4300004: BrainRoom_DoorSnap2
-    4300006: BrainRoom_Door2
-    4300008: BrainRoom_DoorSnap1
-    4300010: BrainRoom_Door
-    4300012: SkullRoom
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: BrainRoom_Door
+  - first:
+      1: 100004
+    second: BrainRoom_Door2
+  - first:
+      1: 100006
+    second: BrainRoom_DoorSnap1
+  - first:
+      1: 100008
+    second: BrainRoom_DoorSnap2
+  - first:
+      1: 100010
+    second: SkullRoom
+  - first:
+      1: 100012
+    second: SkullRoom_Brain
+  - first:
+      1: 100014
+    second: SkullRoom_Face
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: BrainRoom_Door
+  - first:
+      4: 400004
+    second: BrainRoom_Door2
+  - first:
+      4: 400006
+    second: BrainRoom_DoorSnap1
+  - first:
+      4: 400008
+    second: BrainRoom_DoorSnap2
+  - first:
+      4: 400010
+    second: SkullRoom
+  - first:
+      4: 400012
+    second: SkullRoom_Brain
+  - first:
+      4: 400014
+    second: SkullRoom_Face
+  - first:
+      21: 2100000
+    second: 07 - Default
+  - first:
+      21: 2100002
+    second: lambert1
+  - first:
+      21: 2100004
+    second: 09 - Default
+  - first:
+      21: 2100006
+    second: lambert2
+  - first:
+      21: 2100008
+    second: BrainRoom
+  - first:
+      21: 2100010
+    second: FleischSkullRoom
+  - first:
+      23: 2300000
+    second: BrainRoom_Door
+  - first:
+      23: 2300002
+    second: BrainRoom_Door2
+  - first:
+      23: 2300004
+    second: BrainRoom_DoorSnap1
+  - first:
+      23: 2300006
+    second: BrainRoom_DoorSnap2
+  - first:
+      23: 2300008
+    second: SkullRoom
+  - first:
+      23: 2300010
+    second: SkullRoom_Brain
+  - first:
+      23: 2300012
+    second: SkullRoom_Face
+  - first:
+      33: 3300000
+    second: BrainRoom_Door
+  - first:
+      33: 3300002
+    second: BrainRoom_Door2
+  - first:
+      33: 3300004
+    second: BrainRoom_DoorSnap1
+  - first:
+      33: 3300006
+    second: BrainRoom_DoorSnap2
+  - first:
+      33: 3300008
+    second: SkullRoom
+  - first:
+      33: 3300010
+    second: SkullRoom_Brain
+  - first:
+      33: 3300012
+    second: SkullRoom_Face
+  - first:
+      43: 4300000
+    second: SkullRoom_Brain
+  - first:
+      43: 4300002
+    second: SkullRoom_Face
+  - first:
+      43: 4300004
+    second: BrainRoom_DoorSnap2
+  - first:
+      43: 4300006
+    second: BrainRoom_Door2
+  - first:
+      43: 4300008
+    second: BrainRoom_DoorSnap1
+  - first:
+      43: 4300010
+    second: BrainRoom_Door
+  - first:
+      43: 4300012
+    second: SkullRoom
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -58,7 +144,7 @@ ModelImporter:
       name: FleischSkullRoom
     second: {fileID: 2100000, guid: 8b93cf7bd4e17584fa225f772e894a1e, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 1
     materialSearch: 2
     materialLocation: 1
@@ -67,6 +153,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -84,32 +171,43 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -118,10 +216,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -131,13 +229,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
