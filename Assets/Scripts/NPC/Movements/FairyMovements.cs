@@ -13,8 +13,6 @@ public class FairyMovements : MonoBehaviour
     private Vector3 patrolDestination;
     private float timer = 0f;
 
-    private DecisionManager decisionManager;
-
     enum MovingStatus
     {
         Stop,
@@ -33,7 +31,7 @@ public class FairyMovements : MonoBehaviour
     public void GoingToCastle()
     {
         movingStatus = MovingStatus.InCastle;
-        transform.position = finalPosition.transform.position;
+        navMeshAgent.Warp(finalPosition.transform.position);
         Debug.Log($"{transform.name} is in castle");
     }
     
@@ -46,7 +44,6 @@ public class FairyMovements : MonoBehaviour
     void Start()
     {
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        decisionManager = FindObjectOfType<DecisionManager>();
         movingStatus = MovingStatus.Stop;
     }
 

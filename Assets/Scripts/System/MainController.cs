@@ -18,6 +18,8 @@ public class MainController : MonoBehaviour
 
     float m_VerticalAngle, m_HorizontalAngle;
 
+    public GameObject prisonPosition;
+
     void Start()
     {
         m_VerticalAngle = 0.0f;
@@ -100,5 +102,10 @@ public class MainController : MonoBehaviour
 
     public Vector3 GetCurrentPosition() {
         return navMeshAgent.transform.position;
+    }
+
+    public void TPToJail()
+    {
+            navMeshAgent.Warp(prisonPosition.transform.position);
     }
 }

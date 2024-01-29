@@ -33,12 +33,8 @@ public class PolicemanMovements : MonoBehaviour
     
     public void GoingToJail()
     {
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(prison.transform.position, out hit, 1.0f, NavMesh.AllAreas))
-        {
-            transform.position = hit.position;
-            Debug.Log(transform.name + "TP at prison position : " + transform.position);
-        }
+        navMeshAgent.Warp(prison.transform.position);
+        Debug.Log(transform.name + "TP at prison position : " + transform.position);
     }
 
     public void StopMoving()

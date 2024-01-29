@@ -11,13 +11,13 @@ public class KingMovements : MonoBehaviour
 
     public void GoingToCastle()
     {
-        transform.position = finalPosition.transform.position;
+        navMeshAgent.Warp(finalPosition.transform.position);
         Debug.Log($"{transform.name} is in castle");
     }
 
     public void GoingToJail()
     {
-        transform.position = prisonPosition.transform.position;
+        navMeshAgent.Warp(prisonPosition.transform.position);
         Debug.Log($"{transform.name} is going to jail");
     }
     
