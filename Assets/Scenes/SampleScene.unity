@@ -2999,34 +2999,34 @@ MonoBehaviour:
   - {fileID: -7426583211642308163, guid: 002bf449675252849a29782b177a97f2, type: 3}
   - {fileID: 4768935795143599982, guid: 002bf449675252849a29782b177a97f2, type: 3}
   meshDensityValues:
-  - 10
-  - 0.15
+  - 1
+  - 0.2
   multipleMaterials: 1
-  material: {fileID: 2100000, guid: 40e69315dc8bd0b45be8bf7143248fba, type: 2}
+  material: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: a6800ec55fd981a458a652a6c9eb55c1, type: 2}
   - {fileID: 2100000, guid: 67bf7110f1e9aa1479f46da9c636bff6, type: 2}
-  shadowMode: 2
+  shadowMode: 1
   renderLayer:
     m_LayerIndex: 0
-  pointCount: 10
-  multiplyByArea: 1
-  pointLODFactor: 0.305
+  pointCount: 4000
+  multiplyByArea: 0
+  pointLODFactor: 1
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
   forcedNormal: {x: 0, y: 1, z: 0}
   useDensity: 1
-  densityCutoff: 0.15
+  densityCutoff: 0.85
   useLength: 1
-  lengthMapping: {x: 0.8834649, y: 1}
+  lengthMapping: {x: 0.63392866, y: 1}
   projectType: 0
   projectMask:
     serializedVersion: 2
     m_Bits: 4294967295
   boundingBoxOffset:
-    m_Center: {x: 100, y: 0, z: 100}
-    m_Extent: {x: 10, y: 1, z: 10}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &251182092
 GameObject:
   m_ObjectHideFlags: 0
@@ -46461,8 +46461,6 @@ MonoBehaviour:
   terrain: {fileID: 15600000, guid: 7d46ba8b3cdf2e44ca339a24ba9929bd, type: 2}
   terrainLayers:
   - {fileID: 8574412962073106934, guid: adb6478a7f24de14eb356d6dc3d0c502, type: 2}
-  - {fileID: 8574412962073106934, guid: d123883a856ea344c970cfc5282f9142, type: 2}
-  - {fileID: 8574412962073106934, guid: f875e4258709617468478b12cd9d2e21, type: 2}
   chunkCount: {x: 10, y: 10}
   sceneFilters: []
   bladeType: 2
@@ -46472,34 +46470,34 @@ MonoBehaviour:
   - {fileID: -7426583211642308163, guid: 002bf449675252849a29782b177a97f2, type: 3}
   - {fileID: 4768935795143599982, guid: 002bf449675252849a29782b177a97f2, type: 3}
   meshDensityValues:
-  - 10
-  - 0.15
+  - 1
+  - 0.2
   multipleMaterials: 1
-  material: {fileID: 2100000, guid: 40e69315dc8bd0b45be8bf7143248fba, type: 2}
+  material: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: a6800ec55fd981a458a652a6c9eb55c1, type: 2}
   - {fileID: 2100000, guid: 67bf7110f1e9aa1479f46da9c636bff6, type: 2}
-  shadowMode: 2
+  shadowMode: 1
   renderLayer:
     m_LayerIndex: 0
-  pointCount: 10
-  multiplyByArea: 1
-  pointLODFactor: 0.25
+  pointCount: 4000
+  multiplyByArea: 0
+  pointLODFactor: 1
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
   forcedNormal: {x: 0, y: 1, z: 0}
   useDensity: 1
-  densityCutoff: 0.15
+  densityCutoff: 0.85
   useLength: 1
-  lengthMapping: {x: 0.8834649, y: 1}
+  lengthMapping: {x: 0.63392866, y: 1}
   projectType: 0
   projectMask:
     serializedVersion: 2
     m_Bits: 4294967295
   boundingBoxOffset:
-    m_Center: {x: 100, y: 0, z: 100}
-    m_Extent: {x: 10, y: 1, z: 10}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &2791172111811229944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5877311754934771272, guid: eaad071355aac0942900795d028d9e9d, type: 3}
@@ -46522,8 +46520,6 @@ MonoBehaviour:
   terrain: {fileID: 15600000, guid: 96cdc7ac9fa255e41899d6363eb6cf41, type: 2}
   terrainLayers:
   - {fileID: 8574412962073106934, guid: adb6478a7f24de14eb356d6dc3d0c502, type: 2}
-  - {fileID: 8574412962073106934, guid: d123883a856ea344c970cfc5282f9142, type: 2}
-  - {fileID: 8574412962073106934, guid: f875e4258709617468478b12cd9d2e21, type: 2}
   chunkCount: {x: 10, y: 10}
   sceneFilters: []
   bladeType: 2
@@ -46533,34 +46529,34 @@ MonoBehaviour:
   - {fileID: -7426583211642308163, guid: 002bf449675252849a29782b177a97f2, type: 3}
   - {fileID: 4768935795143599982, guid: 002bf449675252849a29782b177a97f2, type: 3}
   meshDensityValues:
-  - 10
-  - 0.15
+  - 1
+  - 0.2
   multipleMaterials: 1
-  material: {fileID: 2100000, guid: 40e69315dc8bd0b45be8bf7143248fba, type: 2}
+  material: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: a6800ec55fd981a458a652a6c9eb55c1, type: 2}
   - {fileID: 2100000, guid: 67bf7110f1e9aa1479f46da9c636bff6, type: 2}
-  shadowMode: 2
+  shadowMode: 1
   renderLayer:
     m_LayerIndex: 0
-  pointCount: 10
-  multiplyByArea: 1
-  pointLODFactor: 0.255
+  pointCount: 4000
+  multiplyByArea: 0
+  pointLODFactor: 1
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
   forcedNormal: {x: 0, y: 1, z: 0}
   useDensity: 1
-  densityCutoff: 0.15
+  densityCutoff: 0.85
   useLength: 1
-  lengthMapping: {x: 0.8834649, y: 1}
+  lengthMapping: {x: 0.63392866, y: 1}
   projectType: 0
   projectMask:
     serializedVersion: 2
     m_Bits: 4294967295
   boundingBoxOffset:
-    m_Center: {x: 100, y: 0, z: 100}
-    m_Extent: {x: 10, y: 1, z: 10}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &2791172111811229946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8971494074114339132, guid: eaad071355aac0942900795d028d9e9d, type: 3}
@@ -46602,34 +46598,34 @@ MonoBehaviour:
   - {fileID: -7426583211642308163, guid: 002bf449675252849a29782b177a97f2, type: 3}
   - {fileID: 4768935795143599982, guid: 002bf449675252849a29782b177a97f2, type: 3}
   meshDensityValues:
-  - 10
-  - 0.15
+  - 1
+  - 0.2
   multipleMaterials: 1
-  material: {fileID: 2100000, guid: 40e69315dc8bd0b45be8bf7143248fba, type: 2}
+  material: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: a6800ec55fd981a458a652a6c9eb55c1, type: 2}
   - {fileID: 2100000, guid: 67bf7110f1e9aa1479f46da9c636bff6, type: 2}
-  shadowMode: 2
+  shadowMode: 1
   renderLayer:
     m_LayerIndex: 0
-  pointCount: 10
-  multiplyByArea: 1
-  pointLODFactor: 0.24
+  pointCount: 4000
+  multiplyByArea: 0
+  pointLODFactor: 1
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
   forcedNormal: {x: 0, y: 1, z: 0}
   useDensity: 1
-  densityCutoff: 0.15
+  densityCutoff: 0.85
   useLength: 1
-  lengthMapping: {x: 0.8834649, y: 1}
+  lengthMapping: {x: 0.63392866, y: 1}
   projectType: 0
   projectMask:
     serializedVersion: 2
     m_Bits: 4294967295
   boundingBoxOffset:
-    m_Center: {x: 100, y: 0, z: 100}
-    m_Extent: {x: 10, y: 1, z: 10}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!114 &2791172111811229950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46656,34 +46652,34 @@ MonoBehaviour:
   - {fileID: -7426583211642308163, guid: 002bf449675252849a29782b177a97f2, type: 3}
   - {fileID: 4768935795143599982, guid: 002bf449675252849a29782b177a97f2, type: 3}
   meshDensityValues:
-  - 10
-  - 0.15
+  - 1
+  - 0.2
   multipleMaterials: 1
-  material: {fileID: 2100000, guid: 40e69315dc8bd0b45be8bf7143248fba, type: 2}
+  material: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: a6800ec55fd981a458a652a6c9eb55c1, type: 2}
   - {fileID: 2100000, guid: 67bf7110f1e9aa1479f46da9c636bff6, type: 2}
-  shadowMode: 2
+  shadowMode: 1
   renderLayer:
     m_LayerIndex: 0
-  pointCount: 10
-  multiplyByArea: 1
-  pointLODFactor: 0.235
+  pointCount: 4000
+  multiplyByArea: 0
+  pointLODFactor: 1
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
   forcedNormal: {x: 0, y: 1, z: 0}
   useDensity: 1
-  densityCutoff: 0.15
+  densityCutoff: 0.85
   useLength: 1
-  lengthMapping: {x: 0.8834649, y: 1}
+  lengthMapping: {x: 0.63392866, y: 1}
   projectType: 0
   projectMask:
     serializedVersion: 2
     m_Bits: 4294967295
   boundingBoxOffset:
-    m_Center: {x: 100, y: 0, z: 100}
-    m_Extent: {x: 10, y: 1, z: 10}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!114 &2791172111811229951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46701,8 +46697,6 @@ MonoBehaviour:
   terrain: {fileID: 15600000, guid: 43d955c5e842d864a80764e8db3bb9aa, type: 2}
   terrainLayers:
   - {fileID: 8574412962073106934, guid: adb6478a7f24de14eb356d6dc3d0c502, type: 2}
-  - {fileID: 8574412962073106934, guid: d123883a856ea344c970cfc5282f9142, type: 2}
-  - {fileID: 8574412962073106934, guid: f875e4258709617468478b12cd9d2e21, type: 2}
   chunkCount: {x: 10, y: 10}
   sceneFilters: []
   bladeType: 2
@@ -46712,34 +46706,34 @@ MonoBehaviour:
   - {fileID: -7426583211642308163, guid: 002bf449675252849a29782b177a97f2, type: 3}
   - {fileID: 4768935795143599982, guid: 002bf449675252849a29782b177a97f2, type: 3}
   meshDensityValues:
-  - 10
-  - 0.15
+  - 1
+  - 0.2
   multipleMaterials: 1
-  material: {fileID: 2100000, guid: 40e69315dc8bd0b45be8bf7143248fba, type: 2}
+  material: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: a6800ec55fd981a458a652a6c9eb55c1, type: 2}
   - {fileID: 2100000, guid: 67bf7110f1e9aa1479f46da9c636bff6, type: 2}
-  shadowMode: 2
+  shadowMode: 1
   renderLayer:
     m_LayerIndex: 0
-  pointCount: 10
-  multiplyByArea: 1
-  pointLODFactor: 0.25
+  pointCount: 4000
+  multiplyByArea: 0
+  pointLODFactor: 1
   randomiseSeed: 1
   seed: 0
   overwriteNormalDirection: 0
   forcedNormal: {x: 0, y: 1, z: 0}
   useDensity: 1
-  densityCutoff: 0.15
+  densityCutoff: 0.85
   useLength: 1
-  lengthMapping: {x: 0.8834649, y: 1}
+  lengthMapping: {x: 0.63392866, y: 1}
   projectType: 0
   projectMask:
     serializedVersion: 2
     m_Bits: 4294967295
   boundingBoxOffset:
-    m_Center: {x: 100, y: 0, z: 100}
-    m_Extent: {x: 10, y: 1, z: 10}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1001 &7431873898685176103
 PrefabInstance:
   m_ObjectHideFlags: 0
