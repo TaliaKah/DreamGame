@@ -53,6 +53,7 @@ public class GameManager : MonoSingleton<GameManager>
     public void ResetStates() {
         m_IsPaused = false;
         m_IsInConversation = false;
+        SetPauseFlags();
     }
 
     public void ResumeTheGame()
@@ -77,6 +78,8 @@ public class GameManager : MonoSingleton<GameManager>
 
         // Attente
         yield return new WaitForSeconds(delayBeforeLoad);
+
+        ResetStates();
 
         // Chargement de la scène
         SceneLoaderAsync.Instance.LoadScene(sceneName);
