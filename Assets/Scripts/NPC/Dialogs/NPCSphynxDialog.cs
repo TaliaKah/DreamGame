@@ -18,12 +18,9 @@ public class NPCSphynxDialog : NPCDialog
     {
         AddDialogCallback(() =>
         {
-            if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerSphynx))
-            {
-                ConversationManager.Instance.StartConversation(meetingConversation);
-                ConversationManager.Instance.SetBool("Recherche potion éveil", decisionManager.GetDecision(DecisionManager.Decision.RechercherLaPotionDEveil));
-                ConversationManager.Instance.SetBool("Recherche cube", decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison));
-            }
+            ConversationManager.Instance.StartConversation(meetingConversation);
+            ConversationManager.Instance.SetBool("Recherche potion éveil", decisionManager.GetDecision(DecisionManager.Decision.RechercherLaPotionDEveil));
+            ConversationManager.Instance.SetBool("Recherche cube", decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison));
         });
     }
 }

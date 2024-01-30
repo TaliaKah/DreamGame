@@ -20,11 +20,7 @@ public class NPCKingDialog : NPCDialog
     {
         AddDialogCallback(() =>
         {
-            if (decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison))
-            {
-                    ConversationManager.Instance.StartConversation(outOfJailConversation);
-            }
-            else
+            if (decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau))
             {
                 if (!decisionManager.GetDecision(DecisionManager.Decision.BattreMechant))
                 {
@@ -37,6 +33,13 @@ public class NPCKingDialog : NPCDialog
                 else
                 {
                     ConversationManager.Instance.StartConversation(afterFightConversation);
+                }
+            }
+            else
+            {
+                if (decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison))
+                {
+                        ConversationManager.Instance.StartConversation(outOfJailConversation);
                 }
             }
         });
