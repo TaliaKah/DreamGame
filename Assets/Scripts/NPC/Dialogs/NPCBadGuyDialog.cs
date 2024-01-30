@@ -18,7 +18,7 @@ public class NPCBadGuyDialog : NPCDialog
     {
         AddDialogCallback(() =>
         {
-            if (!decisionManager.GetDecision(DecisionManager.Decision.DecouvrirMechant))
+            if (decisionManager.GetDecision(DecisionManager.Decision.DecouvrirMechant))
             {
                 ConversationManager.Instance.StartConversation(fightConversation);
             }
