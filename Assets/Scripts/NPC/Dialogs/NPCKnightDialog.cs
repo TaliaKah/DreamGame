@@ -110,13 +110,16 @@ public class NPCKnightDialog : NPCDialog
                                 }
                             }
                         }
+                    }
+                    else
+                    {
+                        if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerSphynx))
+                        {
+                            ConversationManager.Instance.StartConversation(inFrontOfSphynx);
+                        }
                         else
                         {
-                            if (!decisionManager.GetDecision(DecisionManager.Decision.RencontrerSphynx))
-                            {
-                                ConversationManager.Instance.StartConversation(inFrontOfSphynx);
-                            }
-                            else
+                            if (!decisionManager.GetDecision(DecisionManager.Decision.DecouvrirMechant))
                             {
                                 ConversationManager.Instance.StartConversation(awakeningPotion);
                                 ConversationManager.Instance.SetBool("Potion trouvée", decisionManager.GetDecision(DecisionManager.Decision.TrouverLaPotionDEveil));
