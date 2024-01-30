@@ -23,6 +23,7 @@ public class KingMovements : MonoBehaviour
     
     public void StopMoving()
     {
+        navMeshAgent.isStopped = true;
         Debug.Log($"{transform.name} have stopped moving");
     }
 
