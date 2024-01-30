@@ -146,7 +146,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimEnabled: 1
-    - _RimLightAlign: 0.44
+    - _RimLightAlign: 0.46
     - _RimLightSmoothness: 0.225
     - _RimPower: 0.191
     - _Shininess: 0
@@ -157,9 +157,9 @@ Material:
     - _SpecShadowStrength: 0.2
     - _SpecSource: 0
     - _SpecularClipStrength: 0
-    - _SpecularFalloff: 0.215
+    - _SpecularFalloff: 0.84
     - _SpecularHighlights: 0
-    - _SpecularSize: 0.171
+    - _SpecularSize: 0.17
     - _SpherizeNormalEnabled: 0
     - _SrcBlend: 1
     - _StencilComp: 0

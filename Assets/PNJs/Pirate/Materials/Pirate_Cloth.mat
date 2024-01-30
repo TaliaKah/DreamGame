@@ -16,6 +16,7 @@ Material:
   - _NORMALMAP
   - _OUTLINE
   - _RIMLIGHTING_ON
+  - _SPECULAR_COLOR
   m_InvalidKeywords:
   - _HAFTONESHAPES_DOT
   - _METALLICGLOSSMAP
@@ -215,9 +216,9 @@ Material:
     - _SpecShadowStrenth: 1
     - _SpecSource: 0
     - _SpecularClipStrength: 0
-    - _SpecularFalloff: 0.5
-    - _SpecularHighlights: 1
-    - _SpecularSize: 0.25
+    - _SpecularFalloff: 1
+    - _SpecularHighlights: 0
+    - _SpecularSize: 0.23
     - _SpherizeNormalEnabled: 0
     - _SrcBlend: 1
     - _StencilComp: 0
@@ -245,6 +246,6 @@ Material:
     - _OutlineDistancFade: {r: -25, g: 50, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0}
+    - _SpecColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.5}
     - _SpherizeNormalOrigin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

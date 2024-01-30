@@ -27,6 +27,7 @@ Material:
   m_ValidKeywords:
   - _HAFTONESHAPES_DOT
   - _RIMLIGHTING_ON
+  - _SPECULARHIGHLIGHTS
   m_InvalidKeywords:
   - _NORMALMAP
   m_LightmapFlags: 4
@@ -147,7 +148,7 @@ Material:
     - _RimLightAlign: 0
     - _RimLightSmootness: 0
     - _RimPower: 0.08
-    - _SPECULARHIGHLIGHTS: 0
+    - _SPECULARHIGHLIGHTS: 1
     - _ShadowPatternSize: 0.3
     - _SmoothnessTextureChannel: 0
     - _SpecColor_1: 0.1
