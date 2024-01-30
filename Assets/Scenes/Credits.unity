@@ -535,7 +535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 64.2}
+  m_AnchoredPosition: {x: 0, y: 14.7}
   m_SizeDelta: {x: 452.63, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1278599538
@@ -718,7 +718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -46.4}
+  m_AnchoredPosition: {x: 0, y: -72.65}
   m_SizeDelta: {x: 351.76, y: 217.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1803135755
@@ -755,8 +755,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Jeu cod\xE9 par Ana\xEFs Sarata Gougne, Guy Luong et Fady Bekkar\n\nHistoire
-    \xE9crite par Ana\xEFs Sarata Gougne\n\nAssets et musiques : citer le nom de
-    tous les gens chez qui on a pris assets"
+    \xE9crite par Ana\xEFs Sarata Gougne"
 --- !u!222 &1803135756
 CanvasRenderer:
   m_ObjectHideFlags: 0
