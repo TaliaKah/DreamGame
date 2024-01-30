@@ -22,16 +22,16 @@ public class NPCKingDialog : NPCDialog
         {
             if (decisionManager.GetDecision(DecisionManager.Decision.AllerAuChateau))
             {
-                if (!decisionManager.GetDecision(DecisionManager.Decision.BattreMechant))
+                if (!decisionManager.GetDecision(DecisionManager.Decision.TaperMechant))
                 {
                     ConversationManager.Instance.StartConversation(finalConversation);
-                    ConversationManager.Instance.SetBool("Avoir fleur de vérité", decisionManager.GetDecision(DecisionManager.Decision.TrouverLaFleurDeVerite));
-                    ConversationManager.Instance.SetBool("Etre dans la rébellion", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion));
+                    ConversationManager.Instance.SetBool("Verite", decisionManager.GetDecision(DecisionManager.Decision.TrouverLaFleurDeVerite));
+                    ConversationManager.Instance.SetBool("Rebellion", decisionManager.GetDecision(DecisionManager.Decision.AccepterDeRejoindreLaRebellion));
                     ConversationManager.Instance.SetBool("Avoir cube", decisionManager.GetDecision(DecisionManager.Decision.TrouverLeCube));
-                    ConversationManager.Instance.SetBool("Avoir été en prison", decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison));
                 }
                 else
                 {
+
                     ConversationManager.Instance.StartConversation(afterFightConversation);
                 }
             }
