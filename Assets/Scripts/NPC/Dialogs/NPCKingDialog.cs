@@ -5,7 +5,6 @@ using DialogueEditor;
 
 public class NPCKingDialog : NPCDialog
 {
-    public NPCConversation inJailConversation;
     public NPCConversation outOfJailConversation;
     public NPCConversation finalConversation;
     public NPCConversation afterFightConversation;
@@ -23,14 +22,7 @@ public class NPCKingDialog : NPCDialog
         {
             if (decisionManager.GetDecision(DecisionManager.Decision.AllerEnPrison))
             {
-                if (decisionManager.GetDecision(DecisionManager.Decision.AllerALaMontagneDuDesespoir))
-                {
-                    ConversationManager.Instance.StartConversation(inJailConversation);
-                }
-                else
-                {
                     ConversationManager.Instance.StartConversation(outOfJailConversation);
-                }
             }
             else
             {
